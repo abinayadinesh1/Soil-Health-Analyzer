@@ -28,6 +28,11 @@
     }
   },
   "function": {
+    "S3Trigger4bd6ba2a": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "S3Triggerd6c29487": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -62,7 +67,7 @@
             "LambdaExecutionRole"
           ],
           "category": "function",
-          "resourceName": "S3Triggerd6c29487"
+          "resourceName": "S3Trigger4bd6ba2a"
         }
       ],
       "providerPlugin": "awscloudformation",

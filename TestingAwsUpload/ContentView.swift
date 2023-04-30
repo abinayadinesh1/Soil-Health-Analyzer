@@ -14,7 +14,7 @@ import AWSS3StoragePlugin
 import AWSPluginsCore
 
 struct ContentView: View {
-    let imageKey: String = "test-image"
+    var imageKey: String = "test-image"
     @State var inputImage: UIImage
     @State var showingImagePicker = false
     
@@ -50,17 +50,26 @@ struct ContentView: View {
                 }
             Button("Upload", action: uploadImageButton)
             Button("Download", action: downloadImageButton)
+            Button("List All", action: listAllButton)
         }
     
     }
     
     func uploadImage() async{
-        print("hellp")
+        let randomInt = Int.random(in: 1..<900000)
+        let date = Date()
+        let dateFormatter = DateFormatter()
+         
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+         
+        let formattedDate = dateFormatter.string(from: date)
+        
         let inputImageData = inputImage.jpegData(compressionQuality: 0.7)! //this converts the image to data with no compression
         
         //format from documentation https://docs.amplify.aws/lib/storage/upload/q/platform/ios/#upload-data
+        
         let uploadTask = Amplify.Storage.uploadData(
-            key: imageKey,
+            key: "\(formattedDate)userUpload\(randomInt)",
             data: inputImageData
         )
         Task {
@@ -111,7 +120,31 @@ struct ContentView: View {
         } catch {
             //handle error
             print(error)
-        }    }
+        }
+        
+    }
+    func listAllButton(){
+        Task {
+            do {
+                try await listAll()
+            }
+            catch {
+                print(error)
+            }
+        }
+    }
+    func listAll() async{
+        print("list everything in my bucket please")
+        do {
+            let listResult = try await Amplify.Storage.list()
+            listResult.items.forEach { item in
+                print("Key: \(item.key)")
+            }
+        } catch {
+            //handle error
+            print(error)
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

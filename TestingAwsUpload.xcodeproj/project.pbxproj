@@ -33,6 +33,8 @@
 		6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */; };
 		6E7964DD29FEC3EC00572AB7 /* cooper-hewitt in Resources */ = {isa = PBXBuildFile; fileRef = 6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */; };
 		6E7964E029FEC58A00572AB7 /* source-sans-pro in Resources */ = {isa = PBXBuildFile; fileRef = 6E7964DF29FEC58900572AB7 /* source-sans-pro */; };
+		6E7964E229FEDB2D00572AB7 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964E129FEDB2C00572AB7 /* GridView.swift */; };
+		6E7964E729FEE32400572AB7 /* AmplifyImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964E629FEE32400572AB7 /* AmplifyImage */; };
 		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,7 @@
 		6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "cooper-hewitt"; path = "../../../../Downloads/cooper-hewitt"; sourceTree = "<group>"; };
 		6E7964DE29FEC4ED00572AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6E7964DF29FEC58900572AB7 /* source-sans-pro */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "source-sans-pro"; path = "../../../../Downloads/source-sans-pro"; sourceTree = "<group>"; };
+		6E7964E129FEDB2C00572AB7 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUploadTests.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUploadTests/Pods-TestingAwsUploadTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7964E729FEE32400572AB7 /* AmplifyImage in Frameworks */,
 				6E7964C529FE704E00572AB7 /* AWSAPIPlugin in Frameworks */,
 				6E7964CD29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin in Frameworks */,
 				6E7964CB29FE704E00572AB7 /* AWSLocationGeoPlugin in Frameworks */,
@@ -155,6 +159,7 @@
 				6E58127C29F4612600FCF7BA /* Assets.xcassets */,
 				6E58127E29F4612600FCF7BA /* Preview Content */,
 				6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */,
+				6E7964E129FEDB2C00572AB7 /* GridView.swift */,
 			);
 			path = TestingAwsUpload;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				6E7964D429FE704E00572AB7 /* AWSS3StoragePlugin */,
 				6E7964D629FE704E00572AB7 /* Amplify */,
 				6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */,
+				6E7964E629FEE32400572AB7 /* AmplifyImage */,
 			);
 			productName = TestingAwsUpload;
 			productReference = 6E58127529F4612300FCF7BA /* TestingAwsUpload.app */;
@@ -325,6 +331,7 @@
 			mainGroup = 6E58126C29F4612300FCF7BA;
 			packageReferences = (
 				6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */,
+				6E7964E529FEE32400572AB7 /* XCRemoteSwiftPackageReference "AmplifyImage" */,
 			);
 			productRefGroup = 6E58127629F4612300FCF7BA /* Products */;
 			projectDirPath = "";
@@ -486,6 +493,7 @@
 			files = (
 				6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */,
 				6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */,
+				6E7964E229FEDB2D00572AB7 /* GridView.swift in Sources */,
 				6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,6 +833,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		6E7964E529FEE32400572AB7 /* XCRemoteSwiftPackageReference "AmplifyImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kilo-Loco/AmplifyImage.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -882,6 +898,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
 			productName = CoreMLPredictionsPlugin;
+		};
+		6E7964E629FEE32400572AB7 /* AmplifyImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964E529FEE32400572AB7 /* XCRemoteSwiftPackageReference "AmplifyImage" */;
+			productName = AmplifyImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
