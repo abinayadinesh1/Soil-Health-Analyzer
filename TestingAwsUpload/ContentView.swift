@@ -20,14 +20,18 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 40){
-            Text("Welcome to Munsell Ag!").font(.largeTitle).foregroundColor(.red).multilineTextAlignment(.center)
+            Text("Welcome to Munsell Ag!").font(.largeTitle).foregroundColor(.red).multilineTextAlignment(.center).font(
+                .custom(
+                "SourceSansPro-Regular",
+                size: 34)
+            )
             Text("Please upload an image of your soil below to get a color analysis").font(.subheadline).multilineTextAlignment(.center)
 
             Image(uiImage: self.inputImage)
                     .resizable()
                     .cornerRadius(10)
                     .padding(.all, 4)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 200, height: 200)
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Rectangle())
                     .padding(.top, 10)

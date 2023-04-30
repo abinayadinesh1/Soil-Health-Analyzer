@@ -31,6 +31,8 @@
 		6E7964D729FE704E00572AB7 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D629FE704E00572AB7 /* Amplify */; };
 		6E7964D929FE704E00572AB7 /* CoreMLPredictionsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */; };
 		6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */; };
+		6E7964DD29FEC3EC00572AB7 /* cooper-hewitt in Resources */ = {isa = PBXBuildFile; fileRef = 6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */; };
+		6E7964E029FEC58A00572AB7 /* source-sans-pro in Resources */ = {isa = PBXBuildFile; fileRef = 6E7964DF29FEC58900572AB7 /* source-sans-pro */; };
 		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,9 @@
 		6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITests.swift; sourceTree = "<group>"; };
 		6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "cooper-hewitt"; path = "../../../../Downloads/cooper-hewitt"; sourceTree = "<group>"; };
+		6E7964DE29FEC4ED00572AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6E7964DF29FEC58900572AB7 /* source-sans-pro */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "source-sans-pro"; path = "../../../../Downloads/source-sans-pro"; sourceTree = "<group>"; };
 		776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUploadTests.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUploadTests/Pods-TestingAwsUploadTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +147,9 @@
 		6E58127729F4612300FCF7BA /* TestingAwsUpload */ = {
 			isa = PBXGroup;
 			children = (
+				6E7964DE29FEC4ED00572AB7 /* Info.plist */,
+				6E7964DF29FEC58900572AB7 /* source-sans-pro */,
+				6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */,
 				6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */,
 				6E58127A29F4612300FCF7BA /* ContentView.swift */,
 				6E58127C29F4612600FCF7BA /* Assets.xcassets */,
@@ -334,10 +342,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7964E029FEC58A00572AB7 /* source-sans-pro in Resources */,
 				6E58128029F4612600FCF7BA /* Preview Assets.xcassets in Resources */,
 				6E58127D29F4612600FCF7BA /* Assets.xcassets in Resources */,
 				63263867CF49992A316E9E09 /* awsconfiguration.json in Resources */,
 				17F070C40B3703B794D1C5CC /* amplifyconfiguration.json in Resources */,
+				6E7964DD29FEC3EC00572AB7 /* cooper-hewitt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +648,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TestingAwsUpload/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestingAwsUpload/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -667,6 +679,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TestingAwsUpload/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestingAwsUpload/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
