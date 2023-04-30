@@ -30,6 +30,7 @@
 		6E7964D529FE704E00572AB7 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D429FE704E00572AB7 /* AWSS3StoragePlugin */; };
 		6E7964D729FE704E00572AB7 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D629FE704E00572AB7 /* Amplify */; };
 		6E7964D929FE704E00572AB7 /* CoreMLPredictionsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */; };
+		6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */; };
 		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		6E58128F29F4612600FCF7BA /* TestingAwsUploadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingAwsUploadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITests.swift; sourceTree = "<group>"; };
 		6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUploadTests.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUploadTests/Pods-TestingAwsUploadTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				6E58127A29F4612300FCF7BA /* ContentView.swift */,
 				6E58127C29F4612600FCF7BA /* Assets.xcassets */,
 				6E58127E29F4612600FCF7BA /* Preview Content */,
+				6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */,
 			);
 			path = TestingAwsUpload;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */,
 				6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */,
 				6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */,
 			);

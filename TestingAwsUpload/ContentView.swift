@@ -15,15 +15,35 @@ import AWSPluginsCore
 
 struct ContentView: View {
     let imageKey: String = "test-image"
-    @State var image: UIImage
+    @State var inputImage: UIImage
+    @State var showingImagePicker = false
     
     var body: some View {
         VStack(spacing: 40){
             Text("Welcome to Munsell Ag!").font(.largeTitle).foregroundColor(.red).multilineTextAlignment(.center)
             Text("Please upload an image of your soil below to get a color analysis").font(.subheadline).multilineTextAlignment(.center)
-            Image(uiImage: image).resizable().aspectRatio(1, contentMode: .fit).frame(width: 100, height: 100)
-            
 
+            Image(uiImage: self.inputImage)
+                    .resizable()
+                    .cornerRadius(10)
+                    .padding(.all, 4)
+                    .frame(width: 100, height: 100)
+                    .aspectRatio(contentMode: .fill)
+                    .clipShape(Rectangle())
+                    .padding(.top, 10)
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker(sourceType: .photoLibrary, selectedImage: self.$inputImage)
+        }
+
+            
+            Text("Click to select an image of your soils.")
+                .font(.headline)
+                .frame(height: 50)
+                .foregroundColor(.black)
+                .padding(.horizontal, 20)
+                .onTapGesture {
+                    showingImagePicker = true
+                }
             Button("Upload", action: uploadImageButton)
             Button("Download", action: downloadImageButton)
         }
@@ -32,13 +52,12 @@ struct ContentView: View {
     
     func uploadImage() async{
         print("hellp")
-        let testImage = UIImage(systemName: "circle")!
-        let testImageData = testImage.jpegData(compressionQuality: 1)! //this converts the image to data with no compression
+        let inputImageData = inputImage.jpegData(compressionQuality: 0.7)! //this converts the image to data with no compression
         
         //format from documentation https://docs.amplify.aws/lib/storage/upload/q/platform/ios/#upload-data
         let uploadTask = Amplify.Storage.uploadData(
             key: imageKey,
-            data: testImageData
+            data: inputImageData
         )
         Task {
             for await progress in await uploadTask.progress {
@@ -93,6 +112,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(image: UIImage(systemName: "house")!)
+        ContentView(inputImage: UIImage(systemName: "photo")!)
     }
 }
