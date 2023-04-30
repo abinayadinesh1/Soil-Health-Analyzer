@@ -15,20 +15,22 @@ import AWSPluginsCore
 
 struct ContentView: View {
     let imageKey: String = "test-image"
-    @State var image: UIImage?
+    @State var image: UIImage
     
     var body: some View {
         VStack(spacing: 40){
-            if let image = self.image {
-                Image(uiImage: image).resizable().aspectRatio(1, contentMode: .fit).frame(width: 100, height: 100)
-            }
+            Text("Welcome to Munsell Ag!").font(.largeTitle).foregroundColor(.red)
+            Text("Please upload an image of your soil below to get a color analysis").font(.subheadline)
+            Image(uiImage: image).resizable().aspectRatio(1, contentMode: .fit).frame(width: 100, height: 100)
+            
 
             Button("Upload", action: uploadImageButton)
             Button("Download", action: downloadImageButton)
         }
     
     }
-    func uploadImage() async{ //what does it mean for a function to be async? means this function can give up and another async function can take over if this goes wrong. 
+    
+    func uploadImage() async{
         let testImage = UIImage(systemName: "house")!
         let testImageData = testImage.jpegData(compressionQuality: 1)! //this converts the image to data with no compression
         
@@ -90,6 +92,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(image: UIImage(systemName: "house")!)
     }
 }
