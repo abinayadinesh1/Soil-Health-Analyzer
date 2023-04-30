@@ -19,8 +19,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 40){
-            Text("Welcome to Munsell Ag!").font(.largeTitle).foregroundColor(.red)
-            Text("Please upload an image of your soil below to get a color analysis").font(.subheadline)
+            Text("Welcome to Munsell Ag!").font(.largeTitle).foregroundColor(.red).multilineTextAlignment(.center)
+            Text("Please upload an image of your soil below to get a color analysis").font(.subheadline).multilineTextAlignment(.center)
             Image(uiImage: image).resizable().aspectRatio(1, contentMode: .fit).frame(width: 100, height: 100)
             
 
@@ -31,7 +31,8 @@ struct ContentView: View {
     }
     
     func uploadImage() async{
-        let testImage = UIImage(systemName: "house")!
+        print("hellp")
+        let testImage = UIImage(systemName: "circle")!
         let testImageData = testImage.jpegData(compressionQuality: 1)! //this converts the image to data with no compression
         
         //format from documentation https://docs.amplify.aws/lib/storage/upload/q/platform/ios/#upload-data
