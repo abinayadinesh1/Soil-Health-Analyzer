@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17F070C40B3703B794D1C5CC /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */; };
+		2366E88D035F5998E4095445 /* Pods_TestingAwsUploadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1678B2C400EB76CC4D6796 /* Pods_TestingAwsUploadTests.framework */; };
+		30DCD6683B91BA923E630755 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D2BE3D3E42DBBEEBAC7083 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework */; };
+		63263867CF49992A316E9E09 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D851EF2F0A08CF90F833A5B /* awsconfiguration.json */; };
+		6E476EAA29F8BDC600295E9D /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = 6E476EA929F8BDC600295E9D /* Pods */; };
 		6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */; };
 		6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58127A29F4612300FCF7BA /* ContentView.swift */; };
 		6E58127D29F4612600FCF7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E58127C29F4612600FCF7BA /* Assets.xcassets */; };
@@ -14,6 +19,18 @@
 		6E58128A29F4612600FCF7BA /* TestingAwsUploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58128929F4612600FCF7BA /* TestingAwsUploadTests.swift */; };
 		6E58129429F4612600FCF7BA /* TestingAwsUploadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */; };
 		6E58129629F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */; };
+		6E7964C529FE704E00572AB7 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C429FE704E00572AB7 /* AWSAPIPlugin */; };
+		6E7964C729FE704E00572AB7 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C629FE704E00572AB7 /* AWSCognitoAuthPlugin */; };
+		6E7964C929FE704E00572AB7 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C829FE704E00572AB7 /* AWSDataStorePlugin */; };
+		6E7964CB29FE704E00572AB7 /* AWSLocationGeoPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964CA29FE704E00572AB7 /* AWSLocationGeoPlugin */; };
+		6E7964CD29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964CC29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin */; };
+		6E7964CF29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964CE29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin */; };
+		6E7964D129FE704E00572AB7 /* AWSPluginsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D029FE704E00572AB7 /* AWSPluginsCore */; };
+		6E7964D329FE704E00572AB7 /* AWSPredictionsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D229FE704E00572AB7 /* AWSPredictionsPlugin */; };
+		6E7964D529FE704E00572AB7 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D429FE704E00572AB7 /* AWSS3StoragePlugin */; };
+		6E7964D729FE704E00572AB7 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D629FE704E00572AB7 /* Amplify */; };
+		6E7964D929FE704E00572AB7 /* CoreMLPredictionsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */; };
+		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04DC5C3F0B14D8926BB2C6EF /* Pods-TestingAwsUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload.release.xcconfig"; sourceTree = "<group>"; };
+		156ACD329F7ABDEB063243D8 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		172D63061DC5643282782B32 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		39857A0082DD981E6914F364 /* Pods-TestingAwsUploadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUploadTests.debug.xcconfig"; path = "Target Support Files/Pods-TestingAwsUploadTests/Pods-TestingAwsUploadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		64D2BE3D3E42DBBEEBAC7083 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload_TestingAwsUploadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		683485FA4990FE4ABCE17529 /* Pods-TestingAwsUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload.debug.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload.debug.xcconfig"; sourceTree = "<group>"; };
+		6E476EA929F8BDC600295E9D /* Pods */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pods; sourceTree = SOURCE_ROOT; };
 		6E58127529F4612300FCF7BA /* TestingAwsUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingAwsUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadApp.swift; sourceTree = "<group>"; };
 		6E58127A29F4612300FCF7BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +68,11 @@
 		6E58128F29F4612600FCF7BA /* TestingAwsUploadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingAwsUploadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITests.swift; sourceTree = "<group>"; };
 		6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUploadTests.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUploadTests/Pods-TestingAwsUploadTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D851EF2F0A08CF90F833A5B /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		FB1678B2C400EB76CC4D6796 /* Pods_TestingAwsUploadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUploadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +80,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7964C529FE704E00572AB7 /* AWSAPIPlugin in Frameworks */,
+				6E7964CD29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin in Frameworks */,
+				6E7964CB29FE704E00572AB7 /* AWSLocationGeoPlugin in Frameworks */,
+				D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */,
+				6E7964D729FE704E00572AB7 /* Amplify in Frameworks */,
+				6E7964D329FE704E00572AB7 /* AWSPredictionsPlugin in Frameworks */,
+				6E7964D529FE704E00572AB7 /* AWSS3StoragePlugin in Frameworks */,
+				6E7964D129FE704E00572AB7 /* AWSPluginsCore in Frameworks */,
+				6E7964D929FE704E00572AB7 /* CoreMLPredictionsPlugin in Frameworks */,
+				6E7964C729FE704E00572AB7 /* AWSCognitoAuthPlugin in Frameworks */,
+				6E7964CF29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin in Frameworks */,
+				6E7964C929FE704E00572AB7 /* AWSDataStorePlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2366E88D035F5998E4095445 /* Pods_TestingAwsUploadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DCD6683B91BA923E630755 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +121,9 @@
 				6E58128829F4612600FCF7BA /* TestingAwsUploadTests */,
 				6E58129229F4612600FCF7BA /* TestingAwsUploadUITests */,
 				6E58127629F4612300FCF7BA /* Products */,
+				8B0DCBA9DC19DFE4EA1EF81A /* Pods */,
+				8C60D98BB4DD19E4560E1CE4 /* Frameworks */,
+				E0516AF7F5D4F54E113E4008 /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,8 +169,41 @@
 			children = (
 				6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */,
 				6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */,
+				6E476EA929F8BDC600295E9D /* Pods */,
 			);
 			path = TestingAwsUploadUITests;
+			sourceTree = "<group>";
+		};
+		8B0DCBA9DC19DFE4EA1EF81A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				683485FA4990FE4ABCE17529 /* Pods-TestingAwsUpload.debug.xcconfig */,
+				04DC5C3F0B14D8926BB2C6EF /* Pods-TestingAwsUpload.release.xcconfig */,
+				156ACD329F7ABDEB063243D8 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig */,
+				172D63061DC5643282782B32 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig */,
+				39857A0082DD981E6914F364 /* Pods-TestingAwsUploadTests.debug.xcconfig */,
+				86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8C60D98BB4DD19E4560E1CE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */,
+				64D2BE3D3E42DBBEEBAC7083 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework */,
+				FB1678B2C400EB76CC4D6796 /* Pods_TestingAwsUploadTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0516AF7F5D4F54E113E4008 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				8D851EF2F0A08CF90F833A5B /* awsconfiguration.json */,
+				776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,15 +213,30 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E58129929F4612600FCF7BA /* Build configuration list for PBXNativeTarget "TestingAwsUpload" */;
 			buildPhases = (
+				9CDFFAE2D4A9935159367B1A /* [CP] Check Pods Manifest.lock */,
 				6E58127129F4612300FCF7BA /* Sources */,
 				6E58127229F4612300FCF7BA /* Frameworks */,
 				6E58127329F4612300FCF7BA /* Resources */,
+				AC72BC6AF5C4C10BAE4B98AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TestingAwsUpload;
+			packageProductDependencies = (
+				6E7964C429FE704E00572AB7 /* AWSAPIPlugin */,
+				6E7964C629FE704E00572AB7 /* AWSCognitoAuthPlugin */,
+				6E7964C829FE704E00572AB7 /* AWSDataStorePlugin */,
+				6E7964CA29FE704E00572AB7 /* AWSLocationGeoPlugin */,
+				6E7964CC29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin */,
+				6E7964CE29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin */,
+				6E7964D029FE704E00572AB7 /* AWSPluginsCore */,
+				6E7964D229FE704E00572AB7 /* AWSPredictionsPlugin */,
+				6E7964D429FE704E00572AB7 /* AWSS3StoragePlugin */,
+				6E7964D629FE704E00572AB7 /* Amplify */,
+				6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */,
+			);
 			productName = TestingAwsUpload;
 			productReference = 6E58127529F4612300FCF7BA /* TestingAwsUpload.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E58129C29F4612600FCF7BA /* Build configuration list for PBXNativeTarget "TestingAwsUploadTests" */;
 			buildPhases = (
+				2AB50CF97E67616B9EC6EBC0 /* [CP] Check Pods Manifest.lock */,
 				6E58128129F4612600FCF7BA /* Sources */,
 				6E58128229F4612600FCF7BA /* Frameworks */,
 				6E58128329F4612600FCF7BA /* Resources */,
@@ -169,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E58129F29F4612600FCF7BA /* Build configuration list for PBXNativeTarget "TestingAwsUploadUITests" */;
 			buildPhases = (
+				C6DD4AF48DEA5F8DF419D037 /* [CP] Check Pods Manifest.lock */,
 				6E58128B29F4612600FCF7BA /* Sources */,
 				6E58128C29F4612600FCF7BA /* Frameworks */,
 				6E58128D29F4612600FCF7BA /* Resources */,
+				741F4D71411EC21345A9D90B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +312,9 @@
 				Base,
 			);
 			mainGroup = 6E58126C29F4612300FCF7BA;
+			packageReferences = (
+				6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */,
+			);
 			productRefGroup = 6E58127629F4612300FCF7BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +333,8 @@
 			files = (
 				6E58128029F4612600FCF7BA /* Preview Assets.xcassets in Resources */,
 				6E58127D29F4612600FCF7BA /* Assets.xcassets in Resources */,
+				63263867CF49992A316E9E09 /* awsconfiguration.json in Resources */,
+				17F070C40B3703B794D1C5CC /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +349,122 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E476EAA29F8BDC600295E9D /* Pods in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AB50CF97E67616B9EC6EBC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestingAwsUploadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		741F4D71411EC21345A9D90B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CDFFAE2D4A9935159367B1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestingAwsUpload-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC72BC6AF5C4C10BAE4B98AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6DD4AF48DEA5F8DF419D037 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestingAwsUpload-TestingAwsUploadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E58127129F4612300FCF7BA /* Sources */ = {
@@ -411,6 +625,7 @@
 		};
 		6E58129A29F4612600FCF7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 683485FA4990FE4ABCE17529 /* Pods-TestingAwsUpload.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,6 +654,7 @@
 		};
 		6E58129B29F4612600FCF7BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04DC5C3F0B14D8926BB2C6EF /* Pods-TestingAwsUpload.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,6 +683,7 @@
 		};
 		6E58129D29F4612600FCF7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39857A0082DD981E6914F364 /* Pods-TestingAwsUploadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +703,7 @@
 		};
 		6E58129E29F4612600FCF7BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +723,7 @@
 		};
 		6E5812A029F4612600FCF7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 156ACD329F7ABDEB063243D8 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +741,7 @@
 		};
 		6E5812A129F4612600FCF7BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172D63061DC5643282782B32 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -577,6 +797,75 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E7964C429FE704E00572AB7 /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSAPIPlugin;
+		};
+		6E7964C629FE704E00572AB7 /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+		6E7964C829FE704E00572AB7 /* AWSDataStorePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSDataStorePlugin;
+		};
+		6E7964CA29FE704E00572AB7 /* AWSLocationGeoPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSLocationGeoPlugin;
+		};
+		6E7964CC29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSPinpointAnalyticsPlugin;
+		};
+		6E7964CE29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSPinpointPushNotificationsPlugin;
+		};
+		6E7964D029FE704E00572AB7 /* AWSPluginsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSPluginsCore;
+		};
+		6E7964D229FE704E00572AB7 /* AWSPredictionsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSPredictionsPlugin;
+		};
+		6E7964D429FE704E00572AB7 /* AWSS3StoragePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSS3StoragePlugin;
+		};
+		6E7964D629FE704E00572AB7 /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = Amplify;
+		};
+		6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = CoreMLPredictionsPlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E58126D29F4612300FCF7BA /* Project object */;
 }
