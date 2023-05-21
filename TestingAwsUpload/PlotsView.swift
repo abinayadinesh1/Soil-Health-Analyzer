@@ -15,17 +15,23 @@ struct PlotsView: View {
 
     var body: some View {
         VStack(){
-            Image("logo")
-            Text("Your Plots").foregroundColor(.green)
+            Image("pos_logo_2").resizable().scaledToFill()
+                .frame(width: 100, height: 100)
+            Text("Your Plots").foregroundColor(.green).font(.largeTitle)
             LazyVGrid(columns: columns) {
                 ForEach(0...3, id: \.self) { value in
-                    Text(String(value))
-                    Color.red.frame(width: 30)
-                    Image("pos_logo_2.png")
-                    
+                    IndividualPlot(previewImage: "pos_logo_2")
                 }
             }
         }
     }
     
+}
+
+struct IndividualPlot: View {
+    var previewImage: String
+    var body: some View {
+        Image(previewImage).resizable().scaledToFill()
+            .frame(width: 150, height: 150)
+    }
 }

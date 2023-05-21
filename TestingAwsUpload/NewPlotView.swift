@@ -19,7 +19,6 @@ struct NewPlotView: View {
             }) {
                 Text("Show Modal")
         }    }
-    
 }
 
 
