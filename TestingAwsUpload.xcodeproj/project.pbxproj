@@ -19,6 +19,9 @@
 		6E58128A29F4612600FCF7BA /* TestingAwsUploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58128929F4612600FCF7BA /* TestingAwsUploadTests.swift */; };
 		6E58129429F4612600FCF7BA /* TestingAwsUploadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */; };
 		6E58129629F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */; };
+		6E6409622A1C0ECF00E82C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6409612A1C0ECF00E82C5A /* LaunchScreen.storyboard */; };
+		6E6409642A1C11BD00E82C5A /* launch_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6409632A1C11BD00E82C5A /* launch_background.png */; };
+		6E6409662A1C123900E82C5A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6409652A1C123900E82C5A /* bg.png */; };
 		6E7964C529FE704E00572AB7 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C429FE704E00572AB7 /* AWSAPIPlugin */; };
 		6E7964C729FE704E00572AB7 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C629FE704E00572AB7 /* AWSCognitoAuthPlugin */; };
 		6E7964C929FE704E00572AB7 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C829FE704E00572AB7 /* AWSDataStorePlugin */; };
@@ -39,6 +42,11 @@
 		6EEABDAA2A1ABD2F0098889D /* NewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDA92A1ABD2F0098889D /* NewImageView.swift */; };
 		6EEABDAC2A1ABD670098889D /* PlotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDAB2A1ABD670098889D /* PlotsView.swift */; };
 		6EEABDAE2A1AC08A0098889D /* garden.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EEABDAD2A1AC08A0098889D /* garden.png */; };
+		6EEABDB02A1BB37D0098889D /* IndividualPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDAF2A1BB37D0098889D /* IndividualPlot.swift */; };
+		6EF41D642A1D466C000A15D3 /* circle_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF41D632A1D466C000A15D3 /* circle_logo.png */; };
+		6EF41D662A1D496C000A15D3 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF41D652A1D496C000A15D3 /* green.png */; };
+		6EF41D682A1D4C40000A15D3 /* TestIndividualPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF41D672A1D4C3F000A15D3 /* TestIndividualPlot.swift */; };
+		6EF41D6A2A1D4F7F000A15D3 /* addNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF41D692A1D4F7F000A15D3 /* addNew.png */; };
 		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +85,9 @@
 		6E58128F29F4612600FCF7BA /* TestingAwsUploadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingAwsUploadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITests.swift; sourceTree = "<group>"; };
 		6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6E6409612A1C0ECF00E82C5A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E6409632A1C11BD00E82C5A /* launch_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch_background.png; path = ../../../../Downloads/launch_background.png; sourceTree = "<group>"; };
+		6E6409652A1C123900E82C5A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../../Downloads/bg.png; sourceTree = "<group>"; };
 		6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "cooper-hewitt"; path = "../../../../Downloads/cooper-hewitt"; sourceTree = "<group>"; };
 		6E7964DE29FEC4ED00572AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +97,11 @@
 		6EEABDA92A1ABD2F0098889D /* NewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewImageView.swift; sourceTree = "<group>"; };
 		6EEABDAB2A1ABD670098889D /* PlotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotsView.swift; sourceTree = "<group>"; };
 		6EEABDAD2A1AC08A0098889D /* garden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = garden.png; path = ../../../garden.png; sourceTree = "<group>"; };
+		6EEABDAF2A1BB37D0098889D /* IndividualPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualPlot.swift; sourceTree = "<group>"; };
+		6EF41D632A1D466C000A15D3 /* circle_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_logo.png; path = ../../../../Downloads/circle_logo.png; sourceTree = "<group>"; };
+		6EF41D652A1D496C000A15D3 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = ../../../../Downloads/green.png; sourceTree = "<group>"; };
+		6EF41D672A1D4C3F000A15D3 /* TestIndividualPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIndividualPlot.swift; sourceTree = "<group>"; };
+		6EF41D692A1D4F7F000A15D3 /* addNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addNew.png; path = ../../../../Downloads/addNew.png; sourceTree = "<group>"; };
 		776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUploadTests.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUploadTests/Pods-TestingAwsUploadTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,7 +180,12 @@
 				6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */,
 				6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */,
 				6E58127A29F4612300FCF7BA /* ContentView.swift */,
+				6EF41D632A1D466C000A15D3 /* circle_logo.png */,
+				6EF41D652A1D496C000A15D3 /* green.png */,
+				6EF41D692A1D4F7F000A15D3 /* addNew.png */,
 				6EEABDAD2A1AC08A0098889D /* garden.png */,
+				6E6409632A1C11BD00E82C5A /* launch_background.png */,
+				6E6409652A1C123900E82C5A /* bg.png */,
 				6E58127C29F4612600FCF7BA /* Assets.xcassets */,
 				6E58127E29F4612600FCF7BA /* Preview Content */,
 				6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */,
@@ -172,6 +193,9 @@
 				6EEABDAB2A1ABD670098889D /* PlotsView.swift */,
 				6EEABDA72A1ABD210098889D /* NewPlotView.swift */,
 				6EEABDA92A1ABD2F0098889D /* NewImageView.swift */,
+				6EEABDAF2A1BB37D0098889D /* IndividualPlot.swift */,
+				6E6409612A1C0ECF00E82C5A /* LaunchScreen.storyboard */,
+				6EF41D672A1D4C3F000A15D3 /* TestIndividualPlot.swift */,
 			);
 			path = TestingAwsUpload;
 			sourceTree = "<group>";
@@ -361,13 +385,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF41D642A1D466C000A15D3 /* circle_logo.png in Resources */,
+				6E6409662A1C123900E82C5A /* bg.png in Resources */,
+				6EF41D6A2A1D4F7F000A15D3 /* addNew.png in Resources */,
 				6E7964E029FEC58A00572AB7 /* source-sans-pro in Resources */,
+				6E6409622A1C0ECF00E82C5A /* LaunchScreen.storyboard in Resources */,
 				6E58128029F4612600FCF7BA /* Preview Assets.xcassets in Resources */,
 				6E58127D29F4612600FCF7BA /* Assets.xcassets in Resources */,
 				63263867CF49992A316E9E09 /* awsconfiguration.json in Resources */,
 				17F070C40B3703B794D1C5CC /* amplifyconfiguration.json in Resources */,
 				6EEABDAE2A1AC08A0098889D /* garden.png in Resources */,
+				6EF41D662A1D496C000A15D3 /* green.png in Resources */,
 				6E7964DD29FEC3EC00572AB7 /* cooper-hewitt in Resources */,
+				6E6409642A1C11BD00E82C5A /* launch_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,8 +539,10 @@
 				6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */,
 				6EEABDAA2A1ABD2F0098889D /* NewImageView.swift in Sources */,
 				6E7964E229FEDB2D00572AB7 /* GridView.swift in Sources */,
+				6EF41D682A1D4C40000A15D3 /* TestIndividualPlot.swift in Sources */,
 				6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */,
 				6EEABDAC2A1ABD670098889D /* PlotsView.swift in Sources */,
+				6EEABDB02A1BB37D0098889D /* IndividualPlot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

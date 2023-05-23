@@ -11,6 +11,7 @@ import SwiftUI
 
 struct PlotsView: View {
     @State var plots : [String] = []
+    @State var showAll : Bool = true
     let columns = Array(repeating: GridItem(.flexible()), count: 3)
 
     var body: some View {
@@ -18,20 +19,10 @@ struct PlotsView: View {
             Image("pos_logo_2").resizable().scaledToFill()
                 .frame(width: 100, height: 100)
             Text("Your Plots").foregroundColor(.green).font(.largeTitle)
-            LazyVGrid(columns: columns) {
-                ForEach(0...3, id: \.self) { value in
-                    IndividualPlot(previewImage: "pos_logo_2")
-                }
-            }
+            GridView()
+//            GridView(columns: columns, showAll: showAll)
+
         }
     }
     
-}
-
-struct IndividualPlot: View {
-    var previewImage: String
-    var body: some View {
-        Image(previewImage).resizable().scaledToFill()
-            .frame(width: 150, height: 150)
-    }
 }

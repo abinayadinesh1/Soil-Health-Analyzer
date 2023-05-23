@@ -10,16 +10,18 @@ struct ContentView: View {
     var inputImage : UIImage = UIImage(named: "garden")!
     var body: some View {
         Image("pos_logo_2.png")
-            TabView(){
-                NewImageView(inputImage: inputImage).tabItem{
-                    Image(systemName: "camera.viewfinder")
-                    Text("New Image")
-                }
-                PlotsView().tabItem{
-                    Image(systemName: "house")
-                    Text("Plots")
-                }
-            }
+        GridView()
+//            TabView(){
+//                NewImageView(inputImage: inputImage).tabItem{
+//                    Image(systemName: "camera.viewfinder")
+//                    Text("New Image")
+//                }
+//                PlotsView().tabItem{
+//                    Image(systemName: "house")
+//                    Text("Plots")
+//                }
+//
+//            }
         }
     
     }
