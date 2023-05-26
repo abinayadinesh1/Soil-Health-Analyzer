@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var views: [CreatedView] = []
     @State private var selectedView: CreatedView?
+    @State var title : String = " "
     
     var body: some View {
         NavigationView {
@@ -44,16 +45,15 @@ struct ContentView: View {
                     }
                 }
                 Button(action: {
-                    createView {
-                        Text("This is a custom view")
+                    createView(title: $title) {
+                        // Content view here
+                        Text("This is the content view")
                     }
                 }) {
                     Text("Create View")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
                 }
+
+
 
             }
             .padding()
@@ -61,24 +61,24 @@ struct ContentView: View {
         }
     }
     
-    func createView<Content: View>(content: @escaping () -> Content) {
+    func createView<Content: View>(title: Binding<String>, content: @escaping () -> Content) {
         let text = Binding<String>(
             get: { "" }, // Default value
             set: { _ in } // Empty setter
         )
-        let newView = CreatedView(title: "View \(views.count + 1)", text: text)
+        let newView = CreatedView(title: title, text: text)
         views.append(newView)
     }
 
-}
 
+}
 struct CreatedView: Identifiable, Hashable {
     let id = UUID()
-    let title: String
+    @Binding var title: String
     @Binding var text: String
 
-    init(title: String, text: Binding<String>) {
-        self.title = title
+    init(title: Binding<String>, text: Binding<String>) {
+        self._title = title
         self._text = text
     }
 
@@ -93,24 +93,37 @@ struct CreatedView: Identifiable, Hashable {
 
 struct EditView: View {
     @Binding var view: CreatedView
-    
+    @State private var updatedTitle = ""
+
     var body: some View {
         VStack {
-            Text(view.title)
+            TextField("Enter view title", text: $updatedTitle)
                 .font(.title)
                 .padding()
                 .background(Color.yellow)
                 .cornerRadius(10)
-            
-            TextField("Enter text", text: view.$text)
+
+            TextField("Enter text", text: $view.text)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(10)
                 .padding(.horizontal)
+
+            Button(action: {
+                updateTitle(updatedTitle: $updatedTitle)
+            }) {
+                Text("Submit")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
         }
     }
+    func updateTitle(updatedTitle: Binding<String>) {
+        view.title = updatedTitle.wrappedValue
+    }
 }
-
 
 struct AnyViewContainer {
     @Binding var text: String
