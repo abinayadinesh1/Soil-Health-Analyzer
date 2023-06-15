@@ -10,7 +10,6 @@ import SwiftUI
 import Combine
 import Amplify
 import AWSCognitoAuthPlugin
-import AWSAPIPlugin
 import AWSDataStorePlugin
 import AWSS3StoragePlugin
 import AWSPluginsCore

@@ -9,8 +9,9 @@ import SwiftUI
 struct ContentView: View {
     var inputImage : UIImage = UIImage(named: "garden")!
     var body: some View {
-        Image("pos_logo_2.png")
-        GridView()
+        Image("pos_logo_2")
+        SymbolGrid()
+//        GridView()
 //            TabView(){
 //                NewImageView(inputImage: inputImage).tabItem{
 //                    Image(systemName: "camera.viewfinder")
