@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SymbolGrid: View {
-    @State private var isAddingSymbol = false
+    @State private var isAddingSymbol = true
     @State private var isEditing = false
     private static let initialColumns = 3
     @State private var selectedSymbol: CoverImage?
@@ -103,7 +103,7 @@ struct SymbolGrid: View {
     }
     
     func addSymbol() {
-        selectedSymbol = CoverImage(name: "my fav cutie", cover: Image(uiImage: selectedImage!))
+        selectedSymbol = CoverImage(name: "my fav cutie", cover: Image(uiImage: selectedImage ?? UIImage(named: "green")!))
         guard let newCover = selectedSymbol else { return }
         withAnimation {
             symbols.insert(newCover, at: 0)
