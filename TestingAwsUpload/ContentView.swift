@@ -10,6 +10,9 @@ struct ContentView: View {
     var inputImage : UIImage = UIImage(named: "garden")!
     var body: some View {
         Image("pos_logo_2")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 200, height: 200)
         SymbolGrid()
 //        GridView()
 //            TabView(){

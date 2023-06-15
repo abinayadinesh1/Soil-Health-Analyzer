@@ -24,12 +24,12 @@ struct SymbolGrid: View {
     //either use if let or
 
     @State private var symbols = [
-        CoverImage(name: "hb1", cover: Image("garden")), //sorry swift hates extensions
-        CoverImage(name: "hb2", cover: Image("garden")),
-        CoverImage(name: "hb3", cover: Image("garden")),
-        CoverImage(name: "hb4", cover: Image("garden")),
-        CoverImage(name: "hb5", cover: Image("garden")),
-        CoverImage(name: "hb6", cover: Image("garden")),
+        CoverImage(name: "hb1", cover: Image("hb1")), //sorry swift hates extensions
+        CoverImage(name: "hb2", cover: Image("hb2")),
+        CoverImage(name: "hb3", cover: Image("hb3")),
+        CoverImage(name: "hb4", cover: Image("hb4")),
+        CoverImage(name: "hb5", cover: Image("hb5")),
+        CoverImage(name: "hb6", cover: Image("hb6")),
     ]
     
     var columnsText: String {
@@ -44,7 +44,6 @@ struct SymbolGrid: View {
                 }
                 .padding()
             }
-            
             ScrollView {
                 LazyVGrid(columns: gridColumns) {
                     ForEach(symbols) { symbol in
