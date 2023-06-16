@@ -13,3 +13,8 @@ struct CoverImage : Identifiable, Equatable {
     var name : String
     var cover : Image
 }
+
+//struct Symbol : Identifiable, Equatable {
+//    var id = UUID()
+//    var name : String
+//}

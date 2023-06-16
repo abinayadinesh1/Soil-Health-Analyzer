@@ -9,11 +9,17 @@ import SwiftUI
 struct ContentView: View {
     var inputImage : UIImage = UIImage(named: "garden")!
     var body: some View {
-        Image("pos_logo_2")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 200, height: 200)
-        SymbolGrid()
+//        Image("pos_logo_2")
+//            .resizable()
+//            .scaledToFit()
+//            .frame(width: 200, height: 200)
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                SymbolGrid(inputImage: UIImage(named: "hb1")!)
+            }
+        } else {
+            SymbolGrid(inputImage: UIImage(named: "hb1")!)
+        }
 //        GridView()
 //            TabView(){
 //                NewImageView(inputImage: inputImage).tabItem{
