@@ -1,3 +1,14 @@
+// your experiments
+// cover image for expiremtn, name of experiment/location ("Tomato Garden Bed")
+// click on experiment, get name, details, date started experiment, water schedule, etc.
+// see all the samples you've uploaded
+// be able to click on an example and view data
+// be able to make a new example
+
+//sample: when upload a picture, needs to be sent to aws so we can do processing on that image
+
+
+
 
 //
 //GridView.swift
@@ -6,9 +17,7 @@
 //Created by Abinaya on 4/30/23.
 
 import SwiftUI
-//import AWSSageMaker
-//import AWSFis
-//import AWSEvidently
+
 
 struct GridView: View {
     @State private var experiments: [Experiment] = []
@@ -18,8 +27,11 @@ struct GridView: View {
 
     var body: some View {
         VStack {
+            Text("Your Experiments").font(.largeTitle).padding(.top)
+            
             if individualPlots.isEmpty {
                 Text("No individual plots created")
+                    .font(.subheadline)
                     .foregroundColor(.gray)
                     .padding()
             } else {
@@ -31,16 +43,16 @@ struct GridView: View {
                     }
                 }
             }
-            NavigationView {
-                NavigationLink(destination: Sample()) {
-                    Text("Create a new plot!")
-                        .navigationTitle("Create a new plot")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
+            NavigationView{
+                NavigationLink("Create a new plot", destination: Sample())
+                    .navigationBarTitleDisplayMode(.inline)
+                                        .padding()
+                                        .background(Color.blue)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(10)
+                                        .font(.system(size: 20, weight: .medium, design: .rounded))
             }
+
 //            Button(action: createIndividualPlot) {
 //                Image("addNew.png")
 //                 Text("Create new plot")

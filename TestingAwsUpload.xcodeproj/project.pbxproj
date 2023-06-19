@@ -30,7 +30,6 @@
 		6EEA9D632A3EC819005BE56C /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D622A3EC819005BE56C /* Sample.swift */; };
 		6EEA9D652A3EC853005BE56C /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D642A3EC853005BE56C /* Experiment.swift */; };
 		6EEA9D672A3FCFC2005BE56C /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D662A3FCFC2005BE56C /* Sample.swift */; };
-		6EEABDAA2A1ABD2F0098889D /* NewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDA92A1ABD2F0098889D /* NewImageView.swift */; };
 		6EEABDAC2A1ABD670098889D /* PlotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDAB2A1ABD670098889D /* PlotsView.swift */; };
 		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 /* End PBXBuildFile section */
@@ -78,7 +77,6 @@
 		6EEA9D622A3EC819005BE56C /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		6EEA9D642A3EC853005BE56C /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Experiment.swift; path = TestingAwsUpload/Experiment.swift; sourceTree = SOURCE_ROOT; };
 		6EEA9D662A3FCFC2005BE56C /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
-		6EEABDA92A1ABD2F0098889D /* NewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewImageView.swift; sourceTree = "<group>"; };
 		6EEABDAB2A1ABD670098889D /* PlotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotsView.swift; sourceTree = "<group>"; };
 		776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +150,6 @@
 				6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */,
 				6E7964E129FEDB2C00572AB7 /* GridView.swift */,
 				6EEABDAB2A1ABD670098889D /* PlotsView.swift */,
-				6EEABDA92A1ABD2F0098889D /* NewImageView.swift */,
 				6EB527C12A3AD08E00719149 /* SymbolDetail.swift */,
 				6EB527C62A3ADABB00719149 /* CoverImage.swift */,
 				6EB527C02A3AD08C00719149 /* SymbolGrid.swift */,
@@ -380,7 +377,6 @@
 				6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */,
 				6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */,
 				6EB527C32A3AD08F00719149 /* SymbolDetail.swift in Sources */,
-				6EEABDAA2A1ABD2F0098889D /* NewImageView.swift in Sources */,
 				6E7964E229FEDB2D00572AB7 /* GridView.swift in Sources */,
 				6EB527C22A3AD08F00719149 /* SymbolGrid.swift in Sources */,
 				6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */,
