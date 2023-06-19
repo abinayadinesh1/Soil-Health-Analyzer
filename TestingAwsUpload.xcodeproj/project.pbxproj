@@ -7,46 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17F070C40B3703B794D1C5CC /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */; };
-		2366E88D035F5998E4095445 /* Pods_TestingAwsUploadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1678B2C400EB76CC4D6796 /* Pods_TestingAwsUploadTests.framework */; };
-		30DCD6683B91BA923E630755 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D2BE3D3E42DBBEEBAC7083 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework */; };
 		63263867CF49992A316E9E09 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D851EF2F0A08CF90F833A5B /* awsconfiguration.json */; };
+		6E3E316C2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3E316B2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin */; };
+		6E3E316E2A2E5CD00012A8B9 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3E316D2A2E5CD00012A8B9 /* AWSDataStorePlugin */; };
+		6E3E31702A2E5CD00012A8B9 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3E316F2A2E5CD00012A8B9 /* AWSS3StoragePlugin */; };
+		6E3E31722A2E5CD00012A8B9 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3E31712A2E5CD00012A8B9 /* Amplify */; };
 		6E476EAA29F8BDC600295E9D /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = 6E476EA929F8BDC600295E9D /* Pods */; };
 		6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */; };
 		6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58127A29F4612300FCF7BA /* ContentView.swift */; };
 		6E58127D29F4612600FCF7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E58127C29F4612600FCF7BA /* Assets.xcassets */; };
-		6E58128029F4612600FCF7BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E58127F29F4612600FCF7BA /* Preview Assets.xcassets */; };
 		6E58128A29F4612600FCF7BA /* TestingAwsUploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58128929F4612600FCF7BA /* TestingAwsUploadTests.swift */; };
 		6E58129429F4612600FCF7BA /* TestingAwsUploadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */; };
 		6E58129629F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */; };
+		6E5B56692A3EA41500692A23 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B56682A3EA41500692A23 /* DataStore.swift */; };
 		6E6409622A1C0ECF00E82C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6409612A1C0ECF00E82C5A /* LaunchScreen.storyboard */; };
-		6E6409642A1C11BD00E82C5A /* launch_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6409632A1C11BD00E82C5A /* launch_background.png */; };
-		6E6409662A1C123900E82C5A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6409652A1C123900E82C5A /* bg.png */; };
-		6E7964C529FE704E00572AB7 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C429FE704E00572AB7 /* AWSAPIPlugin */; };
-		6E7964C729FE704E00572AB7 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C629FE704E00572AB7 /* AWSCognitoAuthPlugin */; };
-		6E7964C929FE704E00572AB7 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964C829FE704E00572AB7 /* AWSDataStorePlugin */; };
-		6E7964CB29FE704E00572AB7 /* AWSLocationGeoPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964CA29FE704E00572AB7 /* AWSLocationGeoPlugin */; };
-		6E7964CD29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964CC29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin */; };
-		6E7964CF29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964CE29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin */; };
-		6E7964D129FE704E00572AB7 /* AWSPluginsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D029FE704E00572AB7 /* AWSPluginsCore */; };
-		6E7964D329FE704E00572AB7 /* AWSPredictionsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D229FE704E00572AB7 /* AWSPredictionsPlugin */; };
-		6E7964D529FE704E00572AB7 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D429FE704E00572AB7 /* AWSS3StoragePlugin */; };
-		6E7964D729FE704E00572AB7 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D629FE704E00572AB7 /* Amplify */; };
-		6E7964D929FE704E00572AB7 /* CoreMLPredictionsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */; };
 		6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */; };
-		6E7964DD29FEC3EC00572AB7 /* cooper-hewitt in Resources */ = {isa = PBXBuildFile; fileRef = 6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */; };
-		6E7964E029FEC58A00572AB7 /* source-sans-pro in Resources */ = {isa = PBXBuildFile; fileRef = 6E7964DF29FEC58900572AB7 /* source-sans-pro */; };
 		6E7964E229FEDB2D00572AB7 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964E129FEDB2C00572AB7 /* GridView.swift */; };
-		6E7964E729FEE32400572AB7 /* AmplifyImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7964E629FEE32400572AB7 /* AmplifyImage */; };
-		6EEABDA82A1ABD210098889D /* NewPlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDA72A1ABD210098889D /* NewPlotView.swift */; };
+		6EA6BF952A3EC01800D69409 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */; };
+		6EB527C22A3AD08F00719149 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB527C02A3AD08C00719149 /* SymbolGrid.swift */; };
+		6EB527C32A3AD08F00719149 /* SymbolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB527C12A3AD08E00719149 /* SymbolDetail.swift */; };
+		6EB527C72A3ADABC00719149 /* CoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB527C62A3ADABB00719149 /* CoverImage.swift */; };
+		6EEA9D632A3EC819005BE56C /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D622A3EC819005BE56C /* Sample.swift */; };
+		6EEA9D652A3EC853005BE56C /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D642A3EC853005BE56C /* Experiment.swift */; };
+		6EEA9D672A3FCFC2005BE56C /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D662A3FCFC2005BE56C /* Sample.swift */; };
 		6EEABDAA2A1ABD2F0098889D /* NewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDA92A1ABD2F0098889D /* NewImageView.swift */; };
 		6EEABDAC2A1ABD670098889D /* PlotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDAB2A1ABD670098889D /* PlotsView.swift */; };
-		6EEABDAE2A1AC08A0098889D /* garden.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EEABDAD2A1AC08A0098889D /* garden.png */; };
-		6EEABDB02A1BB37D0098889D /* IndividualPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDAF2A1BB37D0098889D /* IndividualPlot.swift */; };
-		6EF41D642A1D466C000A15D3 /* circle_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF41D632A1D466C000A15D3 /* circle_logo.png */; };
-		6EF41D662A1D496C000A15D3 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF41D652A1D496C000A15D3 /* green.png */; };
-		6EF41D682A1D4C40000A15D3 /* TestIndividualPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF41D672A1D4C3F000A15D3 /* TestIndividualPlot.swift */; };
-		6EF41D6A2A1D4F7F000A15D3 /* addNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF41D692A1D4F7F000A15D3 /* addNew.png */; };
 		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,44 +54,35 @@
 
 /* Begin PBXFileReference section */
 		04DC5C3F0B14D8926BB2C6EF /* Pods-TestingAwsUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload.release.xcconfig"; sourceTree = "<group>"; };
-		156ACD329F7ABDEB063243D8 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		172D63061DC5643282782B32 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig"; sourceTree = "<group>"; };
-		39857A0082DD981E6914F364 /* Pods-TestingAwsUploadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUploadTests.debug.xcconfig"; path = "Target Support Files/Pods-TestingAwsUploadTests/Pods-TestingAwsUploadTests.debug.xcconfig"; sourceTree = "<group>"; };
-		64D2BE3D3E42DBBEEBAC7083 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload_TestingAwsUploadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		683485FA4990FE4ABCE17529 /* Pods-TestingAwsUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload.debug.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload.debug.xcconfig"; sourceTree = "<group>"; };
+		6E0FF6C72A214660000C4065 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
+		6E0FF6C92A214677000C4065 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../awsconfiguration.json; sourceTree = "<group>"; };
 		6E476EA929F8BDC600295E9D /* Pods */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pods; sourceTree = SOURCE_ROOT; };
 		6E58127529F4612300FCF7BA /* TestingAwsUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingAwsUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadApp.swift; sourceTree = "<group>"; };
 		6E58127A29F4612300FCF7BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E58127C29F4612600FCF7BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E58127F29F4612600FCF7BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E58128529F4612600FCF7BA /* TestingAwsUploadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingAwsUploadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58128929F4612600FCF7BA /* TestingAwsUploadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadTests.swift; sourceTree = "<group>"; };
 		6E58128F29F4612600FCF7BA /* TestingAwsUploadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingAwsUploadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58129329F4612600FCF7BA /* TestingAwsUploadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITests.swift; sourceTree = "<group>"; };
 		6E58129529F4612600FCF7BA /* TestingAwsUploadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6E5B56682A3EA41500692A23 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		6E6409612A1C0ECF00E82C5A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6E6409632A1C11BD00E82C5A /* launch_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch_background.png; path = ../../../../Downloads/launch_background.png; sourceTree = "<group>"; };
-		6E6409652A1C123900E82C5A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../../Downloads/bg.png; sourceTree = "<group>"; };
 		6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "cooper-hewitt"; path = "../../../../Downloads/cooper-hewitt"; sourceTree = "<group>"; };
 		6E7964DE29FEC4ED00572AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		6E7964DF29FEC58900572AB7 /* source-sans-pro */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "source-sans-pro"; path = "../../../../Downloads/source-sans-pro"; sourceTree = "<group>"; };
 		6E7964E129FEDB2C00572AB7 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		6EEABDA72A1ABD210098889D /* NewPlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlotView.swift; sourceTree = "<group>"; };
+		6EB527C02A3AD08C00719149 /* SymbolGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
+		6EB527C12A3AD08E00719149 /* SymbolDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolDetail.swift; sourceTree = "<group>"; };
+		6EB527C62A3ADABB00719149 /* CoverImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverImage.swift; sourceTree = "<group>"; };
+		6EEA9D622A3EC819005BE56C /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		6EEA9D642A3EC853005BE56C /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Experiment.swift; path = TestingAwsUpload/Experiment.swift; sourceTree = SOURCE_ROOT; };
+		6EEA9D662A3FCFC2005BE56C /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		6EEABDA92A1ABD2F0098889D /* NewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewImageView.swift; sourceTree = "<group>"; };
 		6EEABDAB2A1ABD670098889D /* PlotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotsView.swift; sourceTree = "<group>"; };
-		6EEABDAD2A1AC08A0098889D /* garden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = garden.png; path = ../../../garden.png; sourceTree = "<group>"; };
-		6EEABDAF2A1BB37D0098889D /* IndividualPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualPlot.swift; sourceTree = "<group>"; };
-		6EF41D632A1D466C000A15D3 /* circle_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_logo.png; path = ../../../../Downloads/circle_logo.png; sourceTree = "<group>"; };
-		6EF41D652A1D496C000A15D3 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = ../../../../Downloads/green.png; sourceTree = "<group>"; };
-		6EF41D672A1D4C3F000A15D3 /* TestIndividualPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIndividualPlot.swift; sourceTree = "<group>"; };
-		6EF41D692A1D4F7F000A15D3 /* addNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addNew.png; path = ../../../../Downloads/addNew.png; sourceTree = "<group>"; };
 		776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUploadTests.release.xcconfig"; path = "Target Support Files/Pods-TestingAwsUploadTests/Pods-TestingAwsUploadTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D851EF2F0A08CF90F833A5B /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		FB1678B2C400EB76CC4D6796 /* Pods_TestingAwsUploadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUploadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,19 +90,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E7964E729FEE32400572AB7 /* AmplifyImage in Frameworks */,
-				6E7964C529FE704E00572AB7 /* AWSAPIPlugin in Frameworks */,
-				6E7964CD29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin in Frameworks */,
-				6E7964CB29FE704E00572AB7 /* AWSLocationGeoPlugin in Frameworks */,
+				6E3E316E2A2E5CD00012A8B9 /* AWSDataStorePlugin in Frameworks */,
+				6E3E31722A2E5CD00012A8B9 /* Amplify in Frameworks */,
 				D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */,
-				6E7964D729FE704E00572AB7 /* Amplify in Frameworks */,
-				6E7964D329FE704E00572AB7 /* AWSPredictionsPlugin in Frameworks */,
-				6E7964D529FE704E00572AB7 /* AWSS3StoragePlugin in Frameworks */,
-				6E7964D129FE704E00572AB7 /* AWSPluginsCore in Frameworks */,
-				6E7964D929FE704E00572AB7 /* CoreMLPredictionsPlugin in Frameworks */,
-				6E7964C729FE704E00572AB7 /* AWSCognitoAuthPlugin in Frameworks */,
-				6E7964CF29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin in Frameworks */,
-				6E7964C929FE704E00572AB7 /* AWSDataStorePlugin in Frameworks */,
+				6E3E316C2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin in Frameworks */,
+				6E3E31702A2E5CD00012A8B9 /* AWSS3StoragePlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2366E88D035F5998E4095445 /* Pods_TestingAwsUploadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30DCD6683B91BA923E630755 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,37 +141,26 @@
 		6E58127729F4612300FCF7BA /* TestingAwsUpload */ = {
 			isa = PBXGroup;
 			children = (
+				6E0FF6C72A214660000C4065 /* amplifyconfiguration.json */,
+				6E0FF6C92A214677000C4065 /* awsconfiguration.json */,
 				6E7964DE29FEC4ED00572AB7 /* Info.plist */,
-				6E7964DF29FEC58900572AB7 /* source-sans-pro */,
-				6E7964DC29FEC3EB00572AB7 /* cooper-hewitt */,
 				6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */,
 				6E58127A29F4612300FCF7BA /* ContentView.swift */,
-				6EF41D632A1D466C000A15D3 /* circle_logo.png */,
-				6EF41D652A1D496C000A15D3 /* green.png */,
-				6EF41D692A1D4F7F000A15D3 /* addNew.png */,
-				6EEABDAD2A1AC08A0098889D /* garden.png */,
-				6E6409632A1C11BD00E82C5A /* launch_background.png */,
-				6E6409652A1C123900E82C5A /* bg.png */,
 				6E58127C29F4612600FCF7BA /* Assets.xcassets */,
-				6E58127E29F4612600FCF7BA /* Preview Content */,
+				6EEA9D662A3FCFC2005BE56C /* Sample.swift */,
+				6EEA9D642A3EC853005BE56C /* Experiment.swift */,
 				6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */,
 				6E7964E129FEDB2C00572AB7 /* GridView.swift */,
 				6EEABDAB2A1ABD670098889D /* PlotsView.swift */,
-				6EEABDA72A1ABD210098889D /* NewPlotView.swift */,
 				6EEABDA92A1ABD2F0098889D /* NewImageView.swift */,
-				6EEABDAF2A1BB37D0098889D /* IndividualPlot.swift */,
+				6EB527C12A3AD08E00719149 /* SymbolDetail.swift */,
+				6EB527C62A3ADABB00719149 /* CoverImage.swift */,
+				6EB527C02A3AD08C00719149 /* SymbolGrid.swift */,
 				6E6409612A1C0ECF00E82C5A /* LaunchScreen.storyboard */,
-				6EF41D672A1D4C3F000A15D3 /* TestIndividualPlot.swift */,
+				6E5B56682A3EA41500692A23 /* DataStore.swift */,
+				6EEA9D622A3EC819005BE56C /* Sample.swift */,
 			);
 			path = TestingAwsUpload;
-			sourceTree = "<group>";
-		};
-		6E58127E29F4612600FCF7BA /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6E58127F29F4612600FCF7BA /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		6E58128829F4612600FCF7BA /* TestingAwsUploadTests */ = {
@@ -231,10 +186,6 @@
 			children = (
 				683485FA4990FE4ABCE17529 /* Pods-TestingAwsUpload.debug.xcconfig */,
 				04DC5C3F0B14D8926BB2C6EF /* Pods-TestingAwsUpload.release.xcconfig */,
-				156ACD329F7ABDEB063243D8 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig */,
-				172D63061DC5643282782B32 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig */,
-				39857A0082DD981E6914F364 /* Pods-TestingAwsUploadTests.debug.xcconfig */,
-				86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -243,8 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */,
-				64D2BE3D3E42DBBEEBAC7083 /* Pods_TestingAwsUpload_TestingAwsUploadUITests.framework */,
-				FB1678B2C400EB76CC4D6796 /* Pods_TestingAwsUploadTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,7 +218,6 @@
 				6E58127129F4612300FCF7BA /* Sources */,
 				6E58127229F4612300FCF7BA /* Frameworks */,
 				6E58127329F4612300FCF7BA /* Resources */,
-				AC72BC6AF5C4C10BAE4B98AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,18 +225,10 @@
 			);
 			name = TestingAwsUpload;
 			packageProductDependencies = (
-				6E7964C429FE704E00572AB7 /* AWSAPIPlugin */,
-				6E7964C629FE704E00572AB7 /* AWSCognitoAuthPlugin */,
-				6E7964C829FE704E00572AB7 /* AWSDataStorePlugin */,
-				6E7964CA29FE704E00572AB7 /* AWSLocationGeoPlugin */,
-				6E7964CC29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin */,
-				6E7964CE29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin */,
-				6E7964D029FE704E00572AB7 /* AWSPluginsCore */,
-				6E7964D229FE704E00572AB7 /* AWSPredictionsPlugin */,
-				6E7964D429FE704E00572AB7 /* AWSS3StoragePlugin */,
-				6E7964D629FE704E00572AB7 /* Amplify */,
-				6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */,
-				6E7964E629FEE32400572AB7 /* AmplifyImage */,
+				6E3E316B2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin */,
+				6E3E316D2A2E5CD00012A8B9 /* AWSDataStorePlugin */,
+				6E3E316F2A2E5CD00012A8B9 /* AWSS3StoragePlugin */,
+				6E3E31712A2E5CD00012A8B9 /* Amplify */,
 			);
 			productName = TestingAwsUpload;
 			productReference = 6E58127529F4612300FCF7BA /* TestingAwsUpload.app */;
@@ -298,7 +238,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E58129C29F4612600FCF7BA /* Build configuration list for PBXNativeTarget "TestingAwsUploadTests" */;
 			buildPhases = (
-				2AB50CF97E67616B9EC6EBC0 /* [CP] Check Pods Manifest.lock */,
 				6E58128129F4612600FCF7BA /* Sources */,
 				6E58128229F4612600FCF7BA /* Frameworks */,
 				6E58128329F4612600FCF7BA /* Resources */,
@@ -317,11 +256,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E58129F29F4612600FCF7BA /* Build configuration list for PBXNativeTarget "TestingAwsUploadUITests" */;
 			buildPhases = (
-				C6DD4AF48DEA5F8DF419D037 /* [CP] Check Pods Manifest.lock */,
 				6E58128B29F4612600FCF7BA /* Sources */,
 				6E58128C29F4612600FCF7BA /* Frameworks */,
 				6E58128D29F4612600FCF7BA /* Resources */,
-				741F4D71411EC21345A9D90B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,8 +303,7 @@
 			);
 			mainGroup = 6E58126C29F4612300FCF7BA;
 			packageReferences = (
-				6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */,
-				6E7964E529FEE32400572AB7 /* XCRemoteSwiftPackageReference "AmplifyImage" */,
+				6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */,
 			);
 			productRefGroup = 6E58127629F4612300FCF7BA /* Products */;
 			projectDirPath = "";
@@ -385,19 +321,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EF41D642A1D466C000A15D3 /* circle_logo.png in Resources */,
-				6E6409662A1C123900E82C5A /* bg.png in Resources */,
-				6EF41D6A2A1D4F7F000A15D3 /* addNew.png in Resources */,
-				6E7964E029FEC58A00572AB7 /* source-sans-pro in Resources */,
+				6EA6BF952A3EC01800D69409 /* amplifyconfiguration.json in Resources */,
 				6E6409622A1C0ECF00E82C5A /* LaunchScreen.storyboard in Resources */,
-				6E58128029F4612600FCF7BA /* Preview Assets.xcassets in Resources */,
 				6E58127D29F4612600FCF7BA /* Assets.xcassets in Resources */,
 				63263867CF49992A316E9E09 /* awsconfiguration.json in Resources */,
-				17F070C40B3703B794D1C5CC /* amplifyconfiguration.json in Resources */,
-				6EEABDAE2A1AC08A0098889D /* garden.png in Resources */,
-				6EF41D662A1D496C000A15D3 /* green.png in Resources */,
-				6E7964DD29FEC3EC00572AB7 /* cooper-hewitt in Resources */,
-				6E6409642A1C11BD00E82C5A /* launch_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,49 +346,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2AB50CF97E67616B9EC6EBC0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestingAwsUploadTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		741F4D71411EC21345A9D90B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload-TestingAwsUploadUITests/Pods-TestingAwsUpload-TestingAwsUploadUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9CDFFAE2D4A9935159367B1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,49 +368,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC72BC6AF5C4C10BAE4B98AC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C6DD4AF48DEA5F8DF419D037 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestingAwsUpload-TestingAwsUploadUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -534,15 +375,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EEABDA82A1ABD210098889D /* NewPlotView.swift in Sources */,
+				6EEA9D652A3EC853005BE56C /* Experiment.swift in Sources */,
+				6E5B56692A3EA41500692A23 /* DataStore.swift in Sources */,
 				6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */,
 				6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */,
+				6EB527C32A3AD08F00719149 /* SymbolDetail.swift in Sources */,
 				6EEABDAA2A1ABD2F0098889D /* NewImageView.swift in Sources */,
 				6E7964E229FEDB2D00572AB7 /* GridView.swift in Sources */,
-				6EF41D682A1D4C40000A15D3 /* TestIndividualPlot.swift in Sources */,
+				6EB527C22A3AD08F00719149 /* SymbolGrid.swift in Sources */,
 				6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */,
+				6EEA9D632A3EC819005BE56C /* Sample.swift in Sources */,
+				6EB527C72A3ADABC00719149 /* CoverImage.swift in Sources */,
+				6EEA9D672A3FCFC2005BE56C /* Sample.swift in Sources */,
 				6EEABDAC2A1ABD670098889D /* PlotsView.swift in Sources */,
-				6EEABDB02A1BB37D0098889D /* IndividualPlot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,7 +607,6 @@
 		};
 		6E58129D29F4612600FCF7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39857A0082DD981E6914F364 /* Pods-TestingAwsUploadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -782,7 +626,6 @@
 		};
 		6E58129E29F4612600FCF7BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86419C3EE6A4D7630369BA74 /* Pods-TestingAwsUploadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -802,7 +645,6 @@
 		};
 		6E5812A029F4612600FCF7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 156ACD329F7ABDEB063243D8 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -820,7 +662,6 @@
 		};
 		6E5812A129F4612600FCF7BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 172D63061DC5643282782B32 /* Pods-TestingAwsUpload-TestingAwsUploadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -878,84 +719,36 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
+		6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
+			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
 			};
 		};
-		6E7964E529FEE32400572AB7 /* XCRemoteSwiftPackageReference "AmplifyImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kilo-Loco/AmplifyImage.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6E7964C429FE704E00572AB7 /* AWSAPIPlugin */ = {
+		6E3E316B2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSAPIPlugin;
-		};
-		6E7964C629FE704E00572AB7 /* AWSCognitoAuthPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			package = 6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */;
 			productName = AWSCognitoAuthPlugin;
 		};
-		6E7964C829FE704E00572AB7 /* AWSDataStorePlugin */ = {
+		6E3E316D2A2E5CD00012A8B9 /* AWSDataStorePlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			package = 6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */;
 			productName = AWSDataStorePlugin;
 		};
-		6E7964CA29FE704E00572AB7 /* AWSLocationGeoPlugin */ = {
+		6E3E316F2A2E5CD00012A8B9 /* AWSS3StoragePlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSLocationGeoPlugin;
-		};
-		6E7964CC29FE704E00572AB7 /* AWSPinpointAnalyticsPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSPinpointAnalyticsPlugin;
-		};
-		6E7964CE29FE704E00572AB7 /* AWSPinpointPushNotificationsPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSPinpointPushNotificationsPlugin;
-		};
-		6E7964D029FE704E00572AB7 /* AWSPluginsCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSPluginsCore;
-		};
-		6E7964D229FE704E00572AB7 /* AWSPredictionsPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSPredictionsPlugin;
-		};
-		6E7964D429FE704E00572AB7 /* AWSS3StoragePlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			package = 6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */;
 			productName = AWSS3StoragePlugin;
 		};
-		6E7964D629FE704E00572AB7 /* Amplify */ = {
+		6E3E31712A2E5CD00012A8B9 /* Amplify */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			package = 6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */;
 			productName = Amplify;
-		};
-		6E7964D829FE704E00572AB7 /* CoreMLPredictionsPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E7964C329FE704D00572AB7 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = CoreMLPredictionsPlugin;
-		};
-		6E7964E629FEE32400572AB7 /* AmplifyImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E7964E529FEE32400572AB7 /* XCRemoteSwiftPackageReference "AmplifyImage" */;
-			productName = AmplifyImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

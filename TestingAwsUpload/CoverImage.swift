@@ -13,8 +13,12 @@ struct CoverImage : Identifiable, Equatable {
     var name : String
     var cover : Image
 }
+struct Photo: Codable, Identifiable, Equatable {
+    var id = UUID()
+    var name : String
+    var imageData: Data
 
-//struct Symbol : Identifiable, Equatable {
-//    var id = UUID()
-//    var name : String
-//}
+    func getImage(from data: Data) -> UIImage? {
+        return UIImage(data: data)
+    }
+}

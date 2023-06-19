@@ -13,7 +13,9 @@ import AWSS3StoragePlugin
 @main
 struct TestingAwsUploadApp: App {
     init() {
+        print("app is init")
         configureAmplify()
+        
     }
     var body: some Scene {
         WindowGroup {

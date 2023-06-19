@@ -6,9 +6,13 @@
 //Created by Abinaya on 4/30/23.
 
 import SwiftUI
+//import AWSSageMaker
+//import AWSFis
+//import AWSEvidently
 
 struct GridView: View {
-    @State private var individualPlots: [IndividualPlot] = []
+    @State private var experiments: [Experiment] = []
+    @State private var individualPlots: [Sample] = []
     @State private var showAll = false
     let items = Array(1...20) // Replace this with your array of items
 
@@ -22,19 +26,20 @@ struct GridView: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
                         ForEach(individualPlots) { plot in
-                            Image(plot.previewImage)
+                            Image(uiImage: plot.image)
                         }
                     }
                 }
             }
-            NavigationLink {
-                NewPlotView()
-            } label: {
-                Text("Create new plot")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+            NavigationView {
+                NavigationLink(destination: Sample()) {
+                    Text("Create a new plot!")
+                        .navigationTitle("Create a new plot")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
 //            Button(action: createIndividualPlot) {
 //                Image("addNew.png")
@@ -48,10 +53,10 @@ struct GridView: View {
 
     }
     
-    func createIndividualPlot() {
-        let newPlot = IndividualPlot(previewImage: "green.png")
-        individualPlots.append(newPlot)
-    }
+//    func createIndividualPlot() {
+//        let newPlot = Sample(dateSampled: "06/18/2023", notes: "", image: UIImage(imageLiteralResourceName: "green"))
+//        individualPlots.append(newPlot)
+//    }
     
 //        VStack {
 //            if showAll {

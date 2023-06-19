@@ -41,7 +41,6 @@ struct NewImageView: View {
                     ImagePicker(sourceType: .photoLibrary, selectedImage: self.$inputImage)
                 }
             
-            
             Text("Click to select an image of your soils.")
                 .font(.headline)
                 .frame(height: 50)

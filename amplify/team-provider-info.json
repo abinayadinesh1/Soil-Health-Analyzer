@@ -46,6 +46,10 @@
         "S3Triggerd6c29487": {
           "deploymentBucketName": "amplify-abinaya-amptestone-23211-deployment",
           "s3Key": "amplify-builds/S3Triggerd6c29487-6a6c5a4c514152677832-build.zip"
+        },
+        "S3Trigger4bd6ba2a": {
+          "deploymentBucketName": "amplify-abinaya-amptestone-23211-deployment",
+          "s3Key": "amplify-builds/S3Trigger4bd6ba2a-75703444434f4a6c5251-build.zip"
         }
       },
       "storage": {

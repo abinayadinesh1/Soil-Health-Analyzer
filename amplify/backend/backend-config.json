@@ -40,6 +40,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_S3Trigger4bd6ba2a_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger4bd6ba2a"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Trigger4bd6ba2a_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger4bd6ba2a"
+        }
+      ]
+    },
     "AMPLIFY_function_S3Triggerd6c29487_deploymentBucketName": {
       "usedBy": [
         {

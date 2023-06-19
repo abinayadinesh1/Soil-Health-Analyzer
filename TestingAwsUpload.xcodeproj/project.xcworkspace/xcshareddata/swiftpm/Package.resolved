@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "amplify-swift",
+      "identity" : "amplify-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/aws-amplify/amplify-swift",
+      "location" : "https://github.com/aws-amplify/amplify-ios",
       "state" : {
-        "revision" : "758119b568aff5215997217909c68988326d7582",
-        "version" : "2.11.5"
+        "branch" : "main",
+        "revision" : "758119b568aff5215997217909c68988326d7582"
       }
     },
     {
@@ -16,6 +16,15 @@
       "state" : {
         "revision" : "d4fd3c17e8d40efc821f448d3d6cff75b8f3b0dd",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "amplifyimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Kilo-Loco/AmplifyImage.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "41030d938f277fef95ef8b739c6689a6f171ea52"
       }
     },
     {
@@ -43,6 +52,15 @@
       "state" : {
         "revision" : "24bae88a2391fe75da8a940a544d1ef6441f5321",
         "version" : "0.13.0"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e8625b80c413457b13ea9be75d07f6e9f5830c19"
       }
     },
     {
