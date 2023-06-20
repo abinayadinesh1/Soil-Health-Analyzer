@@ -22,53 +22,43 @@ import SwiftUI
 struct GridView: View {
     @State private var experiments: [Experiment] = []
     @State private var individualPlots: [Sample] = []
+    @State var updatedIndividualPlots: [Sample] //cant be private
     @State private var showAll = false
-    let items = Array(1...20) // Replace this with your array of items
+    var items = Array(1...20) // Replace this with your array of items
 
     var body: some View {
-        VStack {
-            Text("Your Experiments").font(.largeTitle).padding(.top)
-            
-            if individualPlots.isEmpty {
-                Text("No individual plots created")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .padding()
-            } else {
-                ScrollView {
-                    LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
-                        ForEach(individualPlots) { plot in
-                            Image(uiImage: plot.image)
+        NavigationView{
+            ScrollView{
+            VStack {
+                Text("Your Experiments").font(.largeTitle).padding(.top)
+                if individualPlots.isEmpty && updatedIndividualPlots.isEmpty{
+                    Text("No individual plots created")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .padding()
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
+                            ForEach(individualPlots) { plot in
+                                Image(uiImage: plot.image)
+                            }
                         }
                     }
                 }
-            }
-            NavigationView{
-                NavigationLink("Create a new plot", destination: Sample())
+                Text("Where is this?")
+                NavigationLink("Create a new plot", destination: Sample(updatedIndividualPlots: $updatedIndividualPlots))
                     .navigationBarTitleDisplayMode(.inline)
-                                        .padding()
-                                        .background(Color.blue)
-                                        .foregroundColor(.white)
-                                        .cornerRadius(10)
-                                        .font(.system(size: 20, weight: .medium, design: .rounded))
-            }
-
-//            Button(action: createIndividualPlot) {
-//                Image("addNew.png")
-//                 Text("Create new plot")
-//                     .padding()
-//                     .background(Color.blue)
-//                     .foregroundColor(.white)
-//                     .cornerRadius(10)
-//             }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .font(.system(size: 20, weight: .medium, design: .rounded)).navigationBarHidden(true)
+                
+            }.navigationBarHidden(true).navigationBarTitleDisplayMode(.inline).navigationBarTitle("")
         }
+        }.navigationBarHidden(true).navigationBarTitleDisplayMode(.inline).navigationBarTitle("")
 
     }
-    
-//    func createIndividualPlot() {
-//        let newPlot = Sample(dateSampled: "06/18/2023", notes: "", image: UIImage(imageLiteralResourceName: "green"))
-//        individualPlots.append(newPlot)
-//    }
     
 //        VStack {
 //            if showAll {

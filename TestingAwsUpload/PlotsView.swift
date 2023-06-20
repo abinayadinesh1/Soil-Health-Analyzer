@@ -19,7 +19,7 @@ struct PlotsView: View {
             Image("pos_logo_2").resizable().scaledToFill()
                 .frame(width: 100, height: 100)
             Text("Your Plots").foregroundColor(.green).font(.largeTitle)
-            GridView()
+            GridView(updatedIndividualPlots: []) //must grab individual plots from persistent data somehow
 //            GridView(columns: columns, showAll: showAll)
 
         }
