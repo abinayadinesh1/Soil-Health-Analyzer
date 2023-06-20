@@ -20,15 +20,12 @@ struct Sample: View, Identifiable {
     @State var dateSampled: String = "MM-DD-YYYY"
     @State var notes: String = "Found some spider mites on the plants, cleaned with diluted dish soap and praying they wont come back "
     @State var image: UIImage = UIImage(imageLiteralResourceName: "green")
-    @Binding var updatedIndividualPlots: [Sample]
+//    @Binding var individualPlotsValueFromParent: [Sample] //DO I NEED TO RESTATE AS BINDING? DEFINED IN PARENT CLASS ALREADY!
+    @Binding var valFromParent : Int
     @State var showingImagePicker = false
     var id: UUID = UUID()
     var imageKey: String = "test-image"
     var body: some View {
-        ZStack{
-            NavigationLink(destination: GridView(updatedIndividualPlots: updatedIndividualPlots), isActive: $navigate){
-                                EmptyView()
-            }
         VStack {
             HStack {
                 Text("Date Sampled: ")
@@ -63,20 +60,18 @@ struct Sample: View, Identifiable {
 //            Button("Upload", action: uploadImageButton)
 //            Button("List All", action: listAllButton) //user doesnt need this
             Button("Save Sample", action: createIndividualPlot).alert(isPresented: $presentAlert) {
-                Alert(title: Text("Saved"), message: Text("Go back to main screen"), primaryButton: .default(Text("Main!")) {
-                    navigate.toggle()
-                }, secondaryButton: .cancel(Text("Cancel")))
-                
+                Alert(title: Text("Saved"), message: Text("Click 'Back' to return to the main screen."))
             }
-            
         }.padding()
     }
-    }
     func createIndividualPlot() {
-        uploadImageButton()
-        let newPlot = Sample(dateSampled: dateSampled, notes: notes, image: image, updatedIndividualPlots: $updatedIndividualPlots) //saves the old state of the plots
-        updatedIndividualPlots.append(newPlot) //updates the state to accept the newly made plot
+//        uploadImageButton()
+        self.valFromParent += 1
         presentAlert = true
+//        let newPlot = Sample(dateSampled: dateSampled, notes: notes, image: image, individualPlots: $individualPlots) //saves the old state of the plots
+//        self.individualPlots.append(newPlot) //updates the state to accept the newly made plot
+//        presentAlert = true
+//        print("full list of individualPlots", self.individualPlots)
             }
         func getDate() {
             let currDate = Date()
@@ -146,34 +141,6 @@ struct Sample: View, Identifiable {
                 print(error)
             }
         }
-        //used for getting images back from aws; if we wanted to render a grid, we could list all and for every image get it (from the image key) and the associated info from the persisted state.
-    //    func downloadImageButton() {
-    //        Task {
-    //            do {
-    //                try await downloadImage()
-    //            }
-    //            catch {
-    //                print(error)
-    //            }
-    //        }
-    //    }
-    //    func downloadImage() async{
-    //        let downloadTask = Amplify.Storage.downloadData(key: imageKey)
-    //        Task {
-    //            for await progress in await downloadTask.progress {
-    //                print("Progress: \(progress)")
-    //            }
-    //        }
-    //
-    //        do {
-    //            let data = try await downloadTask.value
-    //            print("Completed: \(data)")
-    //        } catch {
-    //            //handle error
-    //            print(error)
-    //        }
-    //
-    //    }
     }
 //dateSampled: String, notes: String, image: UIImage, updatedIndividualPlots: [Sample]
 
@@ -188,4 +155,35 @@ struct Sample: View, Identifiable {
 //                Text("Back to Your Plots")
 //            }
 //        } do {}
+//    }
+
+
+
+//used for getting images back from aws; if we wanted to render a grid, we could list all and for every image get it (from the image key) and the associated info from the persisted state.
+//    func downloadImageButton() {
+//        Task {
+//            do {
+//                try await downloadImage()
+//            }
+//            catch {
+//                print(error)
+//            }
+//        }
+//    }
+//    func downloadImage() async{
+//        let downloadTask = Amplify.Storage.downloadData(key: imageKey)
+//        Task {
+//            for await progress in await downloadTask.progress {
+//                print("Progress: \(progress)")
+//            }
+//        }
+//
+//        do {
+//            let data = try await downloadTask.value
+//            print("Completed: \(data)")
+//        } catch {
+//            //handle error
+//            print(error)
+//        }
+//
 //    }
