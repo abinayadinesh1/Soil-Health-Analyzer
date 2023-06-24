@@ -6,22 +6,16 @@
 // be able to make a new example
 
 //sample: when upload a picture, needs to be sent to aws so we can do processing on that image
-
-
-
-
-//
-//GridView.swift
-//TestingAwsUpload
-//
-//Created by Abinaya on 4/30/23.
-
 import SwiftUI
 
 
 struct GridView: View {
     @State private var experiments: [Experiment] = []
-//    @State private var individualPlots: [Sample] = [Sample(dateSampled: "05/4/23", notes: "no notes", image: UIImage(imageLiteralResourceName: "green")), Sample(dateSampled: "12/4/23", notes: "BIGN NOTES", image: UIImage(imageLiteralResourceName: "hb0")), Sample(dateSampled: "09/4/29", notes: "TINY NOTES", image: UIImage(imageLiteralResourceName: "hb1"))] //retrieved from some sort of persistent data
+    @State private var individualPlots: [Sample] = [
+//        Sample(dateSampled: "05/4/23", notes: "no notes", image: UIImage(imageLiteralResourceName: "green")),
+//        Sample(dateSampled: "12/4/23", notes: "BIGN NOTES", image: UIImage(imageLiteralResourceName: "hb0")),
+//        Sample(dateSampled: "09/4/29", notes: "TINY NOTES", image: UIImage(imageLiteralResourceName: "hb1"))
+    ] //retrieved from some sort of persistent data
     @State var currentValue: Int = 0
     @State private var showAll = false
     var items = Array(1...20) // Replace this with your array of items
@@ -32,23 +26,28 @@ struct GridView: View {
                 VStack {
                     Text("Your Experiments").font(.largeTitle).padding(.top)
                     Text("\(currentValue)")
-//                    if individualPlots.isEmpty {
-//                        Text("No individual plots created")
-//                            .font(.subheadline)
-//                            .foregroundColor(.gray)
-//                            .padding()
-//                    } else { //this is the case where the user has added samples, so now updatedIndividualPlots is bigger
-//                        ScrollView {
-//                            LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
-//                                ForEach(individualPlots) { plot in
-//                                    Image(uiImage: plot.image) //needs to be a navigation link
-//                                }
-//                            }
-//                        }
-//                    }
+                    if individualPlots.isEmpty {
+                        Text("No individual plots created")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .padding()
+                    } else { //this is the case where the user has added samples, so now updatedIndividualPlots is bigger
+                        ScrollView {
+                            LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
+                                Text("Click on any sample to get the color analysis at that time of this plot.")
+                                ForEach(individualPlots) { plot in
+                                    NavigationLink(destination: SampleView(plotsToBeUpdated: $individualPlots, valFromParent: $currentValue)){
+                                        Text(plot.dateSampled)
+                                        Image(uiImage: plot.image).frame(width: 100, height: 200, alignment: .center) //needs to be a navigation link
+                                        Text(plot.notes)
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 Text("Where is this?")
-                NavigationLink("Create a new plot", destination: Sample(valFromParent: $currentValue))
+                NavigationLink("Create a new plot", destination: Sample())
                     .navigationBarTitleDisplayMode(.inline)
                     .padding()
                     .background(Color.blue)

@@ -19,9 +19,9 @@
 		25676A290499E62603765AEAD19365CD /* Pods-TestingAwsUpload.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestingAwsUpload.modulemap"; sourceTree = "<group>"; };
 		680E219052947F8E527AEEB3E49B2CC3 /* Pods-TestingAwsUpload-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestingAwsUpload-dummy.m"; sourceTree = "<group>"; };
 		6B82D16D27A2D8F3AAE859E36F6862E7 /* Pods-TestingAwsUpload-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestingAwsUpload-Info.plist"; sourceTree = "<group>"; };
-		70E1B3604FD6E718512BEEF3678CCFA4 /* Pods-TestingAwsUpload */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TestingAwsUpload"; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E1B3604FD6E718512BEEF3678CCFA4 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F2EF8095C7E07926308B18C9A290DE49 /* Pods-TestingAwsUpload-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestingAwsUpload-umbrella.h"; sourceTree = "<group>"; };
 		F60DECD70BBB08A58DD8063F54E0F494 /* Pods-TestingAwsUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestingAwsUpload.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,7 +49,7 @@
 		4D7C33A666CF55B478754CA2FFFF52EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70E1B3604FD6E718512BEEF3678CCFA4 /* Pods-TestingAwsUpload */,
+				70E1B3604FD6E718512BEEF3678CCFA4 /* Pods_TestingAwsUpload.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			);
 			name = "Pods-TestingAwsUpload";
 			productName = Pods_TestingAwsUpload;
-			productReference = 70E1B3604FD6E718512BEEF3678CCFA4 /* Pods-TestingAwsUpload */;
+			productReference = 70E1B3604FD6E718512BEEF3678CCFA4 /* Pods_TestingAwsUpload.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
