@@ -16,6 +16,7 @@ struct GridView: View {
 //        Sample(dateSampled: "12/4/23", notes: "BIGN NOTES", image: UIImage(imageLiteralResourceName: "hb0")),
 //        Sample(dateSampled: "09/4/29", notes: "TINY NOTES", image: UIImage(imageLiteralResourceName: "hb1"))
     ] //retrieved from some sort of persistent data
+    let range: Range = 0..<10
     @State var currentValue: Int = 0
     @State private var showAll = false
     var items = Array(1...20) // Replace this with your array of items
@@ -36,18 +37,24 @@ struct GridView: View {
                             LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
                                 Text("Click on any sample to get the color analysis at that time of this plot.")
                                 ForEach(individualPlots) { plot in
-                                    NavigationLink(destination: SampleView(plotsToBeUpdated: $individualPlots, valFromParent: $currentValue)){
+                                    VStack {
                                         Text(plot.dateSampled)
-                                        Image(uiImage: plot.image).frame(width: 100, height: 200, alignment: .center) //needs to be a navigation link
-                                        Text(plot.notes)
-                                    }
+                                        NavigationLink(destination: ViewSample(sample: plot)){
+                                            Image(uiImage: plot.image)
+                                                .frame(width: 100, height: 100, alignment: .center) //needs to be a navigation link
+                                        }                    .navigationBarTitleDisplayMode(.inline)
+                                            .padding()
+                                            .foregroundColor(.white)
+                                            .cornerRadius(10)
+                                            .font(.system(size: 20, weight: .medium, design: .rounded)).navigationBarHidden(true)
+                                        Text(plot.notes.prefix(10))
+                                    }.frame(width: 100, height: 100, alignment: .center)
                                 }
                             }
                         }
                     }
                 }
-                Text("Where is this?")
-                NavigationLink("Create a new plot", destination: Sample())
+                NavigationLink("Create a new plot", destination: SampleView(plotsToBeUpdated: $individualPlots, valFromParent: $currentValue, sample: Sample()))
                     .navigationBarTitleDisplayMode(.inline)
                     .padding()
                     .background(Color.blue)

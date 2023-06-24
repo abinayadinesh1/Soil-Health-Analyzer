@@ -17,19 +17,19 @@ import AWSPluginsCore
 struct SampleView: View {
     @Binding var plotsToBeUpdated: [Sample]
     @Binding var valFromParent : Int
+    @State var sample : Sample
     @State var presentAlert: Bool = false
-    @State var sample = Sample()
     @State var showingImagePicker = false
     var imageKey: String = "test-image"
     var body: some View {
         VStack {
             HStack {
                 Text("Date Sampled: ")
-                TextField("\(sample.dateSampled)", text: $sample.dateSampled, prompt: Text("Date Image Taken")).font(.title2).onAppear(perform: getDate).foregroundColor(.red)
+                TextField("", text: $sample.dateSampled, prompt: Text("Date Image Taken")).font(.title2).onAppear(perform: getDate).foregroundColor(.red)
             }
             HStack {
                 Text("Additional Notes: ")
-                TextField(" ", text: $sample.notes, prompt: Text("Additional Notes")).font(.title2).multilineTextAlignment(.center)
+                TextField(" ", text:  $sample.notes, prompt: Text("Additional Notes")).font(.title2).multilineTextAlignment(.center)
             }
             
             Image(uiImage: sample.image)
@@ -41,7 +41,7 @@ struct SampleView: View {
                 .clipShape(Rectangle())
                 .padding(.top, 10)
                 .sheet(isPresented: $showingImagePicker) {
-                    ImagePicker(sourceType: .photoLibrary, selectedImage: $sample.image)
+                    ImagePicker(sourceType: .photoLibrary, selectedImage:  $sample.image)
                 }
             
             Text("Click to select an image of your plot.")
@@ -73,7 +73,7 @@ struct SampleView: View {
             let currDate = Date()
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM-dd-yyyy"
-            sample.dateSampled = dateFormatter.string(from: currDate)
+            self.sample.dateSampled = dateFormatter.string(from: currDate)
         }
 //        func uploadImage() async{
 //            let randomInt = Int.random(in: 1..<900000)
