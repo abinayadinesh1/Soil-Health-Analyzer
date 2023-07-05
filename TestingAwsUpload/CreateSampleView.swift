@@ -1,5 +1,5 @@
 //
-//  SampleView.swift
+//  CreateSampleView.swift
 //  TestingAwsUpload
 //
 //  Created by Abinaya on 6/23/23.
@@ -14,7 +14,7 @@ import AWSDataStorePlugin
 import AWSS3StoragePlugin
 import AWSPluginsCore
 
-struct SampleView: View {
+struct CreateSampleView: View {
     @Binding var plotsToBeUpdated: [Sample]
     @Binding var valFromParent : Int
     @State var sample : Sample

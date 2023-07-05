@@ -25,8 +25,10 @@ struct GridView: View {
         NavigationView{
             ScrollView{
                 VStack {
+                    Image("pos_logo_2").resizable().scaledToFill()
+                        .frame(width: 100, height: 100)
                     Text("Your Experiments").font(.largeTitle).padding(.top)
-                    Text("\(currentValue)")
+                    Text("\(currentValue)") //FOR TESTING IF MAKING A NEW EXPERIMENT UPDATES THE VIEW, CAN BE DELETED
                     if individualPlots.isEmpty {
                         Text("No individual plots created")
                             .font(.subheadline)
@@ -54,7 +56,7 @@ struct GridView: View {
                         }
                     }
                 }
-                NavigationLink("Create a new plot", destination: SampleView(plotsToBeUpdated: $individualPlots, valFromParent: $currentValue, sample: Sample()))
+                NavigationLink("Create a new plot", destination: CreateSampleView(plotsToBeUpdated: $individualPlots, valFromParent: $currentValue, sample: Sample()))
                     .navigationBarTitleDisplayMode(.inline)
                     .padding()
                     .background(Color.blue)
