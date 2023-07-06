@@ -10,7 +10,7 @@ import Amplify
 struct ContentView: View {
     var inputImage : UIImage = UIImage(named: "garden")!
     var body: some View {
-        GridView()
+        ExperimentsView()
         //        Image("pos_logo_2")
         //            .resizable()
         //            .scaledToFit()
@@ -24,7 +24,7 @@ struct ContentView: View {
         //        }
         
 //        TabView(){
-//            GridView().tabItem{
+//            ExperimentsView().tabItem{
 //                Image(systemName: "camera.viewfinder")
 //                Text("gridview")
 //            }

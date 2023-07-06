@@ -146,7 +146,7 @@ struct SampleView: View {
 //        VStack {
 //            Text("Saved")
 //            NavigationLink {
-//                GridView(updatedIndividualPlots: updatedIndividualPlots)
+//                ExperimentsView(updatedIndividualPlots: updatedIndividualPlots)
 //            } label: {
 //                Text("Back to Your Plots")
 //            }

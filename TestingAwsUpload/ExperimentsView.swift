@@ -9,8 +9,10 @@
 import SwiftUI
 
 
-struct GridView: View {
-    @State private var experiments: [Experiment] = []
+struct ExperimentsView: View {
+    @State private var experiments: [Experiment] = [
+        Experiment(id: UUID(), name: "Hello World", plots: [])
+    ]
     @State private var individualPlots: [Sample] = [
 //        Sample(dateSampled: "05/4/23", notes: "no notes", image: UIImage(imageLiteralResourceName: "green")),
 //        Sample(dateSampled: "12/4/23", notes: "BIGN NOTES", image: UIImage(imageLiteralResourceName: "hb0")),
@@ -23,45 +25,76 @@ struct GridView: View {
     
     var body: some View {
         NavigationView{
-            ScrollView{
-                VStack {
-                    Text("Your Experiments").font(.largeTitle).padding(.top)
-                    Text("\(currentValue)")
-                    if individualPlots.isEmpty {
-                        Text("No individual plots created")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                            .padding()
-                    } else { //this is the case where the user has added samples, so now updatedIndividualPlots is bigger
-                        ScrollView {
-                            LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
-                                Text("Click on any sample to get the color analysis at that time of this plot.")
-                                ForEach(individualPlots) { plot in
-                                    VStack {
-                                        Text(plot.dateSampled)
-                                        NavigationLink(destination: ViewSample(sample: plot)){
-                                            Image(uiImage: plot.image)
-                                                .frame(width: 100, height: 100, alignment: .center) //needs to be a navigation link
-                                        }                    .navigationBarTitleDisplayMode(.inline)
-                                            .padding()
-                                            .foregroundColor(.white)
-                                            .cornerRadius(10)
-                                            .font(.system(size: 20, weight: .medium, design: .rounded)).navigationBarHidden(true)
-                                        Text(plot.notes.prefix(10))
-                                    }.frame(width: 100, height: 100, alignment: .center)
+//            ScrollView{
+//                VStack {
+//                    Text("\(currentValue)")
+//                    if individualPlots.isEmpty {
+//                        Text("No individual plots created")
+//                            .font(.subheadline)
+//                            .foregroundColor(.gray)
+//                            .padding()
+//                    } else { //this is the case where the user has added samples, so now updatedIndividualPlots is bigger
+//                        ScrollView {
+//                            LazyVGrid(columns: [GridItem(.flexible())], spacing: 10) {
+//                                Text("Click on any sample to get the color analysis at that time of this plot.")
+//                                ForEach(individualPlots) { plot in
+//                                    VStack {
+//                                        Text(plot.dateSampled)
+//                                        NavigationLink(destination: ViewSample(sample: plot)){
+//                                            Image(uiImage: plot.image)
+//                                                .frame(width: 100, height: 100, alignment: .center) //needs to be a navigation link
+//                                        }                    .navigationBarTitleDisplayMode(.inline)
+//                                            .padding()
+//                                            .foregroundColor(.white)
+//                                            .cornerRadius(10)
+//                                            .font(.system(size: 20, weight: .medium, design: .rounded)).navigationBarHidden(true)
+//                                        Text(plot.notes.prefix(10))
+//                                    }.frame(width: 100, height: 100, alignment: .center)
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//                NavigationLink("Create a new plot", destination: SampleView(plotsToBeUpdated: $individualPlots, valFromParent: $currentValue, sample: Sample()))
+//                    .navigationBarTitleDisplayMode(.inline)
+//                    .padding()
+//                    .background(Color.blue)
+//                    .foregroundColor(.white)
+//                    .cornerRadius(10)
+//                    .font(.system(size: 20, weight: .medium, design: .rounded)).navigationBarHidden(true)
+//            }
+            VStack {
+                if experiments.isEmpty {
+                    Text("No Experiments Available")
+                        .emptyTextStyle()
+                } else {
+                    List {
+                        ForEach(experiments) { experiment in
+                            NavigationLink(destination: ExperimentDetailView(experiment: experiment)) {
+                                VStack {
+                                    Text(experiment.name)
+                                        .font(.title2)
+                                        .bold()
                                 }
+                                .frame(height: 50)
                             }
                         }
                     }
                 }
-                NavigationLink("Create a new plot", destination: SampleView(plotsToBeUpdated: $individualPlots, valFromParent: $currentValue, sample: Sample()))
-                    .navigationBarTitleDisplayMode(.inline)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .font(.system(size: 20, weight: .medium, design: .rounded)).navigationBarHidden(true)
-            }.navigationBarHidden(true).navigationBarTitleDisplayMode(.inline).navigationBarTitle("")
+            }
+            
+            .navigationBarTitle("My Experiments")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "plus")
+                            .foregroundColor(.green)
+                    }
+                }
+            }
         }
     }
     //        .onAppear(updateList(individualPlots: $individualPlots))
@@ -71,8 +104,8 @@ struct GridView: View {
     //        let newPlot2 = Sample(dateSampled: "12/4/23", notes: "BIGN NOTES", image: UIImage(imageLiteralResourceName: "hb0"))
     //        let newPlot3 = Sample(dateSampled: "09/4/29", notes: "TINY NOTES", image: UIImage(imageLiteralResourceName: "hb1"))
     //        individualPlots.append(newPlot1)
-    //    //    GridView.individualPlots.append(newPlot2)
-    //    //    GridView.individualPlots.append(newPlot3)
+    //    //    ExperimentsView.individualPlots.append(newPlot2)
+    //    //    ExperimentsView.individualPlots.append(newPlot3)
     //    }
     //    }
     
