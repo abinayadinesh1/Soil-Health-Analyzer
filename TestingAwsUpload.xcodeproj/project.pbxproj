@@ -27,15 +27,15 @@
 		6EB527C22A3AD08F00719149 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB527C02A3AD08C00719149 /* SymbolGrid.swift */; };
 		6EB527C32A3AD08F00719149 /* SymbolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB527C12A3AD08E00719149 /* SymbolDetail.swift */; };
 		6EB527C72A3ADABC00719149 /* CoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB527C62A3ADABB00719149 /* CoverImage.swift */; };
-		6EEA9D632A3EC819005BE56C /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D622A3EC819005BE56C /* Sample.swift */; };
-		6EEA9D652A3EC853005BE56C /* ExperimentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D642A3EC853005BE56C /* ExperimentDetailView.swift */; };
+		6EEA9D652A3EC853005BE56C /* ExperimentPlotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D642A3EC853005BE56C /* ExperimentPlotsView.swift */; };
 		6EEA9D672A3FCFC2005BE56C /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D662A3FCFC2005BE56C /* Sample.swift */; };
-		6EEABDAC2A1ABD670098889D /* PlotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEABDAB2A1ABD670098889D /* PlotsView.swift */; };
 		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 		E8288D0A2A4FE006007DE955 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = E8288D092A4FE004007DE955 /* awsconfiguration.json */; };
 		E8288D102A50EB5B007DE955 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8288D0F2A50EB5B007DE955 /* Experiment.swift */; };
 		E8288D122A50EB75007DE955 /* IndividualPlotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8288D112A50EB75007DE955 /* IndividualPlotData.swift */; };
 		E8288D142A50EBC0007DE955 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8288D132A50EBC0007DE955 /* View+Ext.swift */; };
+		E8CCF4A52A5A06D2009ADD08 /* PlotDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCF4A42A5A06D2009ADD08 /* PlotDetailView.swift */; };
+		E8CCF4A72A5A19CE009ADD08 /* Wiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCF4A62A5A19CE009ADD08 /* Wiggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,10 +62,8 @@
 		6EB527C02A3AD08C00719149 /* SymbolGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
 		6EB527C12A3AD08E00719149 /* SymbolDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolDetail.swift; sourceTree = "<group>"; };
 		6EB527C62A3ADABB00719149 /* CoverImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverImage.swift; sourceTree = "<group>"; };
-		6EEA9D622A3EC819005BE56C /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
-		6EEA9D642A3EC853005BE56C /* ExperimentDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExperimentDetailView.swift; path = TestingAwsUpload/ExperimentDetailView.swift; sourceTree = SOURCE_ROOT; };
+		6EEA9D642A3EC853005BE56C /* ExperimentPlotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExperimentPlotsView.swift; path = TestingAwsUpload/ExperimentPlotsView.swift; sourceTree = SOURCE_ROOT; };
 		6EEA9D662A3FCFC2005BE56C /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
-		6EEABDAB2A1ABD670098889D /* PlotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotsView.swift; sourceTree = "<group>"; };
 		776407C1FF7B1F9DA05D05ED /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAwsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D851EF2F0A08CF90F833A5B /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		E8288D0F2A50EB5B007DE955 /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		E8288D112A50EB75007DE955 /* IndividualPlotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualPlotData.swift; sourceTree = "<group>"; };
 		E8288D132A50EBC0007DE955 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		E8CCF4A42A5A06D2009ADD08 /* PlotDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotDetailView.swift; sourceTree = "<group>"; };
+		E8CCF4A62A5A19CE009ADD08 /* Wiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wiggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,19 +138,17 @@
 				6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */,
 				6E58127A29F4612300FCF7BA /* ContentView.swift */,
 				6E58127C29F4612600FCF7BA /* Assets.xcassets */,
-				6EEA9D662A3FCFC2005BE56C /* Sample.swift */,
-				6EEA9D642A3EC853005BE56C /* ExperimentDetailView.swift */,
+				6EEA9D642A3EC853005BE56C /* ExperimentPlotsView.swift */,
 				6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */,
 				6E7964E129FEDB2C00572AB7 /* ExperimentsView.swift */,
-				6EEABDAB2A1ABD670098889D /* PlotsView.swift */,
+				E8CCF4A42A5A06D2009ADD08 /* PlotDetailView.swift */,
 				6EB527C12A3AD08E00719149 /* SymbolDetail.swift */,
 				6EB527C02A3AD08C00719149 /* SymbolGrid.swift */,
 				6E6409612A1C0ECF00E82C5A /* LaunchScreen.storyboard */,
-				6E5B56682A3EA41500692A23 /* DataStore.swift */,
-				6EEA9D622A3EC819005BE56C /* Sample.swift */,
 				6E90482F2A46652D0055AEBE /* SampleView.swift */,
 				6E9048312A466CF90055AEBE /* ViewSample.swift */,
 				E8288D132A50EBC0007DE955 /* View+Ext.swift */,
+				E8CCF4A62A5A19CE009ADD08 /* Wiggle.swift */,
 			);
 			path = TestingAwsUpload;
 			sourceTree = "<group>";
@@ -202,7 +200,9 @@
 		E8288D0E2A50E857007DE955 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6E5B56682A3EA41500692A23 /* DataStore.swift */,
 				6EB527C62A3ADABB00719149 /* CoverImage.swift */,
+				6EEA9D662A3FCFC2005BE56C /* Sample.swift */,
 				E8288D0F2A50EB5B007DE955 /* Experiment.swift */,
 				E8288D112A50EB75007DE955 /* IndividualPlotData.swift */,
 			);
@@ -376,7 +376,7 @@
 			files = (
 				E8288D142A50EBC0007DE955 /* View+Ext.swift in Sources */,
 				E8288D102A50EB5B007DE955 /* Experiment.swift in Sources */,
-				6EEA9D652A3EC853005BE56C /* ExperimentDetailView.swift in Sources */,
+				6EEA9D652A3EC853005BE56C /* ExperimentPlotsView.swift in Sources */,
 				6E5B56692A3EA41500692A23 /* DataStore.swift in Sources */,
 				6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */,
 				6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */,
@@ -386,11 +386,11 @@
 				6E9048322A466CF90055AEBE /* ViewSample.swift in Sources */,
 				6EB527C22A3AD08F00719149 /* SymbolGrid.swift in Sources */,
 				6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */,
-				6EEA9D632A3EC819005BE56C /* Sample.swift in Sources */,
+				E8CCF4A52A5A06D2009ADD08 /* PlotDetailView.swift in Sources */,
+				E8CCF4A72A5A19CE009ADD08 /* Wiggle.swift in Sources */,
 				6EB527C72A3ADABC00719149 /* CoverImage.swift in Sources */,
 				6E9048302A46652D0055AEBE /* SampleView.swift in Sources */,
 				6EEA9D672A3FCFC2005BE56C /* Sample.swift in Sources */,
-				6EEABDAC2A1ABD670098889D /* PlotsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

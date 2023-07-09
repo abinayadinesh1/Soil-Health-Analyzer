@@ -40,9 +40,9 @@ struct SampleView: View {
                 .aspectRatio(contentMode: .fill)
                 .clipShape(Rectangle())
                 .padding(.top, 10)
-                .sheet(isPresented: $showingImagePicker) {
-                    ImagePicker(sourceType: .photoLibrary, selectedImage:  $sample.image)
-                }
+//                .sheet(isPresented: $showingImagePicker) {
+//                    ImagePicker(selectedImage:  $sample.image)
+//                }
             
             Text("Click to select an image of your plot.")
                 .background(Color.blue)

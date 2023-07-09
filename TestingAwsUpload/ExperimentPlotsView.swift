@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct ExperimentDetailView: View {
+struct ExperimentPlotsView: View {
     @State var experiment: Experiment
     @State private var showAddPlotSheet = false
+    @State private var isEditing = false
     
     private let columns = [
         GridItem(.flexible()),
@@ -26,19 +27,10 @@ struct ExperimentDetailView: View {
             } else {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 10) {
-                        ForEach(experiment.plots, id: \.self) { plot in
-                            VStack {
-                                Image(systemName: "photo")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .font(.system(size: 30))
-                                    .foregroundColor(.red.opacity(0.35))
-                                Text(plot.plotTitle)
-                                    .bold()
+                        ForEach(experiment.plots) { plot in
+                            NavigationLink(destination: PlotDetailView(plot: plot)) {
+                                PlotView(isEditing: $isEditing, plot: plot)
                             }
-                            .padding()
-                            .background(.red.opacity(0.1))
-                            .cornerRadius(10)
                         }
                     }
                 }
@@ -49,10 +41,17 @@ struct ExperimentDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
-                Button(action: {}) {
-                    Text("Edit")
-                        .foregroundColor(.green)
+                if !experiment.plots.isEmpty {
+                    Button(action: {
+                        withAnimation {
+                            isEditing.toggle()
+                        }
+                    }) {
+                        Text(isEditing ? "Done" : "Edit")
+                            .foregroundColor(.green)
+                    }
                 }
+                
                 Button(action: {
                     showAddPlotSheet.toggle()
                 }) {
@@ -67,6 +66,43 @@ struct ExperimentDetailView: View {
     }
 }
 
+//MARK: - PlotView
+struct PlotView: View {
+    @Binding var isEditing: Bool
+    var plot: IndividualPlotData
+    
+    var body: some View {
+        VStack {
+            if isEditing {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        //TODO: Delete Plot Here via AWS
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.system(size: 25))
+                            .foregroundColor(.red)
+                    }
+                    .offset(x: 10, y: -7)
+                    .wiggling()
+                }
+                .frame(height: 20)
+            }
+            Image(systemName: "photo")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100, height: 100)
+                .foregroundColor(.red.opacity(0.35))
+            Text(plot.plotTitle)
+                .foregroundColor(.red)
+                .bold()
+        }
+        .padding()
+        .background(.red.opacity(0.1))
+        .cornerRadius(10)
+    }
+}
+
 //MARK: - AddPlotView
 struct AddPlotView: View {
     @Binding var experiment: Experiment
@@ -78,12 +114,12 @@ struct AddPlotView: View {
     @State private var newSelectedUpdateCadence: String = "Daily"
     @State private var showAlert: Bool = false
     @State private var samples: [Sample] = []
-    
+
     var previewImage: String = ""
     let wateringOptions = ["Daily", "Weekly", "Monthly", "Custom"]
     let irrigationOptions = ["Drip", "Furrow", "Flood", "Sprinkler", "Custom"]
     let updateCadenceOptions = ["Daily","Every 3 Hours", "Every 6 Hours", "Every 2 Days", "Every 3 Days"]
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -108,7 +144,7 @@ struct AddPlotView: View {
                         .tint(.green)
                         .pickerStyle(.menu)
                     }
-                    
+
                     HStack {
                         Text("Irrigation Type: ")
                             .bold()
@@ -121,7 +157,7 @@ struct AddPlotView: View {
                         .tint(.green)
                         .pickerStyle(.menu)
                     }
-                    
+
                     HStack {
                         Text("Pictures Updated: ")
                             .bold()
@@ -137,7 +173,7 @@ struct AddPlotView: View {
 
                     Image(previewImage).resizable().scaledToFill()
                         .frame(width: 150, height: 150)
-                    
+
                     addButton
                 }
                 .padding()
@@ -150,18 +186,18 @@ struct AddPlotView: View {
                         dismiss()
                     }) {
                         Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 20))
+                            .font(.system(size: 25))
                             .foregroundColor(Color(uiColor: .lightGray))
                     }
                 }
             }
         }
     }
-    
+
     func convertPlotToData() -> IndividualPlotData {
-        return IndividualPlotData(plotTitle: newPlotTitle, plotDescription: newPlotDescription, selectedWateringSchedule: newSelectedWateringSchedule, selectedIrrigationType: newSelectedIrrigationType, selectedUpdateCadence: newSelectedUpdateCadence, id: UUID(), previewImage: previewImage)
+        return IndividualPlotData(plotTitle: newPlotTitle, plotDescription: newPlotDescription, selectedWateringSchedule: newSelectedWateringSchedule, selectedIrrigationType: newSelectedIrrigationType, selectedUpdateCadence: newSelectedUpdateCadence, samples: [], id: UUID(), previewImage: previewImage)
     }
-    
+
     private var addButton: some View {
        Button(action: {
            experiment.plots.append(convertPlotToData())
@@ -181,11 +217,11 @@ struct AddPlotView: View {
    }
 }
 
-//MARK: - TextFieldHeaderView 
+//MARK: - TextFieldHeaderView
 struct TextFieldHeaderView: View {
     var header: String
     @Binding var text: String
-    
+
     var body: some View {
         VStack {
             Text(header)
