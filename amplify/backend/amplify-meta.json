@@ -1,0 +1,133 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-abinaya-amptestone-23211-authRole",
+      "UnauthRoleArn": "arn:aws:iam::193642950242:role/amplify-abinaya-amptestone-23211-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::193642950242:role/amplify-abinaya-amptestone-23211-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-abinaya-amptestone-23211-deployment",
+      "UnauthRoleName": "amplify-abinaya-amptestone-23211-unauthRole",
+      "StackName": "amplify-abinaya-amptestone-23211",
+      "StackId": "arn:aws:cloudformation:us-east-1:193642950242:stack/amplify-abinaya-amptestone-23211/e39af990-e739-11ed-aa79-0aa56d806a69",
+      "AmplifyAppId": "dc72vta8zq1sj"
+    }
+  },
+  "auth": {
+    "abinayafa1ea4b5": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-1_qoDc3h9ll",
+        "AppClientIDWeb": "459d61cj76vk039flugd8ojcv7",
+        "AppClientID": "1d8a42ksdpqt3aa5dm9pc8s95t",
+        "IdentityPoolId": "us-east-1:4f786ac4-734e-4f3d-82b5-d7a8d55f709c",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:193642950242:userpool/us-east-1_qoDc3h9ll",
+        "IdentityPoolName": "abinayafa1ea4b5_identitypool_fa1ea4b5__amptestone",
+        "UserPoolName": "abinayafa1ea4b5_userpool_fa1ea4b5"
+      },
+      "lastPushTimeStamp": "2023-06-18T04:17:42.413Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-amptestone-23211-deployment/amplify-cfn-templates/auth/abinayafa1ea4b5-cloudformation-template.json",
+        "logicalId": "authabinayafa1ea4b5"
+      }
+    }
+  },
+  "function": {
+    "S3Trigger4bd6ba2a": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-06-18T04:14:32.853Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-06-18T04:14:32.890Z",
+      "distZipFilename": "S3Trigger4bd6ba2a-75703444434f4a6c5251-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-abinaya-amptestone-23211-deployment",
+        "s3Key": "amplify-builds/S3Trigger4bd6ba2a-75703444434f4a6c5251-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-amptestone-23211-deployment/amplify-cfn-templates/function/S3Trigger4bd6ba2a-cloudformation-template.json",
+        "logicalId": "functionS3Trigger4bd6ba2a"
+      },
+      "lastPushTimeStamp": "2023-06-18T04:17:42.907Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::193642950242:role/S3Trigger4bd6ba2aLambdaRole4bd6ba2a-amptestone",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:193642950242:function:S3Trigger4bd6ba2a-amptestone",
+        "Name": "S3Trigger4bd6ba2a-amptestone",
+        "LambdaExecutionRole": "S3Trigger4bd6ba2aLambdaRole4bd6ba2a-amptestone"
+      },
+      "lastPushDirHash": "5HeebkDNXC0bepsOoSjBYeCyZmA="
+    },
+    "S3Triggerd6c29487": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::193642950242:role/S3Triggerd6c29487LambdaRoled6c29487-amptestone",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:193642950242:function:S3Triggerd6c29487-amptestone",
+        "Name": "S3Triggerd6c29487-amptestone",
+        "LambdaExecutionRole": "S3Triggerd6c29487LambdaRoled6c29487-amptestone"
+      },
+      "lastPushTimeStamp": "2023-06-18T04:17:42.416Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-amptestone-23211-deployment/amplify-cfn-templates/function/S3Triggerd6c29487-cloudformation-template.json",
+        "logicalId": "functionS3Triggerd6c29487"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-abinaya-amptestone-23211-deployment",
+        "s3Key": "amplify-builds/S3Triggerd6c29487-6a6c5a4c514152677832-build.zip"
+      }
+    }
+  },
+  "storage": {
+    "s363439dc8": {
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger4bd6ba2a",
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ]
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "output": {
+        "BucketName": "soilimages23211-amptestone",
+        "Region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2023-06-18T04:17:42.907Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-amptestone-23211-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages363439dc8"
+      },
+      "lastPushDirHash": "mUTMNejaUZswuN00K3BIpj05528="
+    }
+  }
+}
