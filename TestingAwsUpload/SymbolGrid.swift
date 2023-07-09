@@ -103,7 +103,7 @@ struct SymbolGrid: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .sheet(isPresented: $isAddingSymbol, onDismiss: addSymbol) {
                     //        SymbolPicker(symbol: $selectedSymbol)
-                    ImagePicker(sourceType: .photoLibrary, selectedImage: $inputImage)
+//                    ImagePicker(sourceType: .photoLibrary, selectedImage: $inputImage)
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
