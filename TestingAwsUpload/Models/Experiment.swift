@@ -10,5 +10,6 @@ import SwiftUI
 struct Experiment: Identifiable {
     var id: UUID
     var name: String
+    var date: String
     var plots: [IndividualPlotData]
 }

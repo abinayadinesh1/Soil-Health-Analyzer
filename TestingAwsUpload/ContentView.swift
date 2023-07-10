@@ -5,42 +5,13 @@
 //  Created by Abinaya on 4/22/23.
 //
 import SwiftUI
-import Amplify
 
 struct ContentView: View {
     var inputImage : UIImage = UIImage(named: "garden")!
     var body: some View {
         ExperimentsView()
-        //        Image("pos_logo_2")
-        //            .resizable()
-        //            .scaledToFit()
-        //            .frame(width: 200, height: 200)
-        //        if #available(iOS 16.0, *) {
-        //            NavigationStack {
-        //                SymbolGrid(inputImage: UIImage(named: "hb1")!)
-        //            }
-        //        } else {
-        //            SymbolGrid(inputImage: UIImage(named: "hb1")!)
-        //        }
-        
-//        TabView(){
-//            ExperimentsView().tabItem{
-//                Image(systemName: "camera.viewfinder")
-//                Text("gridview")
-//            }
-//            Sample().tabItem{
-//                Image(systemName: "house")
-//                Text("sample")
-//            }
-//        }
-            ////                IndividualPlot(previewImage: "green").tabItem{
-            ////                    Image(systemName: "house")
-            ////                    Text("IndividualPlot")
-            ////                }
-            //
-            //            }
     }
-    
+
     }
 
 struct ContentView_Previews: PreviewProvider {
@@ -48,3 +19,55 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+//import SwiftUI
+//// this is the main view of our app,
+//// it is made of a Table with one line per Note
+//struct ContentView: View {
+//    @ObservedObject private var userData: UserData = .shared
+//
+//    var body: some View {
+//        List {
+//            ForEach(userData.notes) { note in
+//ListRow(note: note)
+//            }
+//        }
+//    }
+//}
+//// this is use to preview the UI in Xcode
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//
+//        prepareTestData()
+//
+//        return ContentView()
+//    }
+//}
+//
+//
+//// a view to represent a single list item
+//struct ListRow: View {
+//    @ObservedObject var note : Note
+//    var body: some View {
+//
+//            return HStack(alignment: .center, spacing: 5.0) {
+//
+//                // if there is an image, display it on the left
+//    if (note.image != nil) {
+//                    note.image!
+//                    .resizable()
+//                    .frame(width: 50, height: 50)
+//                }
+//
+//                // the right part is a vertical stack with the title and description
+//    VStack(alignment: .leading, spacing: 5.0) {
+//                    Text(note.name)
+//                    .bold()
+//
+//                    if ((note.description) != nil) {
+//                        Text(note.description!)
+//                    }
+//                }
+//            }
+//        }
+//}
