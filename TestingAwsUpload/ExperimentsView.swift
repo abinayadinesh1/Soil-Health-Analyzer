@@ -11,18 +11,13 @@ import SwiftUI
 
 struct ExperimentsView: View {
     @State private var experiments: [Experiment] = [
-        Experiment(id: UUID(), name: "Hello World", plots: [])
+        Experiment(id: UUID(), name: "Tomato Plot", date: "06/10/23", plots: [])
     ]
-    @State private var individualPlots: [Sample] = [
-//        Sample(dateSampled: "05/4/23", notes: "no notes", image: UIImage(imageLiteralResourceName: "green")),
-//        Sample(dateSampled: "12/4/23", notes: "BIGN NOTES", image: UIImage(imageLiteralResourceName: "hb0")),
-//        Sample(dateSampled: "09/4/29", notes: "TINY NOTES", image: UIImage(imageLiteralResourceName: "hb1"))
-    ] //retrieved from some sort of persistent data
-    let range: Range = 0..<10
     @State var currentValue: Int = 0
     @State private var showAll = false
     @State private var isPresentingAddExperimentAlert = false
     @State private var newExperimentName: String = ""
+    @State private var newExperimentDate: String = ""
     
     var body: some View {
         NavigationView {
@@ -34,12 +29,19 @@ struct ExperimentsView: View {
                     List {
                         ForEach(experiments) { experiment in
                             NavigationLink(destination: ExperimentPlotsView(experiment: experiment)) {
-                                VStack {
-                                    Text(experiment.name)
-                                        .font(.title2)
-                                        .bold()
+                                HStack {
+                                    Image("sprout")
+                                        .frame(width: 50.0, height: 50.0)
+                                    VStack {
+                                        Text(experiment.name)
+                                            .font(.title2)
+                                            .bold()
+                                        Text(experiment.date)
+                                            .font(.subheadline)
+                                    }
+                                    .frame(height: 50)
+                                    
                                 }
-                                .frame(height: 50)
                             }
                         }
                     }
@@ -60,9 +62,10 @@ struct ExperimentsView: View {
             }
             .alert("Add Experiment", isPresented: $isPresentingAddExperimentAlert) {
                 TextField("New Experiment Name", text: $newExperimentName)
+                TextField("Date Started", text: $newExperimentDate)
                 Button("OK", action: {
                     //TODO: Add Experiment via AWS
-                    experiments.append(Experiment(id: UUID(), name: newExperimentName, plots: []))
+                    experiments.append(Experiment(id: UUID(), name: newExperimentName, date: "06.10.22", plots: []))
                 })
                 Button("Cancel", role: .cancel) {
                     isPresentingAddExperimentAlert.toggle()
@@ -72,63 +75,3 @@ struct ExperimentsView: View {
         .tint(Color.green)
     }
 }
-
-
-//struct TestPlot: View {
-//    let item: Int
-//
-//    var body: some View {
-//        // Replace this with your custom view implementation for each item
-//        Text("Item \(item)")
-//            .frame(maxWidth: .infinity, maxHeight: 100)
-//            .background(Color.gray)
-//            .cornerRadius(10)
-//            .padding()
-//    }
-//}
-
-//import Foundation
-//import Amplify
-//import SwiftUI
-//import AmplifyImage
-//
-//struct GridView: View {
-//
-//    let columns : [GridItem]
-//    let showAll : Bool
-//    let plots : [IndividualPlot] = Array(IndividualPlot(plotTitle: " ", previewImage: "pos_logo_2"), IndividualPlot(plotTitle: " ", previewImage: "pos_logo_2"))
-//    var counter : Int = 0
-//
-//    var body: some View{
-//        LazyVGrid(columns: columns) {
-//            plots.forEach{ plot in
-//
-//            }
-////            ForEach(0...2, id: \.self) { value in
-////                counter += 1
-////                if(counter > 2 && showAll == false) {
-////                    break
-////                }
-////            }
-//        }
-////        ScrollView{
-////            LazyVGrid(columns: columns) {
-////                ForEach(imageKeys, id: \.self) {key in
-//////                    Text(key[0..<9])
-////                    AmplifyImage(key:key).scaleToFillWidth().padding(15)
-////                }
-////            }
-////        }.onAppear(perform: getImageKeys)
-//    }
-//
-////    func getImageKeys() {
-////        Amplify.Storage.list { result in
-////            if case .success(let storageResult) = result {
-////                self.imageKeys = storageResult.items.map(\.key).filter{ $0.isEmpty == false}
-////            }
-////
-////        }
-////    }
-//}
-//
-//

@@ -19,7 +19,7 @@ struct TestingAwsUploadApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView(inputImage: UIImage(systemName: "photo")!)
+            ContentView()
         }
     }
     
