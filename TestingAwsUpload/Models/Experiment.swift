@@ -10,6 +10,11 @@ import SwiftUI
 struct Experiment: Identifiable {
     var id: UUID
     var name: String
-    var date: String
-    var plots: [IndividualPlotData]
+    var date: Date
+    var samples: [Sample]
+    var description: String
+    var selectedWateringSchedule: String
+    var selectedIrrigationType: String
+    var selectedUpdateCadence: String
+    var previewImage: String
 }
