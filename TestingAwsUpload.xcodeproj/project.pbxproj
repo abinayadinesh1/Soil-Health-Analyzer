@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		6E0B6AFD2A5B8C4F00923CA8 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0B6AFC2A5B8C4E00923CA8 /* Notes.swift */; };
 		6E0B6AFF2A5B8C7A00923CA8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0B6AFE2A5B8C7A00923CA8 /* UserData.swift */; };
-		6E3E316C2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3E316B2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin */; };
-		6E3E316E2A2E5CD00012A8B9 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3E316D2A2E5CD00012A8B9 /* AWSDataStorePlugin */; };
-		6E3E31702A2E5CD00012A8B9 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3E316F2A2E5CD00012A8B9 /* AWSS3StoragePlugin */; };
-		6E3E31722A2E5CD00012A8B9 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3E31712A2E5CD00012A8B9 /* Amplify */; };
+		6E4613402A69E30A001E7E8E /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E46133E2A69E30A001E7E8E /* amplifyconfiguration.json */; };
+		6E4613412A69E30A001E7E8E /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E46133F2A69E30A001E7E8E /* awsconfiguration.json */; };
+		6E4613432A69E541001E7E8E /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4613422A69E541001E7E8E /* Backend.swift */; };
 		6E476EAA29F8BDC600295E9D /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = 6E476EA929F8BDC600295E9D /* Pods */; };
 		6E58127929F4612300FCF7BA /* TestingAwsUploadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */; };
 		6E58127B29F4612300FCF7BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58127A29F4612300FCF7BA /* ContentView.swift */; };
@@ -31,12 +30,13 @@
 		6EB527C72A3ADABC00719149 /* CoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB527C62A3ADABB00719149 /* CoverImage.swift */; };
 		6EEA9D652A3EC853005BE56C /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D642A3EC853005BE56C /* ExperimentView.swift */; };
 		6EEA9D672A3FCFC2005BE56C /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA9D662A3FCFC2005BE56C /* Sample.swift */; };
+		6EECFCFD2A6CD61800104826 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 6EECFCFC2A6CD61800104826 /* AWSCognitoAuthPlugin */; };
+		6EECFCFF2A6CD61D00104826 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 6EECFCFE2A6CD61D00104826 /* Amplify */; };
 		D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D12A7FCCB065BB8726FA7F5 /* Pods_TestingAwsUpload.framework */; };
 		E8288D102A50EB5B007DE955 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8288D0F2A50EB5B007DE955 /* Experiment.swift */; };
 		E8288D142A50EBC0007DE955 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8288D132A50EBC0007DE955 /* View+Ext.swift */; };
 		E8CCF4A52A5A06D2009ADD08 /* SampleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCF4A42A5A06D2009ADD08 /* SampleDetailView.swift */; };
 		E8CCF4A72A5A19CE009ADD08 /* Wiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCF4A62A5A19CE009ADD08 /* Wiggle.swift */; };
-		E8DBF7D02A5E6EF900B60CE5 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = E8DBF7CF2A5E6EF900B60CE5 /* awsconfiguration.json */; };
 		E8F870432A5FC3B100D42E86 /* CreateSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F870422A5FC3B100D42E86 /* CreateSampleView.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,9 @@
 		683485FA4990FE4ABCE17529 /* Pods-TestingAwsUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAwsUpload.debug.xcconfig"; path = "Target Support Files/Pods-TestingAwsUpload/Pods-TestingAwsUpload.debug.xcconfig"; sourceTree = "<group>"; };
 		6E0B6AFC2A5B8C4E00923CA8 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		6E0B6AFE2A5B8C7A00923CA8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		6E0FF6C72A214660000C4065 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
+		6E46133E2A69E30A001E7E8E /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		6E46133F2A69E30A001E7E8E /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		6E4613422A69E541001E7E8E /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Backend.swift; path = /Users/abinayadinesh/Documents/projects/NewMunsellAg/MunsellAg/TestingAwsUpload/Backend.swift; sourceTree = "<absolute>"; };
 		6E476EA929F8BDC600295E9D /* Pods */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pods; sourceTree = SOURCE_ROOT; };
 		6E58127529F4612300FCF7BA /* TestingAwsUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingAwsUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAwsUploadApp.swift; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 		E8288D132A50EBC0007DE955 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		E8CCF4A42A5A06D2009ADD08 /* SampleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDetailView.swift; sourceTree = "<group>"; };
 		E8CCF4A62A5A19CE009ADD08 /* Wiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wiggle.swift; sourceTree = "<group>"; };
-		E8DBF7CF2A5E6EF900B60CE5 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		E8F870422A5FC3B100D42E86 /* CreateSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,11 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E3E316E2A2E5CD00012A8B9 /* AWSDataStorePlugin in Frameworks */,
-				6E3E31722A2E5CD00012A8B9 /* Amplify in Frameworks */,
+				6EECFCFF2A6CD61D00104826 /* Amplify in Frameworks */,
 				D69BFA2E422DC526AFD05A06 /* Pods_TestingAwsUpload.framework in Frameworks */,
-				6E3E316C2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin in Frameworks */,
-				6E3E31702A2E5CD00012A8B9 /* AWSS3StoragePlugin in Frameworks */,
+				6EECFCFD2A6CD61800104826 /* AWSCognitoAuthPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,15 +135,16 @@
 			isa = PBXGroup;
 			children = (
 				E8288D0E2A50E857007DE955 /* Models */,
-				6E0FF6C72A214660000C4065 /* amplifyconfiguration.json */,
 				6E7964DE29FEC4ED00572AB7 /* Info.plist */,
 				6E58127829F4612300FCF7BA /* TestingAwsUploadApp.swift */,
-				E8DBF7CF2A5E6EF900B60CE5 /* awsconfiguration.json */,
 				6E58127A29F4612300FCF7BA /* ContentView.swift */,
 				6E58127C29F4612600FCF7BA /* Assets.xcassets */,
 				6E7964E129FEDB2C00572AB7 /* ExperimentsView.swift */,
+				6E46133E2A69E30A001E7E8E /* amplifyconfiguration.json */,
+				6E46133F2A69E30A001E7E8E /* awsconfiguration.json */,
 				6EEA9D642A3EC853005BE56C /* ExperimentView.swift */,
 				E8F870422A5FC3B100D42E86 /* CreateSampleView.swift */,
+				6E4613422A69E541001E7E8E /* Backend.swift */,
 				6E7964DA29FEBEBA00572AB7 /* ImagePicker.swift */,
 				E8CCF4A42A5A06D2009ADD08 /* SampleDetailView.swift */,
 				6EB527C12A3AD08E00719149 /* SymbolDetail.swift */,
@@ -233,10 +233,8 @@
 			);
 			name = TestingAwsUpload;
 			packageProductDependencies = (
-				6E3E316B2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin */,
-				6E3E316D2A2E5CD00012A8B9 /* AWSDataStorePlugin */,
-				6E3E316F2A2E5CD00012A8B9 /* AWSS3StoragePlugin */,
-				6E3E31712A2E5CD00012A8B9 /* Amplify */,
+				6EECFCFC2A6CD61800104826 /* AWSCognitoAuthPlugin */,
+				6EECFCFE2A6CD61D00104826 /* Amplify */,
 			);
 			productName = TestingAwsUpload;
 			productReference = 6E58127529F4612300FCF7BA /* TestingAwsUpload.app */;
@@ -327,8 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8DBF7D02A5E6EF900B60CE5 /* awsconfiguration.json in Resources */,
+				6E4613412A69E30A001E7E8E /* awsconfiguration.json in Resources */,
 				6E6409622A1C0ECF00E82C5A /* LaunchScreen.storyboard in Resources */,
+				6E4613402A69E30A001E7E8E /* amplifyconfiguration.json in Resources */,
 				6E58127D29F4612600FCF7BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +383,7 @@
 				E8288D102A50EB5B007DE955 /* Experiment.swift in Sources */,
 				6EEA9D652A3EC853005BE56C /* ExperimentView.swift in Sources */,
 				6E0B6AFF2A5B8C7A00923CA8 /* UserData.swift in Sources */,
+				6E4613432A69E541001E7E8E /* Backend.swift in Sources */,
 				6E5B56692A3EA41500692A23 /* DataStore.swift in Sources */,
 				6E7964DB29FEBEBA00572AB7 /* ImagePicker.swift in Sources */,
 				6E0B6AFD2A5B8C4F00923CA8 /* Notes.swift in Sources */,
@@ -728,22 +728,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6E3E316B2A2E5CD00012A8B9 /* AWSCognitoAuthPlugin */ = {
+		6EECFCFC2A6CD61800104826 /* AWSCognitoAuthPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */;
 			productName = AWSCognitoAuthPlugin;
 		};
-		6E3E316D2A2E5CD00012A8B9 /* AWSDataStorePlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */;
-			productName = AWSDataStorePlugin;
-		};
-		6E3E316F2A2E5CD00012A8B9 /* AWSS3StoragePlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */;
-			productName = AWSS3StoragePlugin;
-		};
-		6E3E31712A2E5CD00012A8B9 /* Amplify */ = {
+		6EECFCFE2A6CD61D00104826 /* Amplify */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6E3E316A2A2E5CD00012A8B9 /* XCRemoteSwiftPackageReference "amplify-swift" */;
 			productName = Amplify;

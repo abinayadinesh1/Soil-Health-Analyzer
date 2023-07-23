@@ -1,0 +1,141 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-abinaya-iosgetting-165312-authRole",
+      "UnauthRoleArn": "arn:aws:iam::193642950242:role/amplify-abinaya-iosgetting-165312-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::193642950242:role/amplify-abinaya-iosgetting-165312-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-abinaya-iosgetting-165312-deployment",
+      "UnauthRoleName": "amplify-abinaya-iosgetting-165312-unauthRole",
+      "StackName": "amplify-abinaya-iosgetting-165312",
+      "StackId": "arn:aws:cloudformation:us-east-1:193642950242:stack/amplify-abinaya-iosgetting-165312/d3c10e30-2747-11ee-b973-0ab6e341f443",
+      "AmplifyAppId": "dc72vta8zq1sj"
+    }
+  },
+  "auth": {
+    "abinayafa1ea4b5": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "lastPushTimeStamp": "2023-07-20T22:05:14.300Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/auth/abinayafa1ea4b5-cloudformation-template.json",
+        "logicalId": "authabinayafa1ea4b5"
+      },
+      "output": {
+        "UserPoolId": "us-east-1_K7PETSmrM",
+        "AppClientIDWeb": "1f1vqdsdh8gpsqnp7u8n6vk6lv",
+        "AppClientID": "4t1g0dmu2dh3d40444tc99femj",
+        "HostedUIDomain": "abinayaf1be6966-f1be6966-iosgetting",
+        "IdentityPoolId": "us-east-1:76e03c30-bf64-45ed-b582-eff0c734cc4e",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:193642950242:userpool/us-east-1_K7PETSmrM",
+        "IdentityPoolName": "abinayafa1ea4b5_identitypool_fa1ea4b5__iosgetting",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"gettingstarted://\"],\"LogoutURLs\":[\"gettingstarted://\"]}",
+        "UserPoolName": "abinayafa1ea4b5_userpool_fa1ea4b5"
+      },
+      "lastPushDirHash": "lE/Kkh7jxc1QVxeV3WBTZCew8/c="
+    }
+  },
+  "function": {
+    "S3Trigger4bd6ba2a": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-07-20T22:01:35.400Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-07-20T22:01:35.443Z",
+      "distZipFilename": "S3Trigger4bd6ba2a-75703444434f4a6c5251-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-abinaya-iosgetting-165312-deployment",
+        "s3Key": "amplify-builds/S3Trigger4bd6ba2a-75703444434f4a6c5251-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/function/S3Trigger4bd6ba2a-cloudformation-template.json",
+        "logicalId": "functionS3Trigger4bd6ba2a"
+      },
+      "lastPushTimeStamp": "2023-07-20T22:05:14.300Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::193642950242:role/S3Trigger4bd6ba2aLambdaRole4bd6ba2a-iosgetting",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:193642950242:function:S3Trigger4bd6ba2a-iosgetting",
+        "Name": "S3Trigger4bd6ba2a-iosgetting",
+        "LambdaExecutionRole": "S3Trigger4bd6ba2aLambdaRole4bd6ba2a-iosgetting"
+      },
+      "lastPushDirHash": "mPZaYCNBdx9rSl2v2DACmynjjA4="
+    },
+    "S3Triggerd6c29487": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-07-20T22:01:36.771Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-07-20T22:01:36.791Z",
+      "distZipFilename": "S3Triggerd6c29487-6a6c5a4c514152677832-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-abinaya-iosgetting-165312-deployment",
+        "s3Key": "amplify-builds/S3Triggerd6c29487-6a6c5a4c514152677832-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/function/S3Triggerd6c29487-cloudformation-template.json",
+        "logicalId": "functionS3Triggerd6c29487"
+      },
+      "lastPushTimeStamp": "2023-07-20T22:05:14.300Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::193642950242:role/S3Triggerd6c29487LambdaRoled6c29487-iosgetting",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:193642950242:function:S3Triggerd6c29487-iosgetting",
+        "Name": "S3Triggerd6c29487-iosgetting",
+        "LambdaExecutionRole": "S3Triggerd6c29487LambdaRoled6c29487-iosgetting"
+      },
+      "lastPushDirHash": "6gsLs0UFSmTnW6WHDHRIpi9kyYM="
+    }
+  },
+  "storage": {
+    "s363439dc8": {
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger4bd6ba2a",
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ]
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "lastPushTimeStamp": "2023-07-20T22:05:14.300Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages363439dc8"
+      },
+      "output": {
+        "BucketName": "soilimages165312-iosgetting",
+        "Region": "us-east-1"
+      },
+      "lastPushDirHash": "mUTMNejaUZswuN00K3BIpj05528="
+    }
+  }
+}
