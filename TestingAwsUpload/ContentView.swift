@@ -7,16 +7,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-
     var inputImage : UIImage = UIImage(named: "garden")!
     var body: some View {
 //        ExperimentsView()
         ZStack {
-            if (userData.isSignedIn) {
+            if (Backend.shared.userData.isSignedIn) {
                 NavigationView {
                     List {
-                        ForEach(userData.notes) { note in
+                        ForEach(Backend.shared.userData.notes) { note in
                             ListRow(note: note)
                         }
                     }
@@ -28,6 +26,8 @@ struct ContentView: View {
             }
         }
     }
+    
+
 
     }
 

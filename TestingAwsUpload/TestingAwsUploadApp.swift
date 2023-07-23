@@ -12,13 +12,21 @@ import AWSS3StoragePlugin
 
 @main
 struct TestingAwsUploadApp: App {
+    @EnvironmentObject private var backend = Backend.shared
     init() {
-        // initialize Amplify
-        Backend.initialize()
+        Task.detached {
+            do {
+                try await backend.initialize()
+                print("Backend initialized successfully!")
+            } catch {
+                print("Error initializing backend - \(error)")
+            }
+        }
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(backend)
         }
     }
 }
+
