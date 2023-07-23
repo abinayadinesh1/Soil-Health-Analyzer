@@ -10,21 +10,6 @@ struct ContentView: View {
     var inputImage : UIImage = UIImage(named: "garden")!
     var body: some View {
 //        ExperimentsView()
-        ZStack {
-            if (Backend.shared.userData.isSignedIn) {
-                NavigationView {
-                    List {
-                        ForEach(Backend.shared.userData.notes) { note in
-                            ListRow(note: note)
-                        }
-                    }
-                    .navigationBarTitle(Text("Notes"))
-                    .navigationBarItems(leading: SignOutButton())
-                }
-            } else {
-                SignInButton()
-            }
-        }
     }
     
 
