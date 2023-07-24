@@ -4,14 +4,9 @@
 //
 //  Created by Abinaya on 7/23/23.
 //
-//
-//  SessionManager.swift
-//  Authenticated
-//
-//  Created by Kyle Lee on 7/21/20.
-//
 
 import Amplify
+import SwiftUI
 
 enum AuthState {
     case signUp
@@ -47,7 +42,7 @@ class SessionManager: ObservableObject {
             username: username,
             password: password,
             options: options
-        ) { [weak self] result in
+        ) { (result) in
             
             switch result {
             
@@ -78,7 +73,7 @@ class SessionManager: ObservableObject {
         _ = Amplify.Auth.confirmSignUp(
             for: username,
             confirmationCode: code
-        ) { [weak self] result in
+        ) { (result) in
             
             switch result {
             case .success(let confirmResult):
@@ -99,7 +94,7 @@ class SessionManager: ObservableObject {
         _ = Amplify.Auth.signIn(
             username: username,
             password: password
-        ) { [weak self] result in
+        ) { (result) in
             
             switch result {
             case .success(let signInResult):
@@ -117,7 +112,7 @@ class SessionManager: ObservableObject {
     }
     
     func signOut() {
-        _ = Amplify.Auth.signOut { [weak self] result in
+        _ = Amplify.Auth.signOut { (result) in
             switch result {
             case .success:
                 DispatchQueue.main.async {
