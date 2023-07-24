@@ -29,7 +29,7 @@ struct SignUpView: View {
                     email: email,
                     password: password
                 )
-            }).pretty()
+            })
             
             Spacer()
             Button("Already have an account? Log in.", action: sessionManager.showLogin)

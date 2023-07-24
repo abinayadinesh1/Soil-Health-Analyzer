@@ -4,7 +4,6 @@
 //
 //  Created by Abinaya on 7/23/23.
 //
-
 import Amplify
 import SwiftUI
 
@@ -19,10 +18,15 @@ class SessionManager: ObservableObject {
     @Published var authState: AuthState = .login
     
     func getCurrentAuthUser() {
-        if let user = Amplify.Auth.getCurrentUser() {
-            authState = .session(user: user)
-        } else {
-            authState = .login
+        do {
+            if let user = try Amplify.Auth.getCurrentUser() {
+                authState = .session(user: user)
+            } else {
+                authState = .login
+            }
+        }
+        catch {
+            print("couldnt get current auth user")
         }
     }
     
@@ -38,11 +42,11 @@ class SessionManager: ObservableObject {
         let attributes = [AuthUserAttribute(.email, value: email)]
         let options = AuthSignUpRequest.Options(userAttributes: attributes)
         
-        _ = Amplify.Auth.signUp(
+        Amplify.Auth.signUp(
             username: username,
             password: password,
             options: options
-        ) { (result) in
+        ) { result in
             
             switch result {
             
@@ -70,10 +74,10 @@ class SessionManager: ObservableObject {
     
     
     func confirm(username: String, code: String) {
-        _ = Amplify.Auth.confirmSignUp(
+        Amplify.Auth.confirmSignUp(
             for: username,
             confirmationCode: code
-        ) { (result) in
+        ) { result in
             
             switch result {
             case .success(let confirmResult):
@@ -91,17 +95,17 @@ class SessionManager: ObservableObject {
     }
     
     func login(username: String, password: String) {
-        _ = Amplify.Auth.signIn(
+        Amplify.Auth.signIn(
             username: username,
             password: password
-        ) { (result) in
+        ) { result in
             
             switch result {
             case .success(let signInResult):
                 print(signInResult)
                 if signInResult.isSignedIn {
                     DispatchQueue.main.async {
-                        self?.getCurrentAuthUser()
+                        self.getCurrentAuthUser()
                     }
                 }
                 
@@ -112,11 +116,11 @@ class SessionManager: ObservableObject {
     }
     
     func signOut() {
-        _ = Amplify.Auth.signOut { (result) in
+        Amplify.Auth.signOut { result in
             switch result {
             case .success:
                 DispatchQueue.main.async {
-                    self?.getCurrentAuthUser()
+                    self.getCurrentAuthUser()
                 }
                 
             case .failure(let error):
