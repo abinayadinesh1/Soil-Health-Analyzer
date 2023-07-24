@@ -11,9 +11,33 @@ import SwiftUI
 
 struct ExperimentsView: View {
     @State private var experiments: [Experiment] = [
-        Experiment(id: UUID(), name: "Tomato Plot", date: Date(), samples: [
-            Sample(dateSampled: Date(), notes: "Hello World!", image: UIImage(imageLiteralResourceName: "green"), id: UUID())
-        ], description: "", selectedWateringSchedule: "", selectedIrrigationType: "", selectedUpdateCadence: "", previewImage: "")
+        Experiment(id: UUID(), name: "Tomato Plot", date: Date(timeIntervalSinceReferenceDate: -3), samples: [
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -1), notes: "Day 3", image: UIImage(imageLiteralResourceName: "day3_t"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -2), notes: "Day 2", image: UIImage(imageLiteralResourceName: "day2_t"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -3), notes: "Day 1", image: UIImage(imageLiteralResourceName: "day1_t"), id: UUID())
+        ], description: "cherry tomato seeds bought from grocery store, planting in pot and using clove oil to avoid pests", selectedWateringSchedule: "Weekly", selectedIrrigationType: "Sprinkler", selectedUpdateCadence: "Daily", previewImage: "cherry_tomato"),
+        Experiment(id: UUID(), name: "Squash Plant", date: Date(timeIntervalSinceReferenceDate: -2), samples: [
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -1), notes: "Day 2", image: UIImage(imageLiteralResourceName: "day2_s"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -2), notes: "Day 1", image: UIImage(imageLiteralResourceName: "day1_s"), id: UUID()),
+        ], description: "I hope my squash grow!", selectedWateringSchedule: "Weekly", selectedIrrigationType: "Sprinkler", selectedUpdateCadence: "Daily", previewImage: "squash"),
+        Experiment(id: UUID(), name: "Zucchini Plant", date: Date(timeIntervalSinceReferenceDate: -4), samples: [
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -1), notes: "Day 5", image: UIImage(imageLiteralResourceName: "day4_z"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -2), notes: "Day 4", image: UIImage(imageLiteralResourceName: "day3_z"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -3), notes: "Day 3", image: UIImage(imageLiteralResourceName: "day2_z"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -4), notes: "Day 2", image: UIImage(imageLiteralResourceName: "day1_z"), id: UUID()),
+        ], description: "I love zuchinni and I wonder if I can get this to grow after trying for 2 seasons.", selectedWateringSchedule: "Weekly", selectedIrrigationType: "Sprinkler", selectedUpdateCadence: "Daily", previewImage: "zuchini_plant"),
+        Experiment(id: UUID(), name: "Mint Circle Pot", date: Date(timeIntervalSinceReferenceDate: -6), samples: [
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -1), notes: "Day 6", image: UIImage(imageLiteralResourceName: "green"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -1), notes: "Day 5", image: UIImage(imageLiteralResourceName: "green"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -2), notes: "Day 4", image: UIImage(imageLiteralResourceName: "green"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -3), notes: "Day 3", image: UIImage(imageLiteralResourceName: "green"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -4), notes: "Day 2", image: UIImage(imageLiteralResourceName: "green"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -5), notes: "Day 1", image: UIImage(imageLiteralResourceName: "green"), id: UUID())
+        ], description: "Had to transfer to pot because roots were crowding other plants", selectedWateringSchedule: "Custom", selectedIrrigationType: "None", selectedUpdateCadence: "Daily", previewImage: "mint"),
+        Experiment(id: UUID(), name: "Indoor Succulent", date: Date(timeIntervalSinceReferenceDate: -2), samples: [
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -1), notes: "Week 2", image: UIImage(imageLiteralResourceName: "day2_suc"), id: UUID()),
+            Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -2), notes: "Week 1", image: UIImage(imageLiteralResourceName: "day1_suc"), id: UUID()),
+        ], description: "MY NEW BABY FROM THE FARMER'S MARKET", selectedWateringSchedule: "Monthly", selectedIrrigationType: "Custom", selectedUpdateCadence: "Weekly", previewImage: "succulent")
     ]
     @State private var showAddExperimentSheet = false
     @State private var isPresentingAddExperimentAlert = false
@@ -68,116 +92,6 @@ struct ExperimentsView: View {
         .tint(Color.green)
     }
 }
-
-//MARK: - AddExperimentView
-struct AddExperimentView: View {
-    @Environment(\.dismiss) private var dismiss
-    @State private var newPlotTitle: String = ""
-    @State private var newPlotDescription: String = ""
-    @State private var newSelectedWateringSchedule: String = "Weekly"
-    @State private var newSelectedIrrigationType: String = "Drip"
-    @State private var newSelectedUpdateCadence: String = "Daily"
-    @State private var showAlert: Bool = false
-    @State private var samples: [Sample] = []
-
-    var previewImage: String = ""
-    let wateringOptions = ["Daily", "Weekly", "Monthly", "Custom"]
-    let irrigationOptions = ["Drip", "Furrow", "Flood", "Sprinkler", "Custom"]
-    let updateCadenceOptions = ["Daily","Every 3 Hours", "Every 6 Hours", "Every 2 Days", "Every 3 Days"]
-
-    var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack {
-                    TextFieldHeaderView(header: "Title:", text: $newPlotTitle)
-                    TextFieldHeaderView(header: "Description:", text: $newPlotDescription)
-
-                    Text("⚠️ Reminder: Pictures must be uploaded 3-4 times between watering for accurate results").font(.subheadline)
-                        .padding()
-                        .background(Color.gray.opacity(0.1))
-                        .cornerRadius(10)
-
-                    HStack {
-                        Text("Watering Schedule: ")
-                            .bold()
-                        Spacer()
-                        Picker("Watering Schedule: ", selection: $newSelectedWateringSchedule) {
-                            ForEach(wateringOptions, id: \.self) {
-                                Text($0)
-                            }
-                        }
-                        .tint(.green)
-                        .pickerStyle(.menu)
-                    }
-
-                    HStack {
-                        Text("Irrigation Type: ")
-                            .bold()
-                        Spacer()
-                        Picker("Irrigation Type: ", selection: $newSelectedIrrigationType) {
-                            ForEach(irrigationOptions, id: \.self) {
-                                Text($0)
-                            }
-                        }
-                        .tint(.green)
-                        .pickerStyle(.menu)
-                    }
-
-                    HStack {
-                        Text("Pictures Updated: ")
-                            .bold()
-                        Spacer()
-                        Picker("Pictures Updated: ", selection: $newSelectedUpdateCadence) {
-                            ForEach(updateCadenceOptions, id: \.self) {
-                                Text($0)
-                            }
-                        }
-                        .tint(.green)
-                        .pickerStyle(.menu)
-                    }
-
-                    Image(previewImage).resizable().scaledToFill()
-                        .frame(width: 150, height: 150)
-
-                    addButton
-                }
-                .padding()
-            }
-            .navigationBarTitle("New Experiment")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        dismiss()
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 25))
-                            .foregroundColor(Color(uiColor: .lightGray))
-                    }
-                }
-            }
-        }
-    }
-
-    private var addButton: some View {
-       Button(action: {
-           //TODO: Upload to AWS
-           dismiss()
-       }) {
-           Text("Confirm")
-               .centered()
-               .padding()
-               .foregroundColor(.white)
-               .font(.system(size: 20).bold())
-               .background(
-                   RadialGradient(gradient: Gradient(colors: [.blue.opacity(0.4), .purple.opacity(0.5)]), center: .center, startRadius: 1, endRadius: 150)
-               )
-               .cornerRadius(10.0)
-               .shadow(color: .purple.opacity(0.8), radius: 20, x: 0, y: 0)
-       }
-   }
-}
-
 //MARK: - TextFieldHeaderView
 struct TextFieldHeaderView: View {
     var header: String
