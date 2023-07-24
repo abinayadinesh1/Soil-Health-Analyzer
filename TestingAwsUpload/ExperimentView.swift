@@ -34,7 +34,7 @@ struct ExperimentView: View {
                     }
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(.red.opacity(0.1))
+                    .background(.green.opacity(0.1))
                     .cornerRadius(10)
                     .padding()
                 }) {
@@ -117,10 +117,11 @@ struct ExperimentView: View {
     private var headerImageView: some View {
         HStack {
             Spacer()
-            Image(systemName: "photo")
-                .foregroundColor(.red.opacity(0.2))
-                .shadow(color: .red.opacity(0.6), radius: 10)
-                .font(.system(size: 120))
+            Image(experiment.previewImage)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 150, height: 150, alignment: .center)
+                .clipped()
             Spacer()
         }
     }
@@ -132,11 +133,11 @@ struct ExperimentView: View {
                     Text("Description:")
                         .bold()
                         .font(.system(size: 17))
-                        .foregroundColor(Color(uiColor: .gray))
+                        .foregroundColor(Color(uiColor: .black))
                     Spacer()
                 }
                 Text("\(experiment.description)")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
             } else {
                 Text("No Description")
                     .emptyTextStyle()
@@ -151,11 +152,11 @@ struct ExperimentView: View {
                     Text("Watering Schedule:")
                         .bold()
                         .font(.system(size: 17))
-                        .foregroundColor(Color(uiColor: .gray))
+                        .foregroundColor(Color(uiColor: .black))
                     Spacer()
                 }
                 Text("\(experiment.selectedWateringSchedule)")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
             } else {
                 Text("No Watering Schedule")
                     .emptyTextStyle()
@@ -170,11 +171,11 @@ struct ExperimentView: View {
                     Text("Irrigation Type:")
                         .bold()
                         .font(.system(size: 17))
-                        .foregroundColor(Color(uiColor: .gray))
+                        .foregroundColor(Color(uiColor: .black))
                     Spacer()
                 }
                 Text("\(experiment.selectedIrrigationType)")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
             } else {
                 Text("No Irrigation Type")
                     .emptyTextStyle()
@@ -189,11 +190,11 @@ struct ExperimentView: View {
                     Text("Update Cadence:")
                         .bold()
                         .font(.system(size: 17))
-                        .foregroundColor(Color(uiColor: .gray))
+                        .foregroundColor(Color(uiColor: .black))
                     Spacer()
                 }
                 Text("\(experiment.selectedUpdateCadence)")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
             } else {
                 Text("No Update Cadence")
                     .emptyTextStyle()
@@ -201,41 +202,3 @@ struct ExperimentView: View {
         }
     }
 }
-
-//MARK: - ExperimentSampleView
-struct ExperimentSampleView: View {
-    @Binding var isEditing: Bool
-    var sample: Sample
-    
-    var body: some View {
-        VStack {
-            if isEditing {
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        //TODO: Delete Plot Here via AWS
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 25))
-                            .foregroundColor(.red)
-                    }
-                    .offset(x: 10, y: -7)
-                    .wiggling()
-                }
-                .frame(height: 20)
-            }
-            Image(systemName: "photo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
-                .foregroundColor(.red.opacity(0.35))
-            Text(sample.dateSampled.formatted(date: .abbreviated, time: .shortened))
-                .foregroundColor(.red)
-                .bold()
-        }
-        .padding()
-        .background(.red.opacity(0.1))
-        .cornerRadius(10)
-    }
-}
-

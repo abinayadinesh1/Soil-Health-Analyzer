@@ -40,14 +40,9 @@ struct SampleDetailView: View {
             if isEditingSample {
                 uploadPhotoButton
             }
-            
             sampleNotesSection
-            
             Spacer()
-
             colorTimeSeriesAnalaysisSection
-            
-            Spacer()
         }
         .padding()
         .navigationTitle(sampleDateAndTime)

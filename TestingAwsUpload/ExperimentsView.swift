@@ -55,8 +55,11 @@ struct ExperimentsView: View {
                         ForEach(experiments) { experiment in
                             NavigationLink(destination: ExperimentView(experiment: experiment)) {
                                 HStack {
-                                    Image("sprout")
-                                        .frame(width: 50.0, height: 50.0)
+                                    Image(experiment.previewImage)
+                                        .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 50, height: 50, alignment: .center)
+                                            .clipped()
                                     VStack {
                                         Text(experiment.name)
                                             .font(.title2)
@@ -65,14 +68,12 @@ struct ExperimentsView: View {
                                             .font(.subheadline)
                                     }
                                     .frame(height: 50)
-                                    
                                 }
                             }
                         }
                     }
                 }
             }
-            
             .navigationBarTitle("My Experiments")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
