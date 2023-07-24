@@ -5,52 +5,34 @@
 //  Created by Abinaya on 4/22/23.
 //
 import SwiftUI
+import Amplify
 
 struct ContentView: View {
-    var inputImage : UIImage = UIImage(named: "garden")!
-    var body: some View {
-//        ExperimentsView()
-    }
-    
-
-
-    }
-
-struct SignInButton: View {
-    var body: some View {
-        Button(
-            action: {
-                Task { await Backend.shared.signIn() }
-            },
-            label: {
-                HStack {
-                    Image(systemName: "person.fill")
-                        .scaleEffect(1.5)
-                        .padding()
-                    Text("Sign In")
-                        .font(.largeTitle)
+    @State var authStatus: String?
+    func checkAuthStatus() {
+        Amplify.Auth.fetchAuthSession { (result) in
+            switch result {
+            case .success(let authSession):
+                print("the current use is signed in: \(authSession.isSignedIn)")
+                if authSession.isSignedIn {
+                    authStatus = "User is signed in"
+                } else {
+                    authStatus = "User is signed out"
                 }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.green)
-                .cornerRadius(30)
+            case .failure(let authError):
+                print("failed to fetch auth session", authError)
             }
-        )
+        }
     }
-}
-
-struct SignOutButton : View {
     var body: some View {
-        Button(
-            action: {
-                Task { await Backend.shared.signOut() }
-            },
-            label: { Text("Sign Out") }
-        )
+        VStack {
+            if let authStatus = self.authStatus { //as long as its not nil
+                Text(authStatus).padding()
+            }
+            Button("Get Status", action: checkAuthStatus).padding()
+        }
     }
 }
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
