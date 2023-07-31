@@ -28,9 +28,13 @@ struct ExperimentView: View {
                 DisclosureGroup(content: {
                     Group {
                         descriptionView
+                        Divider().foregroundColor(.systemBrown).frame(width: 40)
                         wateringScheduleView
+                        Divider().foregroundColor(.systemBrown).frame(width: 40)
                         irrigationTypeView
+                        Divider().foregroundColor(.systemBrown).frame(width: 40)
                         updateCadenceView
+                        Divider().foregroundColor(.systemBrown).frame(width: 40)
                     }
                     .padding()
                     .frame(maxWidth: .infinity)
@@ -127,10 +131,11 @@ struct ExperimentView: View {
     }
     
     private var descriptionView: some View {
-        VStack {
+        VStack (alignment: .leading){
             if !experiment.description.isEmpty {
                 HStack {
                     Text("Description:")
+                        .padding(.bottom, 5)
                         .bold()
                         .font(.system(size: 17))
                         .foregroundColor(Color(uiColor: .black))
@@ -146,10 +151,11 @@ struct ExperimentView: View {
     }
     
     private var wateringScheduleView: some View {
-        VStack {
+        VStack (alignment: .leading){
             if !experiment.selectedWateringSchedule.isEmpty {
                 HStack {
                     Text("Watering Schedule:")
+                        .padding(.bottom, 5)
                         .bold()
                         .font(.system(size: 17))
                         .foregroundColor(Color(uiColor: .black))
@@ -165,10 +171,11 @@ struct ExperimentView: View {
     }
     
     private var irrigationTypeView: some View {
-        VStack {
+        VStack (alignment: .leading){
             if !experiment.selectedIrrigationType.isEmpty {
                 HStack {
                     Text("Irrigation Type:")
+                        .padding(.bottom, 5)
                         .bold()
                         .font(.system(size: 17))
                         .foregroundColor(Color(uiColor: .black))
@@ -184,10 +191,11 @@ struct ExperimentView: View {
     }
     
     private var updateCadenceView: some View {
-        VStack {
+        VStack (alignment: .leading){
             if !experiment.selectedUpdateCadence.isEmpty {
                 HStack {
                     Text("Update Cadence:")
+                        .padding(.bottom, 5)
                         .bold()
                         .font(.system(size: 17))
                         .foregroundColor(Color(uiColor: .black))
