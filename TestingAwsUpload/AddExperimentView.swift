@@ -18,8 +18,8 @@ struct AddExperimentView: View {
     @State private var samples: [Sample] = []
 
     var previewImage: String = ""
-    let wateringOptions = ["Daily", "Weekly", "Monthly", "Custom"]
-    let irrigationOptions = ["Drip", "Furrow", "Flood", "Sprinkler", "Custom"]
+    let wateringOptions = ["Daily", "Every 2 Days", "Every 3 Days", "Weekly", "Monthly", "Custom"]
+    let irrigationOptions = ["Drip", "Furrow", "Flood", "Sprinkler", "Hand Watered", "Custom"]
     let updateCadenceOptions = ["Daily","Every 3 Hours", "Every 6 Hours", "Every 2 Days", "Every 3 Days"]
 
     var body: some View {
