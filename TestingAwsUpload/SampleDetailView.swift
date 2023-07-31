@@ -111,13 +111,18 @@ struct SampleDetailView: View {
             
             Text("Organic Matter Content Over Time")
                 .font(.title2.bold())
-            Text("Water Content:")
-                .foregroundColor(.gray)
-                .bold()
-            
-            Text("Organic Matter Content")
-                .foregroundColor(.gray)
-                .bold()
+            VStack{
+                Text("Water Content:")
+                    .foregroundColor(.black)
+                    .bold()
+                Text("Decreased 11% percentage over past 3 days. Approximately 2 days left before next watering needed to prevent the plant from drying.").multilineTextAlignment(.leading)
+            }
+            VStack{
+                Text("Organic Matter Content")
+                    .foregroundColor(.black)
+                    .bold()
+                Text("Decreased 5% over the past 3 days. To prevent further decline, a common recommendation for this plant is to mix in eggshells or coffee grounds into the soil.").multilineTextAlignment(.leading)
+            }
         }.padding(.top, 20)
     }
     
