@@ -41,7 +41,6 @@ struct SampleDetailView: View {
                 uploadPhotoButton
             }
             sampleNotesSection
-            Spacer()
             colorTimeSeriesAnalaysisSection
         }
         .padding()
@@ -105,6 +104,13 @@ struct SampleDetailView: View {
                 .font(.title2.bold())
                 .multilineTextAlignment(.center)
             
+            Image(sample.waterAnalysis)
+            Text("Water Content Over Time")
+                .font(.title2.bold())
+            Image(sample.OMAnalysis)
+            
+            Text("Organic Matter Content Over Time")
+                .font(.title2.bold())
             Text("Water Content:")
                 .foregroundColor(.gray)
                 .bold()
@@ -112,7 +118,7 @@ struct SampleDetailView: View {
             Text("Organic Matter Content")
                 .foregroundColor(.gray)
                 .bold()
-        }
+        }.padding(.top, 20)
     }
     
     private var uploadPhotoButton: some View {

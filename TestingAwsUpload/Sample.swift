@@ -13,5 +13,7 @@ struct Sample: Hashable, Identifiable {
     var dateSampled: Date
     var notes: String
     var image: UIImage
+    var waterAnalysis: Image
+    var OMAnalysis: Image
     var id = UUID()
 }
