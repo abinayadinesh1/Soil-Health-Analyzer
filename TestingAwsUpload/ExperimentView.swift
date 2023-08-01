@@ -86,7 +86,7 @@ struct ExperimentView: View {
                 }
                 .padding()
             }
-            .navigationBarTitle(experiment.name)
+            .navigationBarTitle(experiment.plotTitle)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -132,16 +132,15 @@ struct ExperimentView: View {
     
     private var descriptionView: some View {
         VStack (alignment: .leading){
-            if !experiment.description.isEmpty {
+            if !experiment.plotDescription.isEmpty {
                 HStack {
                     Text("Description:")
                         .padding(.bottom, 5)
-                        .bold()
                         .font(.system(size: 17))
                         .foregroundColor(Color(uiColor: .black))
                     Spacer()
                 }
-                Text("\(experiment.description)")
+                Text("\(experiment.plotDescription)")
                         .foregroundColor(.black)
             } else {
                 Text("No Description")
@@ -156,7 +155,6 @@ struct ExperimentView: View {
                 HStack {
                     Text("Watering Schedule:")
                         .padding(.bottom, 5)
-                        .bold()
                         .font(.system(size: 17))
                         .foregroundColor(Color(uiColor: .black))
                     Spacer()
@@ -176,7 +174,6 @@ struct ExperimentView: View {
                 HStack {
                     Text("Irrigation Type:")
                         .padding(.bottom, 5)
-                        .bold()
                         .font(.system(size: 17))
                         .foregroundColor(Color(uiColor: .black))
                     Spacer()
@@ -196,7 +193,6 @@ struct ExperimentView: View {
                 HStack {
                     Text("Update Cadence:")
                         .padding(.bottom, 5)
-                        .bold()
                         .font(.system(size: 17))
                         .foregroundColor(Color(uiColor: .black))
                     Spacer()

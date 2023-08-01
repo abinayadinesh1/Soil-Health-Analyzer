@@ -9,15 +9,16 @@ import Foundation
 import SwiftUI
 
 struct Experiment: View, Identifiable {
+    var id: UUID = UUID()
     @State var plotTitle: String = "Edit Title Here"
+    @State var date: Date
+    @State var samples: [Sample] = []
     @State var plotDescription: String = "Edit Description Here"
     @State var selectedWateringSchedule: String = "Weekly"
     @State var selectedIrrigationType: String = "Drip"
     @State var selectedUpdateCadence: String = "Daily"
-    @State var showAlert: Bool = false
-    @State var samples: [Sample] = []
-    var id: UUID = UUID()
     var previewImage: String
+    @State var showAlert: Bool = false
     let wateringOptions = ["Daily", "Weekly", "Monthly", "Custom"]
     let irrigationOptions = ["Drip", "Furrow", "Flood", "Sprinkler", "Custom"]
     let updateCadenceOptions = ["Daily","Every 3 Hours", "Every 6 Hours", "Every 2 Days", "Every 3 Days"]

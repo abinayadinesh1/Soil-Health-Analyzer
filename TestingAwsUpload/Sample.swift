@@ -9,11 +9,12 @@ import Foundation
 import SwiftUI
 
 
-struct Sample: Hashable, Identifiable {
+struct Sample: Identifiable {
     var dateSampled: Date
     var notes: String
     var image: UIImage
-    var waterAnalysis: Image
-    var OMAnalysis: Image
     var id = UUID()
+    var waterAnalysis: String
+    var OMAnalysis: String
+
 }
