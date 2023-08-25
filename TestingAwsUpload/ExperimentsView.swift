@@ -85,12 +85,12 @@ struct ExperimentsView: View {
                     AddExperimentView()
                 }
         }.task {
-            await performOnAppear()
+            await retrieveExperiments()
         }
     }
     
     
-    func performOnAppear() async {
+    func retrieveExperiments() async {
         
         //query for the experiments
         do {
@@ -101,15 +101,45 @@ struct ExperimentsView: View {
         } catch {
             print("Could not query DataStore: \(error)")
         }
-        //make a new experiment
-//        do {
-//            let item = ExperimentGraphQL(id: "id1",
-//                            title: "Build an iOS application using Amplify")
-//            let savedItem = try await Amplify.DataStore.save(item)
-//            print("Saved item: \(savedItem.id)")
-//        } catch {
-//            print("Could not save item to DataStore: \(error)")
-//        }
+    }
+    func updateExperiment() async {
+        do {
+            let experiments = try await Amplify.DataStore.query(ExperimentGraphQL.self,
+                                                          where: ExperimentGraphQL.keys.title.eq("new title for experiment"))
+            guard experiments.count == 1, var updatedExperiments = experiments.first else {
+                print("Did not find exactly one todo, bailing")
+                return
+            }
+            updatedExperiments.title = "new title for experiment"
+            let savedExperiment = try await Amplify.DataStore.save(updatedExperiments)
+            print("Updated item: \(savedExperiment.title)")
+        } catch {
+            print("Unable to perform operation: \(error)")
+        }
+    }
+    func deleteExperiment() async {
+        do {
+            let experiments = try await Amplify.DataStore.query(ExperimentGraphQL.self,
+                                                                where: ExperimentGraphQL.keys.title.eq("new title for experiment"))
+            guard experiments.count == 1, let toDeleteExperiment = experiments.first else {
+                print("Did not find exactly one todo, bailing")
+                return
+            }
+            try await Amplify.DataStore.delete(toDeleteExperiment)
+            print("Deleted item: \(toDeleteExperiment.title)")
+        } catch {
+            print("Unable to perform operation: \(error)")
+        }
+    }
+    func addExperiment() async {
+        do {
+            let item = ExperimentGraphQL(id: "id1",
+                            title: "Build an iOS application using Amplify")
+            let savedItem = try await Amplify.DataStore.save(item)
+            print("Saved item: \(savedItem.id)")
+        } catch {
+            print("Could not save item to DataStore: \(error)")
+        }
     }
 }
 //MARK: - TextFieldHeaderView
