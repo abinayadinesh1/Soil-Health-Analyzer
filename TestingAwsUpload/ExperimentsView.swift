@@ -56,6 +56,7 @@ struct ExperimentsView: View {
                                             .clipped()
                                         VStack (alignment: .leading) {
                                             Text(experiment.plotTitle)
+                                            Text(experiment.name)
                                                 .font(.title2)
                                                 .bold()
                                             Text("Started: \(experiment.date.formatted(date: .abbreviated, time: .omitted))")
