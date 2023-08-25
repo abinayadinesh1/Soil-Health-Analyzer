@@ -28,13 +28,10 @@ struct ExperimentView: View {
                 DisclosureGroup(content: {
                     Group {
                         descriptionView
-                        Divider().foregroundColor(.systemBrown).frame(width: 40)
                         wateringScheduleView
-                        Divider().foregroundColor(.systemBrown).frame(width: 40)
                         irrigationTypeView
-                        Divider().foregroundColor(.systemBrown).frame(width: 40)
                         updateCadenceView
-                        Divider().foregroundColor(.systemBrown).frame(width: 40)
+//                        Divider().foregroundColor(.brown).frame(width: 40)
                     }
                     .padding()
                     .frame(maxWidth: .infinity)

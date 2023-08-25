@@ -1,0 +1,73 @@
+# this is an auto generated file. This will be overwritten
+
+subscription OnCreateExperimentGraphQL(
+  $filter: ModelSubscriptionExperimentGraphQLFilterInput
+) {
+  onCreateExperimentGraphQL(filter: $filter) {
+    id
+    title
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateExperimentGraphQL(
+  $filter: ModelSubscriptionExperimentGraphQLFilterInput
+) {
+  onUpdateExperimentGraphQL(filter: $filter) {
+    id
+    title
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteExperimentGraphQL(
+  $filter: ModelSubscriptionExperimentGraphQLFilterInput
+) {
+  onDeleteExperimentGraphQL(filter: $filter) {
+    id
+    title
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateSampleGraphQL(
+  $filter: ModelSubscriptionSampleGraphQLFilterInput
+) {
+  onCreateSampleGraphQL(filter: $filter) {
+    id
+    content
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateSampleGraphQL(
+  $filter: ModelSubscriptionSampleGraphQLFilterInput
+) {
+  onUpdateSampleGraphQL(filter: $filter) {
+    id
+    content
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteSampleGraphQL(
+  $filter: ModelSubscriptionSampleGraphQLFilterInput
+) {
+  onDeleteSampleGraphQL(filter: $filter) {
+    id
+    content
+    createdAt
+    updatedAt
+    __typename
+  }
+}

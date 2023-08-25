@@ -1,27 +1,8 @@
-// your experiments
-// cover image for expiremtn, name of experiment/location ("Tomato Garden Bed")
-// click on experiment, get name, details, date started experiment, water schedule, etc.
-// see all the samples you've uploaded
-// be able to click on an example and view data
-// be able to make a new example
-
-//sample: when upload a picture, needs to be sent to aws so we can do processing on that image
 import SwiftUI
-//var id: UUID = UUID()
-//@State var plotTitle: String = "Edit Title Here"
-//@State var date: Date
-//@State var samples: [Sample] = []
-//@State var plotDescription: String = "Edit Description Here"
-//@State var selectedWateringSchedule: String = "Weekly"
-//@State var selectedIrrigationType: String = "Drip"
-//@State var selectedUpdateCadence: String = "Daily"
-//var previewImage: String
-//@State var showAlert: Bool = false
-//let wateringOptions = ["Daily", "Weekly", "Monthly", "Custom"]
-//let irrigationOptions = ["Drip", "Furrow", "Flood", "Sprinkler", "Custom"]
-//let updateCadenceOptions = ["Daily","Every 3 Hours", "Every 6 Hours", "Every 2 Days", "Every 3 Days"]
+import Amplify
+
 struct ExperimentsView: View {
-    @State private var experiments: [Experiment] = [
+    private var experiments: [Experiment] = [
         Experiment(id: UUID(), plotTitle: "Tomato Plot", date: Date(timeIntervalSinceReferenceDate: -3), samples: [
             Sample(dateSampled: Date(timeIntervalSinceNow: -1), notes: "Day 3", image: UIImage(imageLiteralResourceName: "day3_t"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -2), notes: "Day 2", image: UIImage(imageLiteralResourceName: "day2_t"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
@@ -74,7 +55,7 @@ struct ExperimentsView: View {
                                             .frame(width: 60, height: 60, alignment: .center)
                                             .clipped()
                                         VStack (alignment: .leading) {
-                                            Text(experiment.name)
+                                            Text(experiment.plotTitle)
                                                 .font(.title2)
                                                 .bold()
                                             Text("Started: \(experiment.date.formatted(date: .abbreviated, time: .omitted))")
@@ -102,7 +83,32 @@ struct ExperimentsView: View {
                 .sheet(isPresented: $showAddExperimentSheet) {
                     AddExperimentView()
                 }
+        }.task {
+            await performOnAppear()
         }
+    }
+    
+    
+    func performOnAppear() async {
+        
+        //query for the experiments
+        do {
+            let experiments = try await Amplify.DataStore.query(ExperimentGraphQL.self)
+            for experiment in experiments {
+                print(experiment.title)
+            }
+        } catch {
+            print("Could not query DataStore: \(error)")
+        }
+        //make a new experiment
+//        do {
+//            let item = ExperimentGraphQL(id: "id1",
+//                            title: "Build an iOS application using Amplify")
+//            let savedItem = try await Amplify.DataStore.save(item)
+//            print("Saved item: \(savedItem.id)")
+//        } catch {
+//            print("Could not save item to DataStore: \(error)")
+//        }
     }
 }
 //MARK: - TextFieldHeaderView

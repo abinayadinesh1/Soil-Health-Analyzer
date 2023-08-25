@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Amplify
-import AWSCognitoAuthPlugin
+import AWSDataStorePlugin
 
 @main
 struct TestingAwsUploadApp: App {
@@ -22,14 +22,15 @@ struct TestingAwsUploadApp: App {
         }
     }
     
-    private func configureAmplify() {
+    func configureAmplify() {
+        let dataStorePlugin = AWSDataStorePlugin(modelRegistration: AmplifyModels())
         do {
-            try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.add(plugin: dataStorePlugin)
             try Amplify.configure()
-            print("Amplify configured successfully")
-            
+            print("Initialized Amplify");
         } catch {
-            print("could not initialize Amplify", error)
+            // simplified error handling for the tutorial
+            print("Could not initialize Amplify: \(error)")
         }
     }
 }

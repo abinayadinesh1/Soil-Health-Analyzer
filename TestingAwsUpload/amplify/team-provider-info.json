@@ -85,6 +85,9 @@
       },
       "storage": {
         "s363439dc8": {}
+      },
+      "api": {
+        "testingawsupload": {}
       }
     }
   }

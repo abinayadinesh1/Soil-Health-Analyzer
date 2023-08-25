@@ -38,7 +38,7 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito",
-      "lastPushTimeStamp": "2023-07-23T22:53:15.049Z",
+      "lastPushTimeStamp": "2023-08-25T20:24:33.157Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/auth/abinayafa1ea4b5-cloudformation-template.json",
         "logicalId": "authabinayafa1ea4b5"
@@ -74,7 +74,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/function/S3Trigger4bd6ba2a-cloudformation-template.json",
         "logicalId": "functionS3Trigger4bd6ba2a"
       },
-      "lastPushTimeStamp": "2023-07-23T22:53:15.052Z",
+      "lastPushTimeStamp": "2023-08-25T20:24:33.159Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::193642950242:role/S3Trigger4bd6ba2aLambdaRole4bd6ba2a-iosgetting",
         "Region": "us-east-1",
@@ -100,7 +100,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/function/S3Triggerd6c29487-cloudformation-template.json",
         "logicalId": "functionS3Triggerd6c29487"
       },
-      "lastPushTimeStamp": "2023-07-23T22:53:15.053Z",
+      "lastPushTimeStamp": "2023-08-25T20:24:33.161Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::193642950242:role/S3Triggerd6c29487LambdaRoled6c29487-iosgetting",
         "Region": "us-east-1",
@@ -126,7 +126,7 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "S3",
-      "lastPushTimeStamp": "2023-07-23T22:53:15.481Z",
+      "lastPushTimeStamp": "2023-08-25T20:24:33.165Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storages363439dc8"
@@ -136,6 +136,33 @@
         "Region": "us-east-1"
       },
       "lastPushDirHash": "mUTMNejaUZswuN00K3BIpj05528="
+    }
+  },
+  "api": {
+    "testingawsupload": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "gfpj6pvxy5g3rpuhoeufwjgupa",
+        "GraphQLAPIEndpointOutput": "https://5z7erssa4jf3vdmgt6nugy7vmi.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-oi4plav7grcnlebzqd74eai3ay"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-abinaya-iosgetting-165312-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apitestingawsupload"
+      },
+      "lastPushTimeStamp": "2023-08-25T20:24:35.232Z",
+      "lastPushDirHash": "V8z97JZ7fXRTIDIqa880vO/QNP0="
     }
   }
 }
