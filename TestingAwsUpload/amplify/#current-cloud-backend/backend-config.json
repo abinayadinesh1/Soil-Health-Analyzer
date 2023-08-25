@@ -1,42 +1,36 @@
 {
-  "auth": {
-    "abinayafa1ea4b5": {
-      "customAuth": false,
-      "dependsOn": [],
-      "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 8
-        },
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
+  "api": {
+    "amplifyDatasource": {
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7,
+              "description": ""
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
       },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito"
-    }
-  },
-  "function": {
-    "S3Trigger4bd6ba2a": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "AppSync"
     },
-    "S3Triggerd6c29487": {
-      "build": true,
+    "testingawsupload": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "AppSync"
     }
   },
   "parameters": {
@@ -85,9 +79,7 @@
           "category": "function",
           "resourceName": "S3Trigger4bd6ba2a"
         }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "S3"
+      ]
     }
   }
 }

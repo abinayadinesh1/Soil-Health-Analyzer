@@ -40,11 +40,10 @@ struct SampleDetailView: View {
             if isEditingSample {
                 uploadPhotoButton
             }
-            
-            sampleNotesSection
-            
-            Spacer()
-
+            VStack(alignment: .center){
+                Text("Notes")
+                sampleNotesSection
+            }
             colorTimeSeriesAnalaysisSection
             
             Spacer()
@@ -136,4 +135,3 @@ struct SampleDetailView: View {
         }
     }
 }
-

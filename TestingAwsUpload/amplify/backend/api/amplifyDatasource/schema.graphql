@@ -1,0 +1,8 @@
+type Experiment @model {
+  id: ID!
+  title: String!
+}
+type Sample @model {
+  id: ID!
+  content: String!
+}
