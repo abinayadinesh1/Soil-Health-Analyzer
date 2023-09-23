@@ -9,13 +9,15 @@ import Foundation
 import SwiftUI
 struct AddExperimentView: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var newPlotTitle: String = ""
-    @State private var newPlotDescription: String = ""
-    @State private var newSelectedWateringSchedule: String = "Weekly"
-    @State private var newSelectedIrrigationType: String = "Drip"
-    @State private var newSelectedUpdateCadence: String = "Daily"
-    @State private var showAlert: Bool = false
-    @State private var samples: [Sample] = []
+    @Binding var experiments:[Experiment]
+    @State var newDate : Date
+    @State var newPlotTitle: String = ""
+    @State var newPlotDescription: String = ""
+    @State var newSelectedWateringSchedule: String = "Weekly"
+    @State var newSelectedIrrigationType: String = "Drip"
+    @State var newSelectedUpdateCadence: String = "Daily"
+    @State var showAlert: Bool = false
+    @State var samples: [Sample] = []
 
     var previewImage: String = ""
     let wateringOptions = ["Daily", "Every 2 Days", "Every 3 Days", "Weekly", "Monthly", "Custom"]
@@ -98,6 +100,8 @@ struct AddExperimentView: View {
 
     private var addButton: some View {
        Button(action: {
+           let newExp = Experiment(plotTitle: newPlotTitle, date: newDate, samples: [], plotDescription: newPlotDescription, selectedWateringSchedule: newSelectedWateringSchedule, selectedIrrigationType: newSelectedIrrigationType, selectedUpdateCadence: newSelectedUpdateCadence,   previewImage: "green_bg" )
+           experiments.append(newExp)
            //TODO: Upload to AWS
            dismiss()
        }) {

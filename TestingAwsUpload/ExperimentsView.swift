@@ -2,23 +2,23 @@ import SwiftUI
 import Amplify
 
 struct ExperimentsView: View {
-    private var experiments: [Experiment] = [
-        Experiment(id: UUID(), plotTitle: "Tomato Plot", date: Date(timeIntervalSinceReferenceDate: -3), samples: [
+    @State var experiments: [Experiment] = [
+        Experiment(id: UUID(), plotTitle: "Tomato Plot", date: Date(timeIntervalSinceNow: -20), samples: [
             Sample(dateSampled: Date(timeIntervalSinceNow: -1), notes: "Day 3", image: UIImage(imageLiteralResourceName: "day3_t"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -2), notes: "Day 2", image: UIImage(imageLiteralResourceName: "day2_t"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -3), notes: "Day 1", image: UIImage(imageLiteralResourceName: "day1_t"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time")
         ], plotDescription: "cherry tomato seeds bought from grocery store, planting in pot and using clove oil to avoid pests", selectedWateringSchedule: "Weekly", selectedIrrigationType: "Sprinkler", selectedUpdateCadence: "Daily", previewImage: "cherry_tomato"),
-        Experiment(id: UUID(), plotTitle: "Squash Plant", date: Date(timeIntervalSinceNow: -2), samples: [
+        Experiment(id: UUID(), plotTitle: "Squash Plant", date: Date(timeIntervalSinceNow: -18), samples: [
             Sample(dateSampled: Date(timeIntervalSinceNow: -1), notes: "Day 2", image: UIImage(imageLiteralResourceName: "day2_s"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -2), notes: "Day 1", image: UIImage(imageLiteralResourceName: "day1_s"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
         ], plotDescription: "I hope my squash grow!", selectedWateringSchedule: "Weekly", selectedIrrigationType: "Sprinkler", selectedUpdateCadence: "Daily", previewImage: "squash"),
-        Experiment(id: UUID(), plotTitle: "Zucchini Plant", date: Date(timeIntervalSinceNow: -4), samples: [
+        Experiment(id: UUID(), plotTitle: "Zucchini Plant", date: Date(timeIntervalSinceNow: -16), samples: [
             Sample(dateSampled: Date(timeIntervalSinceNow: -1), notes: "Day 5", image: UIImage(imageLiteralResourceName: "day4_z"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -2), notes: "Day 4", image: UIImage(imageLiteralResourceName: "day3_z"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -3), notes: "Day 3", image: UIImage(imageLiteralResourceName: "day2_z"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -4), notes: "Day 2", image: UIImage(imageLiteralResourceName: "day1_z"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
         ], plotDescription: "I love zuchinni and I wonder if I can get this to grow after trying for 2 seasons.", selectedWateringSchedule: "Weekly", selectedIrrigationType: "Sprinkler", selectedUpdateCadence: "Daily", previewImage: "zuchini_plant"),
-        Experiment(id: UUID(), plotTitle: "Mint Circle Pot", date: Date(timeIntervalSinceNow: -6), samples: [
+        Experiment(id: UUID(), plotTitle: "Mint Circle Pot", date: Date(timeIntervalSinceNow: -12), samples: [
             Sample(dateSampled: Date(timeIntervalSinceNow: -1), notes: "Day 6", image: UIImage(imageLiteralResourceName: "green"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -1), notes: "Day 5", image: UIImage(imageLiteralResourceName: "green"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -2), notes: "Day 4", image: UIImage(imageLiteralResourceName: "green"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
@@ -26,7 +26,7 @@ struct ExperimentsView: View {
             Sample(dateSampled: Date(timeIntervalSinceNow: -4), notes: "Day 2", image: UIImage(imageLiteralResourceName: "green"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceNow: -5), notes: "Day 1", image: UIImage(imageLiteralResourceName: "green"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time")
         ], plotDescription: "Had to transfer to pot because roots were crowding other plants", selectedWateringSchedule: "Custom", selectedIrrigationType: "None", selectedUpdateCadence: "Daily", previewImage: "mint"),
-        Experiment(id: UUID(), plotTitle: "Indoor Succulent", date: Date(timeIntervalSinceReferenceDate: -2), samples: [
+        Experiment(id: UUID(), plotTitle: "Indoor Succulent", date: Date(timeIntervalSinceReferenceDate: -10), samples: [
             Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -1), notes: "Week 2", image: UIImage(imageLiteralResourceName: "day2_suc"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
             Sample(dateSampled: Date(timeIntervalSinceReferenceDate: -2), notes: "Week 1", image: UIImage(imageLiteralResourceName: "day1_suc"), id: UUID(), waterAnalysis: "water_time", OMAnalysis: "OM_time"),
         ], plotDescription: "MY NEW BABY FROM THE FARMER'S MARKET", selectedWateringSchedule: "Monthly", selectedIrrigationType: "Custom", selectedUpdateCadence: "Weekly", previewImage: "succulent")
@@ -39,7 +39,7 @@ struct ExperimentsView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Image("background").resizable()
+                Image("green_bg").resizable()
                 VStack {
                     if experiments.isEmpty {
                         Text("No Experiments Available")
@@ -56,7 +56,6 @@ struct ExperimentsView: View {
                                             .clipped()
                                         VStack (alignment: .leading) {
                                             Text(experiment.plotTitle)
-                                            Text(experiment.name)
                                                 .font(.title2)
                                                 .bold()
                                             Text("Started: \(experiment.date.formatted(date: .abbreviated, time: .omitted))")
@@ -69,7 +68,7 @@ struct ExperimentsView: View {
                         }
                     }
                 }
-            }   .navigationBarTitle("My Experiments")
+            }   .navigationBarTitle("Plots 🌱")
                 .navigationBarTitleDisplayMode(.large)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -82,7 +81,7 @@ struct ExperimentsView: View {
                     }
                 }
                 .sheet(isPresented: $showAddExperimentSheet) {
-                    AddExperimentView()
+                    AddExperimentView(experiments: $experiments, newDate: Date(timeIntervalSinceNow: 0))
                 }
         }.task {
             await retrieveExperiments()
