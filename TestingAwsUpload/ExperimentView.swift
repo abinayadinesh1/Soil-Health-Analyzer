@@ -14,6 +14,7 @@ struct ExperimentView: View {
     @State private var isEditing = false
     @State private var isSamplesSectionExpanded: Bool = true
     @State private var isPresentingCreateSampleModal = false
+    @State private var isAnalysisSectionExpanded = false
 
     
     private let columns = [
@@ -26,7 +27,8 @@ struct ExperimentView: View {
             ScrollView(.vertical) {
                 headerImageView
                     .padding()
-            
+                
+                
                 DisclosureGroup(content: {
                     Group {
                         descriptionView
@@ -48,7 +50,9 @@ struct ExperimentView: View {
                     .foregroundColor(.green)
                 }
                 .padding()
-    
+
+
+
                 DisclosureGroup(isExpanded: $isSamplesSectionExpanded, content: {
                     if experiment.samples.isEmpty {
                         VStack {
@@ -60,7 +64,7 @@ struct ExperimentView: View {
                         .frame(minHeight: geo.size.height)
                     } else {
                         LazyVGrid(columns: columns, spacing: 10) {
-                    
+
                             ForEach(experiment.samples) { sample in
                                 NavigationLink(destination: SampleDetailView(sample: sample)) {
                                     ExperimentSampleView(isEditing: $isEditing, experiment: $experiment, sample: sample)
@@ -82,8 +86,55 @@ struct ExperimentView: View {
                     }
                     .font(.system(size: 20).bold())
                     .foregroundColor(.green)
+
                 }
                 .padding()
+
+
+
+                    DisclosureGroup(isExpanded: $isAnalysisSectionExpanded, content: {
+                        VStack (alignment: .leading) {
+                            Text("""
+                                 Water Retention and Organic Matter Decomposition over Time
+                                 """)
+                                .font(.title3)
+                                .foregroundColor(.black)
+                                .bold()
+                                .fixedSize(horizontal: false, vertical: true)
+                            ScrollView (.horizontal){
+                                Image("chart")
+                            }
+                            Spacer(minLength: 10)
+                            Text("""
+                                 Water is leaving the system at a rate of 8 percent per day. This is normal and will mean your plants are healthy. If the rate drastically increases (losing 15% of water per day), it would be beneficial to incorporate shade (by planting taller, leafy crops or trees nearby) or adding organic matter to the system (which improves soil aggregation and water retention).
+                                 
+                                 """)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .font(.body)
+                                .foregroundColor(.gray)
+                            Spacer(minLength: 10)
+                            Text("""
+                                Organic matter is leaving the system at a rate of .05% per day. The initial organic matter content at planting was 6.3 percent, which is fairly high. This is great! Feel free to add eggshells, coffee grounds, woodchips, or other organic matter sometime in the next month for nutrient rich plants.
+                                """
+                            )
+                                .font(.body)
+                                .foregroundColor(.gray)
+                                .bold()
+                        }
+
+                    }) {
+                        HStack {
+                            Image(systemName: "leaf")
+                            Text("Time Series Analysis")
+                            Spacer()
+                        }
+                        .font(.system(size: 20).bold())
+                        .foregroundColor(.green)
+                    }
+                    .padding()
+
+
+                }
             }
             .navigationBarTitle(experiment.plotTitle)
             .navigationBarTitleDisplayMode(.inline)
@@ -115,25 +166,6 @@ struct ExperimentView: View {
                 CreateSampleView()
             }
         }
-        Button {
-            for i in 0...experiments.count-2 {
-                print(i)
-                print("experiment.id")
-                print(experiment.id)
-                print("comparing to ")
-                print(experiments[i].id)
-                if experiment.id == experiments[i].id {
-                    experiments.remove(at: i)
-                }
-            }
-        } label: {
-            Text("Delete")
-                .foregroundColor(.black)
-                .buttonStyle(.bordered)
-                .tint(.red)
-        }
-
-    }
     
     private var headerImageView: some View {
         HStack {
@@ -225,4 +257,6 @@ struct ExperimentView: View {
             }
         }
     }
-}
+
+
+    }

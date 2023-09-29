@@ -111,10 +111,10 @@ struct AddExperimentView: View {
                .foregroundColor(.white)
                .font(.system(size: 20).bold())
                .background(
-                   RadialGradient(gradient: Gradient(colors: [.blue.opacity(0.4), .purple.opacity(0.5)]), center: .center, startRadius: 1, endRadius: 150)
+                   RadialGradient(gradient: Gradient(colors: [.green.opacity(0.4), .blue.opacity(0.5)]), center: .center, startRadius: 8, endRadius: 150)
                )
                .cornerRadius(10.0)
-               .shadow(color: .purple.opacity(0.8), radius: 20, x: 0, y: 0)
+               .shadow(color: .blue.opacity(0.8), radius: 20, x: 0, y: 0)
        }
    }
 }

@@ -59,11 +59,7 @@ struct Experiment: View, Identifiable {
         Image(previewImage).resizable().scaledToFill()
             .frame(width: 150, height: 150)
     }
-    
-    func convertPlotToData(){
-        _ = individualPlotData(plotTitle: plotTitle, plotDescription: plotDescription, selectedWateringSchedule: selectedWateringSchedule, selectedIrrigationType: selectedIrrigationType, selectedUpdateCadence: selectedUpdateCadence, id: id, previewImage: previewImage)
-    }
-    }
+}
 
 struct individualPlotData: Identifiable, Decodable {
     var plotTitle: String

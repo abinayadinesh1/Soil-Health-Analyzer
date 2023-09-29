@@ -30,7 +30,7 @@ struct SampleDetailView: View {
     var body: some View {
         VStack {
             dateSampledSection
-
+            
             Image(uiImage: sample.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -44,9 +44,7 @@ struct SampleDetailView: View {
                 Text("Notes")
                 sampleNotesSection
             }
-            colorTimeSeriesAnalaysisSection
             
-            Spacer()
         }
         .padding()
         .navigationTitle(sampleDateAndTime)
@@ -104,22 +102,6 @@ struct SampleDetailView: View {
         }
     }
     
-    private var colorTimeSeriesAnalaysisSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Spacer()
-            Text("Time Series Analysis")
-                .font(.title2.bold())
-                .multilineTextAlignment(.center)
-            
-            Text("Water Content:")
-                .foregroundColor(.gray)
-                .bold()
-            
-            Text("Organic Matter Content")
-                .foregroundColor(.gray)
-                .bold()
-        }
-    }
     
     private var uploadPhotoButton: some View {
         Button(action: {

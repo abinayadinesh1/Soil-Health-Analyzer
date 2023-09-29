@@ -38,60 +38,79 @@ struct ExperimentsView: View {
     
     var body: some View {
         NavigationView {
-            Image("background").resizable()
-                .overlay(
-            VStack {
-                if experiments.isEmpty {
-                    Text("No Experiments Available")
-                        .emptyTextStyle()
-                } else {
-                    List {
-                        ForEach(experiments) { experiment in
-                            NavigationLink(destination: ExperimentView(experiments: $experiments, experiment: experiment)) {
-                                HStack {
-                                    Image(experiment.previewImage)
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 60, height: 60, alignment: .center)
-                                        .clipped()
-                                    VStack (alignment: .leading) {
-                                        Text(experiment.plotTitle)
-                                            .font(.title2)
-                                            .bold()
-                                        Text("Started: \(experiment.date.formatted(date: .abbreviated, time: .omitted))")
-                                            .font(.subheadline)
+            ZStack{
+                Image("green_bg_long").resizable()
+                ScrollView{
+                    VStack {
+                        VStack {
+                            Spacer(minLength: 85)
+                        HStack {
+                            Text("Plots 🌱")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .padding(.leading, 15)
+                                .leftAligned()
+                            Button(action: {
+                                showAddExperimentSheet.toggle()
+                            }) {
+                                Image(systemName: "plus")
+                                    .foregroundColor(.green)
+                            }
+                            .rightAligned()
+                            .padding(.trailing, 15)
+                            
+                        }
+                    }
+                            VStack{
+                                if experiments.isEmpty {
+                                    Text("No Experiments Available")
+                                        .emptyTextStyle()
+                                }
+                                else {
+                                    ForEach(experiments) { experiment in
+                                        NavigationLink(destination: ExperimentView(experiments: $experiments, experiment: experiment)) {
+                                            HStack (alignment: .center) {
+                                                Image(experiment.previewImage)
+                                                    .resizable()
+                                                    .scaledToFill()
+                                                    .frame(width: 80, height: 80, alignment: .center)
+                                                    .clipped()
+                                                VStack (alignment: .leading) {
+                                                    Text(experiment.plotTitle)
+                                                        .font(.title2)
+                                                        .foregroundColor(.black)
+                                                        .bold()
+                                                    Text("Started: \(experiment.date.formatted(date: .abbreviated, time: .omitted))")
+                                                        .font(.subheadline)
+                                                        .foregroundColor(.black)
+                                                }
+                                            }
+                                            .frame(width: 350, height: 110)
+                                            .background(Color(red: 240, green: 253, blue: 243))
+                                            .cornerRadius(10)
+                                        }
+                                        .navigationBarHidden(true)
                                     }
-                                    .frame(height: 50)
                                 }
                             }
                         }
-                    }
+                        .navigationBarHidden(true)
                 }
+            .ignoresSafeArea()
+            .navigationBarHidden(true)
+            .sheet(isPresented: $showAddExperimentSheet) {
+                AddExperimentView(experiments: $experiments, newDate: Date(timeIntervalSinceNow: 0))
             }
-                )
-                .background(Image("background").resizable())
-                .navigationBarTitle("Plots 🌱")
-                .navigationBarTitleDisplayMode(.large)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            showAddExperimentSheet.toggle()
-                        }) {
-                            Image(systemName: "plus")
-                                .foregroundColor(.green)
-                        }
-                    }
-                }
-                .sheet(isPresented: $showAddExperimentSheet) {
-                    AddExperimentView(experiments: $experiments, newDate: Date(timeIntervalSinceNow: 0))
-                }
-        }.task {
-            await retrieveExperiments()
+            .task {
+                await retrieveExperiments()
+            }
+        }
+            .navigationBarHidden(true)
+            .ignoresSafeArea()
+            }
+        .navigationBarHidden(true)
         }
             
-            
-    }
-    
     
     func retrieveExperiments() async {
         
@@ -145,6 +164,8 @@ struct ExperimentsView: View {
         }
     }
 }
+
+
 //MARK: - TextFieldHeaderView
 struct TextFieldHeaderView: View {
     var header: String
