@@ -38,37 +38,39 @@ struct ExperimentsView: View {
     
     var body: some View {
         NavigationView {
-            ZStack{
-                Image("green_bg").resizable()
-                VStack {
-                    if experiments.isEmpty {
-                        Text("No Experiments Available")
-                            .emptyTextStyle()
-                    } else {
-                        List {
-                            ForEach(experiments) { experiment in
-                                NavigationLink(destination: ExperimentView(experiment: experiment)) {
-                                    HStack {
-                                        Image(experiment.previewImage)
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: 60, height: 60, alignment: .center)
-                                            .clipped()
-                                        VStack (alignment: .leading) {
-                                            Text(experiment.plotTitle)
-                                                .font(.title2)
-                                                .bold()
-                                            Text("Started: \(experiment.date.formatted(date: .abbreviated, time: .omitted))")
-                                                .font(.subheadline)
-                                        }
-                                        .frame(height: 50)
+            Image("background").resizable()
+                .overlay(
+            VStack {
+                if experiments.isEmpty {
+                    Text("No Experiments Available")
+                        .emptyTextStyle()
+                } else {
+                    List {
+                        ForEach(experiments) { experiment in
+                            NavigationLink(destination: ExperimentView(experiments: $experiments, experiment: experiment)) {
+                                HStack {
+                                    Image(experiment.previewImage)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 60, height: 60, alignment: .center)
+                                        .clipped()
+                                    VStack (alignment: .leading) {
+                                        Text(experiment.plotTitle)
+                                            .font(.title2)
+                                            .bold()
+                                        Text("Started: \(experiment.date.formatted(date: .abbreviated, time: .omitted))")
+                                            .font(.subheadline)
                                     }
+                                    .frame(height: 50)
                                 }
                             }
                         }
                     }
                 }
-            }   .navigationBarTitle("Plots 🌱")
+            }
+                )
+                .background(Image("background").resizable())
+                .navigationBarTitle("Plots 🌱")
                 .navigationBarTitleDisplayMode(.large)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -86,6 +88,8 @@ struct ExperimentsView: View {
         }.task {
             await retrieveExperiments()
         }
+            
+            
     }
     
     

@@ -11,7 +11,9 @@ import SwiftUI
 
 struct ExperimentSampleView: View {
     @Binding var isEditing: Bool
+    @Binding var experiment:Experiment
     var sample: Sample
+    
     
     var body: some View {
         VStack {
@@ -19,7 +21,11 @@ struct ExperimentSampleView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        //TODO: Delete Plot Here via AWS
+                        for i in 0...experiment.samples.count-1 {
+                            if (sample.id == experiment.samples[i].id){
+                                experiment.samples.remove(at: i)
+                            }
+                        }
                     }) {
                         Image(systemName: "xmark.circle.fill")
                             .font(.system(size: 25))

@@ -9,10 +9,12 @@ import Foundation
 import SwiftUI
 
 struct ExperimentView: View {
+    @Binding var experiments: [Experiment]
     @State var experiment: Experiment
     @State private var isEditing = false
-    @State private var isSamplesSectionExpanded: Bool = false
+    @State private var isSamplesSectionExpanded: Bool = true
     @State private var isPresentingCreateSampleModal = false
+
     
     private let columns = [
         GridItem(.flexible()),
@@ -31,7 +33,6 @@ struct ExperimentView: View {
                         wateringScheduleView
                         irrigationTypeView
                         updateCadenceView
-//                        Divider().foregroundColor(.brown).frame(width: 40)
                     }
                     .padding()
                     .frame(maxWidth: .infinity)
@@ -59,9 +60,10 @@ struct ExperimentView: View {
                         .frame(minHeight: geo.size.height)
                     } else {
                         LazyVGrid(columns: columns, spacing: 10) {
+                    
                             ForEach(experiment.samples) { sample in
                                 NavigationLink(destination: SampleDetailView(sample: sample)) {
-                                    ExperimentSampleView(isEditing: $isEditing, sample: sample)
+                                    ExperimentSampleView(isEditing: $isEditing, experiment: $experiment, sample: sample)
                                 }
                             }
                         }
@@ -113,6 +115,24 @@ struct ExperimentView: View {
                 CreateSampleView()
             }
         }
+        Button {
+            for i in 0...experiments.count-2 {
+                print(i)
+                print("experiment.id")
+                print(experiment.id)
+                print("comparing to ")
+                print(experiments[i].id)
+                if experiment.id == experiments[i].id {
+                    experiments.remove(at: i)
+                }
+            }
+        } label: {
+            Text("Delete")
+                .foregroundColor(.black)
+                .buttonStyle(.bordered)
+                .tint(.red)
+        }
+
     }
     
     private var headerImageView: some View {
@@ -130,18 +150,18 @@ struct ExperimentView: View {
     private var descriptionView: some View {
         VStack (alignment: .leading){
             if !experiment.plotDescription.isEmpty {
-                HStack {
+                VStack {
                     Text("Description:")
                         .padding(.bottom, 5)
-                        .font(.system(size: 17))
+                        .font(.system(size: 17, weight: .bold))
                         .foregroundColor(Color(uiColor: .black))
-                    Spacer()
+                    Text("\(experiment.plotDescription)")
+                            .foregroundColor(.black)
                 }
-                Text("\(experiment.plotDescription)")
-                        .foregroundColor(.black)
             } else {
                 Text("No Description")
                     .emptyTextStyle()
+                    .font(Font.headline.weight(.bold))
             }
         }
     }
@@ -149,18 +169,19 @@ struct ExperimentView: View {
     private var wateringScheduleView: some View {
         VStack (alignment: .leading){
             if !experiment.selectedWateringSchedule.isEmpty {
-                HStack {
+                VStack {
                     Text("Watering Schedule:")
                         .padding(.bottom, 5)
-                        .font(.system(size: 17))
+                        .font(.system(size: 17, weight: .bold))
                         .foregroundColor(Color(uiColor: .black))
-                    Spacer()
+                    Text("\(experiment.selectedWateringSchedule)")
+                            .foregroundColor(.black)
                 }
-                Text("\(experiment.selectedWateringSchedule)")
-                        .foregroundColor(.black)
+                
             } else {
                 Text("No Watering Schedule")
                     .emptyTextStyle()
+                    .font(Font.headline.weight(.bold))
             }
         }
     }
@@ -168,18 +189,19 @@ struct ExperimentView: View {
     private var irrigationTypeView: some View {
         VStack (alignment: .leading){
             if !experiment.selectedIrrigationType.isEmpty {
-                HStack {
+                VStack {
                     Text("Irrigation Type:")
                         .padding(.bottom, 5)
-                        .font(.system(size: 17))
+                        .font(.system(size: 17, weight: .bold))
                         .foregroundColor(Color(uiColor: .black))
-                    Spacer()
+                    Text("\(experiment.selectedIrrigationType)")
+                            .foregroundColor(.black)
                 }
-                Text("\(experiment.selectedIrrigationType)")
-                        .foregroundColor(.black)
+                
             } else {
                 Text("No Irrigation Type")
                     .emptyTextStyle()
+                    .font(Font.headline.weight(.bold))
             }
         }
     }
@@ -187,18 +209,19 @@ struct ExperimentView: View {
     private var updateCadenceView: some View {
         VStack (alignment: .leading){
             if !experiment.selectedUpdateCadence.isEmpty {
-                HStack {
+                VStack {
                     Text("Update Cadence:")
                         .padding(.bottom, 5)
-                        .font(.system(size: 17))
+                        .font(.system(size: 17, weight: .bold))
                         .foregroundColor(Color(uiColor: .black))
-                    Spacer()
+                    Text("\(experiment.selectedUpdateCadence)")
+                            .foregroundColor(.black)
                 }
-                Text("\(experiment.selectedUpdateCadence)")
-                        .foregroundColor(.black)
+                
             } else {
                 Text("No Update Cadence")
                     .emptyTextStyle()
+                    .font(Font.headline.weight(.bold))
             }
         }
     }

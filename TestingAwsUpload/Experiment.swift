@@ -61,7 +61,7 @@ struct Experiment: View, Identifiable {
     }
     
     func convertPlotToData(){
-        var newPlotData = individualPlotData(plotTitle: plotTitle, plotDescription: plotDescription, selectedWateringSchedule: selectedWateringSchedule, selectedIrrigationType: selectedIrrigationType, selectedUpdateCadence: selectedUpdateCadence, id: id, previewImage: previewImage)
+        _ = individualPlotData(plotTitle: plotTitle, plotDescription: plotDescription, selectedWateringSchedule: selectedWateringSchedule, selectedIrrigationType: selectedIrrigationType, selectedUpdateCadence: selectedUpdateCadence, id: id, previewImage: previewImage)
     }
     }
 

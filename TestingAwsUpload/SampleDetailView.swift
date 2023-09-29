@@ -53,6 +53,7 @@ struct SampleDetailView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
+//                    sample.notes = textEditorText
                     withAnimation {
                         isEditingSample.toggle()
                     }
@@ -105,7 +106,8 @@ struct SampleDetailView: View {
     
     private var colorTimeSeriesAnalaysisSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Color + Time Series Analysis")
+            Spacer()
+            Text("Time Series Analysis")
                 .font(.title2.bold())
                 .multilineTextAlignment(.center)
             

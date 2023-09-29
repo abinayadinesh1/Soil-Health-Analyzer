@@ -100,7 +100,7 @@ struct AddExperimentView: View {
 
     private var addButton: some View {
        Button(action: {
-           let newExp = Experiment(plotTitle: newPlotTitle, date: newDate, samples: [], plotDescription: newPlotDescription, selectedWateringSchedule: newSelectedWateringSchedule, selectedIrrigationType: newSelectedIrrigationType, selectedUpdateCadence: newSelectedUpdateCadence,   previewImage: "green_bg" )
+           let newExp = Experiment(plotTitle: newPlotTitle, date: newDate, samples: [], plotDescription: newPlotDescription, selectedWateringSchedule: newSelectedWateringSchedule, selectedIrrigationType: newSelectedIrrigationType, selectedUpdateCadence: newSelectedUpdateCadence,   previewImage: "sprout" )
            experiments.append(newExp)
            //TODO: Upload to AWS
            dismiss()
